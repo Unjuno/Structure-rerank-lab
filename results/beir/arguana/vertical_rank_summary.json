@@ -1,0 +1,174 @@
+{
+  "baseline_mode": "vector_baseline",
+  "compare_mode": "vertical_vector_rerank",
+  "k": 10,
+  "improved_relevant_moves": 49,
+  "harmed_relevant_moves": 20,
+  "neutral_or_irrelevant_moves": 1104,
+  "entered_relevant": 6,
+  "left_relevant": 3,
+  "queries_with_relevant_up": [
+    {
+      "query_id": "test-environment-aiahwagit-con04a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-aiahwagit-pro03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-chbwtlgcc-con01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-chbwtlgcc-con03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-chbwtlgcc-pro04a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-ehwsnwu-con02a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-opecewiahw-pro02a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-fchbjaj-pro02a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-fsaphgiap-pro02a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-ldhwbmclg-con03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-ldhwbmclg-pro01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-ldhwprhs-pro01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-ldhwprhs-pro02a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-magghbcrg-con03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-magghbcrg-pro01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-magghbcrg-pro03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-nshbbsbfb-pro01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-radhbsshr-con03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-radhbsshr-con04a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-radhbsshr-pro01a",
+      "count": 1
+    }
+  ],
+  "queries_with_relevant_down": [
+    {
+      "query_id": "test-environment-aeghhgwpe-pro01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-aiahwagit-pro01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-chbwtlgcc-pro02a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-opecewiahw-con01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-environment-opecewiahw-pro03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-ldhwbmclg-con01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-ldhwbmclg-con02a",
+      "count": 1
+    },
+    {
+      "query_id": "test-free-speech-debate-radhbsshr-pro02a",
+      "count": 1
+    },
+    {
+      "query_id": "test-health-dhghhbampt-con01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-health-dhgsshbesbc-pro01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-health-dhiacihwph-con03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-health-hdond-pro01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-health-hgwhwbjfs-pro03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-health-hpehwadvoee-pro02a",
+      "count": 1
+    },
+    {
+      "query_id": "test-health-hpehwadvoee-pro04a",
+      "count": 1
+    },
+    {
+      "query_id": "test-health-ppelfhwbpba-con01a",
+      "count": 1
+    },
+    {
+      "query_id": "test-health-ppelfhwbpba-con03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-sport-aastshsrqsar-con04a",
+      "count": 1
+    },
+    {
+      "query_id": "test-sport-tshbmlbscac-con03a",
+      "count": 1
+    },
+    {
+      "query_id": "test-sport-tshbmlbscac-pro01a",
+      "count": 1
+    }
+  ]
+}
