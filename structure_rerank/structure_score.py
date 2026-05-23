@@ -27,14 +27,20 @@ def tokenize(text: str) -> List[str]:
     return [token.lower() for token in _TOKEN_RE.findall(text)]
 
 
-def lexical_score(query: str, text: str) -> float:
+def lexical_overlap(query: str, text: str) -> Tuple[int, float]:
     query_terms = set(tokenize(query))
     if not query_terms:
-        return 0.0
+        return 0, 0.0
     text_terms = set(tokenize(text))
     if not text_terms:
-        return 0.0
-    return len(query_terms & text_terms) / len(query_terms)
+        return 0, 0.0
+    overlap_count = len(query_terms & text_terms)
+    return overlap_count, overlap_count / len(query_terms)
+
+
+def lexical_score(query: str, text: str) -> float:
+    _count, score = lexical_overlap(query, text)
+    return score
 
 
 def normalize_scores(items: Sequence[Tuple[str, float]]) -> Dict[str, float]:
@@ -66,9 +72,9 @@ def structure_score(
 ) -> float:
     """Score structure match with query-intent gating.
 
-    A structure type match is not enough by itself. The extracted structure text
-    must also overlap with the query. This prevents every `conclusion` snippet
-    from being boosted for every conclusion query.
+    A structure type match is not enough. The extracted structure text must also
+    share enough query terms. Weak one-token matches are damped to avoid promoting
+    unrelated posts that merely contain the same broad structure type.
     """
 
     intent = str(query.get("intent_structure", "")).strip().lower()
@@ -81,17 +87,20 @@ def structure_score(
             continue
         text = str(item.get("text", ""))
         confidence = float(item.get("confidence", 0.0) or 0.0)
-        overlap = lexical_score(query_text, text)
+        overlap_count, overlap_ratio = lexical_overlap(query_text, text)
+        if overlap_count < 2:
+            continue
+        damped_overlap = overlap_ratio * overlap_ratio
         if not intent or stype == intent:
-            score = confidence * overlap
+            score = confidence * damped_overlap
         else:
-            score = 0.15 * confidence * overlap
+            score = 0.05 * confidence * damped_overlap
         if score > best:
             best = score
     return best
 
 
-def combine_scores(base_score: float, struct_score: float, alpha: float = 0.8, beta: float = 0.2) -> float:
+def combine_scores(base_score: float, struct_score: float = 0.0, alpha: float = 0.8, beta: float = 0.2) -> float:
     if alpha < 0 or beta < 0:
         raise ValueError("alpha and beta must be non-negative")
     return alpha * base_score + beta * struct_score
