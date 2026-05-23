@@ -1,0 +1,556 @@
+{
+  "verdict": "PASS",
+  "baseline_mode": "vector_baseline",
+  "candidate_mode": "vector_structure_rerank",
+  "primary_k": 3,
+  "metrics_by_k": {
+    "3": {
+      "vector_baseline": {
+        "nDCG@3": 0.859447,
+        "MRR": 1.0,
+        "AvgRel@3": 1.1
+      },
+      "vector_structure_rerank": {
+        "nDCG@3": 0.870507,
+        "MRR": 1.0,
+        "AvgRel@3": 1.15
+      }
+    },
+    "5": {
+      "vector_baseline": {
+        "nDCG@5": 0.883786,
+        "MRR": 1.0,
+        "AvgRel@5": 0.75
+      },
+      "vector_structure_rerank": {
+        "nDCG@5": 0.892466,
+        "MRR": 1.0,
+        "AvgRel@5": 0.77
+      }
+    },
+    "10": {
+      "vector_baseline": {
+        "nDCG@10": 0.899367,
+        "MRR": 1.0,
+        "AvgRel@10": 0.41
+      },
+      "vector_structure_rerank": {
+        "nDCG@10": 0.902724,
+        "MRR": 1.0,
+        "AvgRel@10": 0.41
+      }
+    }
+  },
+  "query_deltas_by_k": {
+    "3": [
+      {
+        "query_id": "rq1",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r1",
+        "candidate_top": "r1"
+      },
+      {
+        "query_id": "rq10",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r14",
+        "candidate_top": "r14"
+      },
+      {
+        "query_id": "rq11",
+        "baseline_avg_rel": 1.333333,
+        "candidate_avg_rel": 1.333333,
+        "delta": 0.0,
+        "baseline_top": "r17",
+        "candidate_top": "r17"
+      },
+      {
+        "query_id": "rq12",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r18",
+        "candidate_top": "r18"
+      },
+      {
+        "query_id": "rq13",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.666667,
+        "delta": 0.666667,
+        "baseline_top": "r19",
+        "candidate_top": "r19"
+      },
+      {
+        "query_id": "rq14",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r20",
+        "candidate_top": "r20"
+      },
+      {
+        "query_id": "rq15",
+        "baseline_avg_rel": 1.333333,
+        "candidate_avg_rel": 1.333333,
+        "delta": 0.0,
+        "baseline_top": "r21",
+        "candidate_top": "r21"
+      },
+      {
+        "query_id": "rq16",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r22",
+        "candidate_top": "r22"
+      },
+      {
+        "query_id": "rq17",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r23",
+        "candidate_top": "r23"
+      },
+      {
+        "query_id": "rq18",
+        "baseline_avg_rel": 1.333333,
+        "candidate_avg_rel": 1.333333,
+        "delta": 0.0,
+        "baseline_top": "r24",
+        "candidate_top": "r24"
+      },
+      {
+        "query_id": "rq19",
+        "baseline_avg_rel": 1.333333,
+        "candidate_avg_rel": 1.333333,
+        "delta": 0.0,
+        "baseline_top": "r25",
+        "candidate_top": "r25"
+      },
+      {
+        "query_id": "rq2",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r2",
+        "candidate_top": "r2"
+      },
+      {
+        "query_id": "rq20",
+        "baseline_avg_rel": 1.333333,
+        "candidate_avg_rel": 1.333333,
+        "delta": 0.0,
+        "baseline_top": "r30",
+        "candidate_top": "r30"
+      },
+      {
+        "query_id": "rq3",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r3",
+        "candidate_top": "r3"
+      },
+      {
+        "query_id": "rq4",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r4",
+        "candidate_top": "r4"
+      },
+      {
+        "query_id": "rq5",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r5",
+        "candidate_top": "r5"
+      },
+      {
+        "query_id": "rq6",
+        "baseline_avg_rel": 1.333333,
+        "candidate_avg_rel": 1.666667,
+        "delta": 0.333333,
+        "baseline_top": "r6",
+        "candidate_top": "r6"
+      },
+      {
+        "query_id": "rq7",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r7",
+        "candidate_top": "r7"
+      },
+      {
+        "query_id": "rq8",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r8",
+        "candidate_top": "r8"
+      },
+      {
+        "query_id": "rq9",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r9",
+        "candidate_top": "r9"
+      }
+    ],
+    "5": [
+      {
+        "query_id": "rq1",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r1",
+        "candidate_top": "r1"
+      },
+      {
+        "query_id": "rq10",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "r14",
+        "candidate_top": "r14"
+      },
+      {
+        "query_id": "rq11",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "r17",
+        "candidate_top": "r17"
+      },
+      {
+        "query_id": "rq12",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "r18",
+        "candidate_top": "r18"
+      },
+      {
+        "query_id": "rq13",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.4,
+        "baseline_top": "r19",
+        "candidate_top": "r19"
+      },
+      {
+        "query_id": "rq14",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r20",
+        "candidate_top": "r20"
+      },
+      {
+        "query_id": "rq15",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r21",
+        "candidate_top": "r21"
+      },
+      {
+        "query_id": "rq16",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "r22",
+        "candidate_top": "r22"
+      },
+      {
+        "query_id": "rq17",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "r23",
+        "candidate_top": "r23"
+      },
+      {
+        "query_id": "rq18",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "r24",
+        "candidate_top": "r24"
+      },
+      {
+        "query_id": "rq19",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "r25",
+        "candidate_top": "r25"
+      },
+      {
+        "query_id": "rq2",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "r2",
+        "candidate_top": "r2"
+      },
+      {
+        "query_id": "rq20",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "r30",
+        "candidate_top": "r30"
+      },
+      {
+        "query_id": "rq3",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "r3",
+        "candidate_top": "r3"
+      },
+      {
+        "query_id": "rq4",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "r4",
+        "candidate_top": "r4"
+      },
+      {
+        "query_id": "rq5",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "r5",
+        "candidate_top": "r5"
+      },
+      {
+        "query_id": "rq6",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "r6",
+        "candidate_top": "r6"
+      },
+      {
+        "query_id": "rq7",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "r7",
+        "candidate_top": "r7"
+      },
+      {
+        "query_id": "rq8",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "r8",
+        "candidate_top": "r8"
+      },
+      {
+        "query_id": "rq9",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "r9",
+        "candidate_top": "r9"
+      }
+    ],
+    "10": [
+      {
+        "query_id": "rq1",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "r1",
+        "candidate_top": "r1"
+      },
+      {
+        "query_id": "rq10",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "r14",
+        "candidate_top": "r14"
+      },
+      {
+        "query_id": "rq11",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "r17",
+        "candidate_top": "r17"
+      },
+      {
+        "query_id": "rq12",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "r18",
+        "candidate_top": "r18"
+      },
+      {
+        "query_id": "rq13",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "r19",
+        "candidate_top": "r19"
+      },
+      {
+        "query_id": "rq14",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "r20",
+        "candidate_top": "r20"
+      },
+      {
+        "query_id": "rq15",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "r21",
+        "candidate_top": "r21"
+      },
+      {
+        "query_id": "rq16",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "r22",
+        "candidate_top": "r22"
+      },
+      {
+        "query_id": "rq17",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "r23",
+        "candidate_top": "r23"
+      },
+      {
+        "query_id": "rq18",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "r24",
+        "candidate_top": "r24"
+      },
+      {
+        "query_id": "rq19",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "r25",
+        "candidate_top": "r25"
+      },
+      {
+        "query_id": "rq2",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "r2",
+        "candidate_top": "r2"
+      },
+      {
+        "query_id": "rq20",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "r30",
+        "candidate_top": "r30"
+      },
+      {
+        "query_id": "rq3",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "r3",
+        "candidate_top": "r3"
+      },
+      {
+        "query_id": "rq4",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "r4",
+        "candidate_top": "r4"
+      },
+      {
+        "query_id": "rq5",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "r5",
+        "candidate_top": "r5"
+      },
+      {
+        "query_id": "rq6",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "r6",
+        "candidate_top": "r6"
+      },
+      {
+        "query_id": "rq7",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "r7",
+        "candidate_top": "r7"
+      },
+      {
+        "query_id": "rq8",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "r8",
+        "candidate_top": "r8"
+      },
+      {
+        "query_id": "rq9",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "r9",
+        "candidate_top": "r9"
+      }
+    ]
+  },
+  "improved_queries": [
+    {
+      "query_id": "rq13",
+      "baseline_avg_rel": 1.0,
+      "candidate_avg_rel": 1.666667,
+      "delta": 0.666667,
+      "baseline_top": "r19",
+      "candidate_top": "r19"
+    },
+    {
+      "query_id": "rq6",
+      "baseline_avg_rel": 1.333333,
+      "candidate_avg_rel": 1.666667,
+      "delta": 0.333333,
+      "baseline_top": "r6",
+      "candidate_top": "r6"
+    }
+  ],
+  "worsened_queries": [],
+  "next_actions": [
+    "Keep the candidate mode for the next dataset expansion.",
+    "Add harder negative examples before tuning weights.",
+    "Compare against an optional neural embedding backend later."
+  ]
+}
