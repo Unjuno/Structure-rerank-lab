@@ -21,10 +21,11 @@ jobs:
       - run: python -m structure_rerank.beir_adapter --dataset scifact --out results/beir/scifact --max-queries 200 --max-corpus 8000
       - run: python -m structure_rerank.vector_experiment --posts results/beir/scifact/posts.jsonl --queries results/beir/scifact/queries.jsonl --structures results/beir/scifact/structures.jsonl --output results/beir/scifact/vector_results.jsonl
       - run: python -m structure_rerank.mode_feedback --results results/beir/scifact/vector_results.jsonl --judgments results/beir/scifact/judgments.jsonl --output-md results/beir/scifact/vertical_vector_feedback.md --output-json results/beir/scifact/vertical_vector_feedback.json --baseline-mode vector_baseline --candidate-mode vertical_vector_rerank
+      - run: python -m structure_rerank.explain_moves --results results/beir/scifact/vector_results.jsonl --judgments results/beir/scifact/judgments.jsonl --explanations-md results/beir/scifact/vertical_rank_movements.md --explanations-json results/beir/scifact/vertical_rank_movements.json --baseline-mode vector_baseline --compare-mode vertical_vector_rerank --skip-rerank
       - run: |
           git config user.name github-actions
           git config user.email actions@github.com
           git pull --rebase || true
-          git add results/beir/scifact/vertical_vector_feedback.md results/beir/scifact/vertical_vector_feedback.json
+          git add results/beir/scifact/vertical_vector_feedback.md results/beir/scifact/vertical_vector_feedback.json results/beir/scifact/vertical_rank_movements.md results/beir/scifact/vertical_rank_movements.json
           git commit -m "results: scifact vertical" || exit 0
           git push || true
