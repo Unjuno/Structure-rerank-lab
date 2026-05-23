@@ -14,6 +14,7 @@ The current main candidate is `vertical_vector_rerank`.
 - `vector_baseline`
 - `vector_structure_rerank`
 - `vertical_vector_rerank`
+- `corpus_vertical_rerank`
 
 ## Current results
 
@@ -26,6 +27,7 @@ Dataset: 30 posts / 20 queries
 | vector_baseline | 0.859447 | 1.100000 |
 | vector_structure_rerank | 0.870507 | 1.150000 |
 | vertical_vector_rerank | 0.875672 | 1.166667 |
+| corpus_vertical_rerank | 0.861717 | 1.116667 |
 
 ### BEIR ArguAna
 
@@ -55,14 +57,15 @@ Dataset: 30 posts / 20 queries
 
 `vertical_vector_rerank` is consistently better than `vector_structure_rerank` in the current small tests.
 
+`corpus_vertical_rerank` is implemented, but current expanded real-like evidence is only uncertain.
+
 This does not prove superiority over dense neural embeddings.
 
 ## Active work
 
 - Generate BEIR summary from CI outputs.
 - Generate BEIR vertical rank movement reports.
-- Generate BEIR vertical rank movement summaries.
-- Use rank movements to inspect why SciFact and NFCorpus gains are small.
+- Test corpus-derived vertical axes on BEIR.
 
 ## Next work
 
