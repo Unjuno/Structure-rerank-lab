@@ -73,6 +73,16 @@ jobs:
           --baseline-mode vector_baseline
           --candidate-mode vertical_vector_rerank
 
+      - name: Report expanded corpus vertical result
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/real_like_expanded_vector_results.jsonl
+          --judgments results/real_like_judgments_20.jsonl
+          --output-md results/real_like_expanded_corpus_vertical_feedback.md
+          --output-json results/real_like_expanded_corpus_vertical_feedback.json
+          --baseline-mode vector_baseline
+          --candidate-mode corpus_vertical_rerank
+
       - name: Upload expanded artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -88,6 +98,8 @@ jobs:
             results/real_like_expanded_vector_feedback.json
             results/real_like_expanded_vertical_feedback.md
             results/real_like_expanded_vertical_feedback.json
+            results/real_like_expanded_corpus_vertical_feedback.md
+            results/real_like_expanded_corpus_vertical_feedback.json
 
       - name: Commit expanded snapshots
         if: github.event_name == 'push'
