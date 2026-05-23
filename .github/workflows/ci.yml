@@ -162,6 +162,9 @@ jobs:
           --compare-mode vector_structure_rerank
           --skip-rerank
 
+      - name: Generate real-like summary
+        run: python -m structure_rerank.real_like_summary
+
       - name: Upload experiment artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -193,6 +196,8 @@ jobs:
             results/real_like_vector_feedback.json
             results/real_like_vector_rank_movements.md
             results/real_like_vector_rank_movements.json
+            results/real_like_summary.md
+            results/real_like_summary.json
 
       - name: Commit generated experiment snapshots
         if: github.event_name == 'push'
