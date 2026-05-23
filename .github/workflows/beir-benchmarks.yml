@@ -8,6 +8,9 @@ on:
       - 'structure_rerank/beir_adapter.py'
       - '.github/workflows/beir-benchmarks.yml'
 
+permissions:
+  contents: write
+
 jobs:
   beir:
     runs-on: ubuntu-latest
@@ -17,6 +20,8 @@ jobs:
         dataset: [arguana, scifact, nfcorpus]
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - uses: actions/setup-python@v5
         with:
@@ -62,3 +67,17 @@ jobs:
             results/beir/${{ matrix.dataset }}/vector_feedback.md
             results/beir/${{ matrix.dataset }}/vector_feedback.json
             results/beir/${{ matrix.dataset }}/vector_results.jsonl
+
+      - name: Commit benchmark snapshot
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase || true
+          git add results/beir/${{ matrix.dataset }}/vector_feedback.md results/beir/${{ matrix.dataset }}/vector_feedback.json
+          if git diff --cached --quiet; then
+            echo "no result changes"
+          else
+            git commit -m "results: refresh BEIR ${{ matrix.dataset }} [skip ci]"
+            git push || true
+          fi
