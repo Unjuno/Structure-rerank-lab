@@ -6,3 +6,15 @@
 {"post_id":"p6","structures":[{"type":"premise","text":"Markdown lists often look similar even when ideas are unrelated","confidence":0.85},{"type":"conclusion","text":"formatting should not dominate reasoning search","confidence":0.9}]}
 {"post_id":"p7","structures":[{"type":"contrast","text":"same premise can support opposite conclusions","confidence":0.9},{"type":"conclusion","text":"both posts should be discoverable for comparison","confidence":0.8}]}
 {"post_id":"p8","structures":[{"type":"definition","text":"causal explanation connects a reason to an outcome","confidence":0.9},{"type":"causal","text":"extraction errors can make reranking worse","confidence":0.85}]}
+{"post_id":"p9","structures":[{"type":"premise","text":"similar words do not guarantee matching reasoning","confidence":0.75}]}
+{"post_id":"p10","structures":[{"type":"definition","text":"a contrast compares two ideas","confidence":0.8},{"type":"contrast","text":"topical similarity is shared subject matter while argument similarity is shared reasoning path","confidence":0.95}]}
+{"post_id":"p11","structures":[{"type":"contrast","text":"reranking is not replacement for dense retrieval but a post-retrieval adjustment","confidence":0.9},{"type":"conclusion","text":"run reranking after candidate generation","confidence":0.8}]}
+{"post_id":"p12","structures":[{"type":"causal","text":"invented premises make reranking worse by rewarding false explanations","confidence":0.95}]}
+{"post_id":"p13","structures":[{"type":"definition","text":"a premise is a reason supporting a conclusion","confidence":0.95},{"type":"definition","text":"a conclusion is the claim reasoning tries to justify","confidence":0.9}]}
+{"post_id":"p14","structures":[{"type":"contrast","text":"same premise can lead to opposite conclusions","confidence":0.9},{"type":"conclusion","text":"show opposite conclusions side by side","confidence":0.85}]}
+{"post_id":"p15","structures":[{"type":"premise","text":"keyword repetition can create a false lexical match","confidence":0.85}]}
+{"post_id":"p16","structures":[{"type":"definition","text":"structure search means storing extracted reasoning structures as searchable fields","confidence":0.95}]}
+{"post_id":"p17","structures":[{"type":"contrast","text":"Markdown lists help scanning but are not reasoning evidence","confidence":0.9},{"type":"conclusion","text":"formatting should not count as reasoning evidence by itself","confidence":0.85}]}
+{"post_id":"p18","structures":[{"type":"causal","text":"public experiments improve trust because readers can inspect method and failures","confidence":0.9},{"type":"conclusion","text":"public experiments can improve trust","confidence":0.85}]}
+{"post_id":"p19","structures":[{"type":"contrast","text":"public experiments can reduce trust when failures are hidden","confidence":0.85},{"type":"causal","text":"hiding failures reduces trust","confidence":0.8}]}
+{"post_id":"p20","structures":[{"type":"definition","text":"definition answers what a term means","confidence":0.95},{"type":"definition","text":"causal explanation answers why an outcome happened","confidence":0.9}]}
