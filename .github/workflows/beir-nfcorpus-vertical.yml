@@ -1,0 +1,56 @@
+name: BEIR NFCorpus Vertical
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  nfcorpus:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Convert NFCorpus
+        run: >-
+          python -m structure_rerank.beir_adapter
+          --dataset nfcorpus
+          --out results/beir/nfcorpus
+          --max-queries 200
+          --max-corpus 8000
+
+      - name: Run vector experiment
+        run: >-
+          python -m structure_rerank.vector_experiment
+          --posts results/beir/nfcorpus/posts.jsonl
+          --queries results/beir/nfcorpus/queries.jsonl
+          --structures results/beir/nfcorpus/structures.jsonl
+          --output results/beir/nfcorpus/vector_results.jsonl
+
+      - name: Report vertical vector
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/beir/nfcorpus/vector_results.jsonl
+          --judgments results/beir/nfcorpus/judgments.jsonl
+          --output-md results/beir/nfcorpus/vertical_vector_feedback.md
+          --output-json results/beir/nfcorpus/vertical_vector_feedback.json
+          --baseline-mode vector_baseline
+          --candidate-mode vertical_vector_rerank
+
+      - name: Commit result
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/beir/nfcorpus/vertical_vector_feedback.md results/beir/nfcorpus/vertical_vector_feedback.json
+          git commit -m "results: refresh BEIR nfcorpus vertical [skip ci]" || exit 0
+          git push
