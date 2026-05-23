@@ -53,8 +53,14 @@ jobs:
       - name: Evaluate vector experiment
         run: python -m structure_rerank.evaluate --results results/vector_results.jsonl --skip-rerank
 
-      - name: Generate vector feedback report
-        run: python -m structure_rerank.feedback --results results/vector_results.jsonl --feedback-md results/vector_feedback.md --feedback-json results/vector_feedback.json --skip-rerank
+      - name: Generate vector mode feedback report
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/vector_results.jsonl
+          --output-md results/vector_feedback.md
+          --output-json results/vector_feedback.json
+          --baseline-mode vector_baseline
+          --candidate-mode vector_structure_rerank
 
       - name: Upload experiment artifacts
         uses: actions/upload-artifact@v4
