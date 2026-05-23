@@ -46,6 +46,16 @@ jobs:
           --baseline-mode vector_baseline
           --candidate-mode vertical_vector_rerank
 
+      - name: Report corpus vertical
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/beir/arguana/vector_results.jsonl
+          --judgments results/beir/arguana/judgments.jsonl
+          --output-md results/beir/arguana/corpus_vertical_feedback.md
+          --output-json results/beir/arguana/corpus_vertical_feedback.json
+          --baseline-mode vector_baseline
+          --candidate-mode corpus_vertical_rerank
+
       - name: Report vertical movements
         run: >-
           python -m structure_rerank.explain_moves
@@ -70,6 +80,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase || true
-          git add results/beir/arguana/vertical_vector_feedback.md results/beir/arguana/vertical_vector_feedback.json results/beir/arguana/vertical_rank_movements.md results/beir/arguana/vertical_rank_movements.json results/beir/arguana/vertical_rank_summary.md results/beir/arguana/vertical_rank_summary.json
+          git add results/beir/arguana/vertical_vector_feedback.md results/beir/arguana/vertical_vector_feedback.json results/beir/arguana/corpus_vertical_feedback.md results/beir/arguana/corpus_vertical_feedback.json results/beir/arguana/vertical_rank_movements.md results/beir/arguana/vertical_rank_movements.json results/beir/arguana/vertical_rank_summary.md results/beir/arguana/vertical_rank_summary.json
           git commit -m "results: refresh BEIR arguana vertical [skip ci]" || exit 0
           git push || true
