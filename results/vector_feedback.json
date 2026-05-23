@@ -1,5 +1,308 @@
 {
-  "status": "pending CI artifact refresh",
-  "modes": ["vector_baseline", "vector_structure_rerank"],
-  "purpose": "Check whether structure-aware reranking helps against a dependency-free TF-IDF vector baseline."
+  "verdict": "PASS",
+  "baseline_mode": "vector_baseline",
+  "candidate_mode": "vector_structure_rerank",
+  "primary_k": 3,
+  "metrics_by_k": {
+    "3": {
+      "vector_baseline": {
+        "nDCG@3": 0.827494,
+        "MRR": 0.933333,
+        "AvgRel@3": 1.7
+      },
+      "vector_structure_rerank": {
+        "nDCG@3": 0.860886,
+        "MRR": 0.95,
+        "AvgRel@3": 1.8
+      }
+    },
+    "5": {
+      "vector_baseline": {
+        "nDCG@5": 0.863475,
+        "MRR": 0.933333,
+        "AvgRel@5": 1.16
+      },
+      "vector_structure_rerank": {
+        "nDCG@5": 0.887667,
+        "MRR": 0.95,
+        "AvgRel@5": 1.2
+      }
+    },
+    "10": {
+      "vector_baseline": {
+        "nDCG@10": 0.904456,
+        "MRR": 0.933333,
+        "AvgRel@10": 0.67
+      },
+      "vector_structure_rerank": {
+        "nDCG@10": 0.920002,
+        "MRR": 0.95,
+        "AvgRel@10": 0.68
+      }
+    }
+  },
+  "query_deltas_by_k": {
+    "3": [
+      {
+        "query_id": "q1",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "p1",
+        "candidate_top": "p1"
+      },
+      {
+        "query_id": "q10",
+        "baseline_avg_rel": 1.666667,
+        "candidate_avg_rel": 1.666667,
+        "delta": 0.0,
+        "baseline_top": "p20",
+        "candidate_top": "p20"
+      },
+      {
+        "query_id": "q2",
+        "baseline_avg_rel": 2.0,
+        "candidate_avg_rel": 2.0,
+        "delta": 0.0,
+        "baseline_top": "p8",
+        "candidate_top": "p8"
+      },
+      {
+        "query_id": "q3",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 1.333333,
+        "delta": 1.0,
+        "baseline_top": "p15",
+        "candidate_top": "p15"
+      },
+      {
+        "query_id": "q4",
+        "baseline_avg_rel": 2.0,
+        "candidate_avg_rel": 2.0,
+        "delta": 0.0,
+        "baseline_top": "p4",
+        "candidate_top": "p4"
+      },
+      {
+        "query_id": "q5",
+        "baseline_avg_rel": 2.0,
+        "candidate_avg_rel": 2.0,
+        "delta": 0.0,
+        "baseline_top": "p6",
+        "candidate_top": "p6"
+      },
+      {
+        "query_id": "q6",
+        "baseline_avg_rel": 1.666667,
+        "candidate_avg_rel": 1.666667,
+        "delta": 0.0,
+        "baseline_top": "p13",
+        "candidate_top": "p13"
+      },
+      {
+        "query_id": "q7",
+        "baseline_avg_rel": 2.0,
+        "candidate_avg_rel": 2.0,
+        "delta": 0.0,
+        "baseline_top": "p5",
+        "candidate_top": "p5"
+      },
+      {
+        "query_id": "q8",
+        "baseline_avg_rel": 2.0,
+        "candidate_avg_rel": 2.0,
+        "delta": 0.0,
+        "baseline_top": "p14",
+        "candidate_top": "p14"
+      },
+      {
+        "query_id": "q9",
+        "baseline_avg_rel": 2.333333,
+        "candidate_avg_rel": 2.333333,
+        "delta": 0.0,
+        "baseline_top": "p19",
+        "candidate_top": "p19"
+      }
+    ],
+    "5": [
+      {
+        "query_id": "q1",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "p1",
+        "candidate_top": "p1"
+      },
+      {
+        "query_id": "q10",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "p20",
+        "candidate_top": "p20"
+      },
+      {
+        "query_id": "q2",
+        "baseline_avg_rel": 1.4,
+        "candidate_avg_rel": 1.4,
+        "delta": 0.0,
+        "baseline_top": "p8",
+        "candidate_top": "p8"
+      },
+      {
+        "query_id": "q3",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 1.4,
+        "delta": 0.6,
+        "baseline_top": "p15",
+        "candidate_top": "p15"
+      },
+      {
+        "query_id": "q4",
+        "baseline_avg_rel": 1.2,
+        "candidate_avg_rel": 1.4,
+        "delta": 0.2,
+        "baseline_top": "p4",
+        "candidate_top": "p4"
+      },
+      {
+        "query_id": "q5",
+        "baseline_avg_rel": 1.6,
+        "candidate_avg_rel": 1.2,
+        "delta": -0.4,
+        "baseline_top": "p6",
+        "candidate_top": "p6"
+      },
+      {
+        "query_id": "q6",
+        "baseline_avg_rel": 1.2,
+        "candidate_avg_rel": 1.2,
+        "delta": 0.0,
+        "baseline_top": "p13",
+        "candidate_top": "p13"
+      },
+      {
+        "query_id": "q7",
+        "baseline_avg_rel": 1.2,
+        "candidate_avg_rel": 1.2,
+        "delta": 0.0,
+        "baseline_top": "p5",
+        "candidate_top": "p5"
+      },
+      {
+        "query_id": "q8",
+        "baseline_avg_rel": 1.2,
+        "candidate_avg_rel": 1.2,
+        "delta": 0.0,
+        "baseline_top": "p14",
+        "candidate_top": "p14"
+      },
+      {
+        "query_id": "q9",
+        "baseline_avg_rel": 1.4,
+        "candidate_avg_rel": 1.4,
+        "delta": 0.0,
+        "baseline_top": "p19",
+        "candidate_top": "p19"
+      }
+    ],
+    "10": [
+      {
+        "query_id": "q1",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.1,
+        "baseline_top": "p1",
+        "candidate_top": "p1"
+      },
+      {
+        "query_id": "q10",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.1,
+        "baseline_top": "p20",
+        "candidate_top": "p20"
+      },
+      {
+        "query_id": "q2",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.0,
+        "baseline_top": "p8",
+        "candidate_top": "p8"
+      },
+      {
+        "query_id": "q3",
+        "baseline_avg_rel": 0.9,
+        "candidate_avg_rel": 0.9,
+        "delta": 0.0,
+        "baseline_top": "p15",
+        "candidate_top": "p15"
+      },
+      {
+        "query_id": "q4",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.0,
+        "baseline_top": "p4",
+        "candidate_top": "p4"
+      },
+      {
+        "query_id": "q5",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "p6",
+        "candidate_top": "p6"
+      },
+      {
+        "query_id": "q6",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "p13",
+        "candidate_top": "p13"
+      },
+      {
+        "query_id": "q7",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "p5",
+        "candidate_top": "p5"
+      },
+      {
+        "query_id": "q8",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.6,
+        "delta": -0.1,
+        "baseline_top": "p14",
+        "candidate_top": "p14"
+      },
+      {
+        "query_id": "q9",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.0,
+        "baseline_top": "p19",
+        "candidate_top": "p19"
+      }
+    ]
+  },
+  "improved_queries": [
+    {
+      "query_id": "q3",
+      "baseline_avg_rel": 0.333333,
+      "candidate_avg_rel": 1.333333,
+      "delta": 1.0,
+      "baseline_top": "p15",
+      "candidate_top": "p15"
+    }
+  ],
+  "worsened_queries": [],
+  "next_actions": [
+    "Keep the candidate mode for the next dataset expansion.",
+    "Add harder negative examples before tuning weights.",
+    "Compare against an optional neural embedding backend later."
+  ]
 }

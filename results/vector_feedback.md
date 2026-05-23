@@ -1,26 +1,38 @@
-# Vector feedback report
+# Mode feedback report
 
-Status: **pending CI artifact refresh**
+Judgment: **PASS**
+Baseline mode: **vector_baseline**
+Candidate mode: **vector_structure_rerank**
+Primary cutoff: **top-3**
 
-This file is a repository-visible snapshot target for the dependency-free TF-IDF vector experiment.
+## Metrics
 
-The CI now runs:
+| k | mode | nDCG | MRR | AvgRel |
+|---:|---|---:|---:|---:|
+| 3 | vector_baseline | 0.827494 | 0.933333 | 1.700000 |
+| 3 | vector_structure_rerank | 0.860886 | 0.950000 | 1.800000 |
+| 5 | vector_baseline | 0.863475 | 0.933333 | 1.160000 |
+| 5 | vector_structure_rerank | 0.887667 | 0.950000 | 1.200000 |
+| 10 | vector_baseline | 0.904456 | 0.933333 | 0.670000 |
+| 10 | vector_structure_rerank | 0.920002 | 0.950000 | 0.680000 |
 
-```bash
-python -m structure_rerank.vector_experiment
-python -m structure_rerank.evaluate --results results/vector_results.jsonl --skip-rerank
-python -m structure_rerank.feedback --results results/vector_results.jsonl --feedback-md results/vector_feedback.md --feedback-json results/vector_feedback.json --skip-rerank
-```
+## Primary query deltas
 
-## Modes
+| query_id | baseline AvgRel | candidate AvgRel | delta | baseline top | candidate top |
+|---|---:|---:|---:|---|---|
+| q1 | 1.000000 | 1.000000 | 0.000000 | p1 | p1 |
+| q10 | 1.666667 | 1.666667 | 0.000000 | p20 | p20 |
+| q2 | 2.000000 | 2.000000 | 0.000000 | p8 | p8 |
+| q3 | 0.333333 | 1.333333 | 1.000000 | p15 | p15 |
+| q4 | 2.000000 | 2.000000 | 0.000000 | p4 | p4 |
+| q5 | 2.000000 | 2.000000 | 0.000000 | p6 | p6 |
+| q6 | 1.666667 | 1.666667 | 0.000000 | p13 | p13 |
+| q7 | 2.000000 | 2.000000 | 0.000000 | p5 | p5 |
+| q8 | 2.000000 | 2.000000 | 0.000000 | p14 | p14 |
+| q9 | 2.333333 | 2.333333 | 0.000000 | p19 | p19 |
 
-- `vector_baseline`
-- `vector_structure_rerank`
+## Next actions
 
-## Purpose
-
-This checks whether structure-aware reranking still helps when the baseline is a vector-space scorer instead of raw lexical overlap.
-
-## Next action
-
-Inspect the CI artifact and replace this snapshot with the generated metrics.
+- Keep the candidate mode for the next dataset expansion.
+- Add harder negative examples before tuning weights.
+- Compare against an optional neural embedding backend later.

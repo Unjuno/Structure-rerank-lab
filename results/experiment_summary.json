@@ -1,11 +1,35 @@
 {
-  "status": "pending CI artifact refresh",
-  "summary_target": "results/experiment_summary.md",
-  "checks": [
-    "lexical baseline vs structure rerank",
-    "TF-IDF vector baseline vs vector structure rerank",
-    "top-3 delta",
-    "harmful modes",
-    "next actions"
+  "status": "PASS",
+  "blockers": [],
+  "lexical_top3": {
+    "k": 3,
+    "baseline_mode": "baseline",
+    "candidate_mode": "structure_rerank",
+    "baseline_nDCG": 0.799869,
+    "candidate_nDCG": 0.871324,
+    "delta_nDCG": 0.07145499999999994,
+    "baseline_AvgRel": 1.633333,
+    "candidate_AvgRel": 1.733333,
+    "delta_AvgRel": 0.10000000000000009
+  },
+  "vector_top3": {
+    "k": 3,
+    "baseline_mode": "vector_baseline",
+    "candidate_mode": "vector_structure_rerank",
+    "baseline_nDCG": 0.827494,
+    "candidate_nDCG": 0.860886,
+    "delta_nDCG": 0.03339200000000009,
+    "baseline_AvgRel": 1.7,
+    "candidate_AvgRel": 1.8,
+    "delta_AvgRel": 0.10000000000000009
+  },
+  "harmful_modes": {
+    "structure_causal_only": 1
+  },
+  "next_actions": [
+    "inspect harmful modes: structure_causal_only",
+    "add a real-like exported sample without secrets",
+    "keep TF-IDF vector baseline as CI-safe baseline",
+    "add optional neural embedding backend only after real-like sample check"
   ]
 }

@@ -1,30 +1,25 @@
 # Experiment summary
 
-Status: **pending CI artifact refresh**
+Overall status: **PASS**
 
-This file is the repository-visible summary target for the full experiment loop.
+## Top-3 comparison
 
-The CI generates:
+| family | baseline | candidate | baseline nDCG@3 | candidate nDCG@3 | delta nDCG@3 | baseline AvgRel@3 | candidate AvgRel@3 | delta AvgRel@3 |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| lexical | baseline | structure_rerank | 0.799869 | 0.871324 | 0.071455 | 1.633333 | 1.733333 | 0.100000 |
+| vector | vector_baseline | vector_structure_rerank | 0.827494 | 0.860886 | 0.033392 | 1.700000 | 1.800000 | 0.100000 |
 
-```bash
-python -m structure_rerank.experiment_summary
-```
+## Blockers
 
-## What it summarizes
+- none
 
-- lexical baseline vs structure rerank
-- TF-IDF vector baseline vs vector + structure rerank
-- top-3 deltas
-- harmful modes from diagnostics
-- blockers
-- next actions
+## Harmful modes
 
-## Current expected decision rule
+- structure_causal_only: 1
 
-- If lexical and vector structure rerank both improve nDCG@3, the sample experiment can move to a real-like exported dataset.
-- If vector structure rerank fails, fix weighting or query-intent gating before adding more data.
-- If harmful modes remain, inspect their rank movements before increasing their weight.
+## Next actions
 
-## Next action
-
-Inspect the latest CI artifact, then replace this placeholder with generated values if needed.
+- inspect harmful modes: structure_causal_only
+- add a real-like exported sample without secrets
+- keep TF-IDF vector baseline as CI-safe baseline
+- add optional neural embedding backend only after real-like sample check
