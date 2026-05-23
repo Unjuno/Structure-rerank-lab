@@ -1,0 +1,64 @@
+name: BEIR Benchmarks
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'structure_rerank/beir_adapter.py'
+      - '.github/workflows/beir-benchmarks.yml'
+
+jobs:
+  beir:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        dataset: [arguana, scifact, nfcorpus]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache BEIR downloads
+        uses: actions/cache@v4
+        with:
+          path: .cache/beir
+          key: beir-${{ matrix.dataset }}-v1
+
+      - name: Convert dataset
+        run: >-
+          python -m structure_rerank.beir_adapter
+          --dataset ${{ matrix.dataset }}
+          --out results/beir/${{ matrix.dataset }}
+          --max-queries 200
+          --max-corpus 8000
+
+      - name: Run vector experiment
+        run: >-
+          python -m structure_rerank.vector_experiment
+          --posts results/beir/${{ matrix.dataset }}/posts.jsonl
+          --queries results/beir/${{ matrix.dataset }}/queries.jsonl
+          --structures results/beir/${{ matrix.dataset }}/structures.jsonl
+          --output results/beir/${{ matrix.dataset }}/vector_results.jsonl
+
+      - name: Generate feedback
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/beir/${{ matrix.dataset }}/vector_results.jsonl
+          --judgments results/beir/${{ matrix.dataset }}/judgments.jsonl
+          --output-md results/beir/${{ matrix.dataset }}/vector_feedback.md
+          --output-json results/beir/${{ matrix.dataset }}/vector_feedback.json
+          --baseline-mode vector_baseline
+          --candidate-mode vector_structure_rerank
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: beir-${{ matrix.dataset }}
+          path: |
+            results/beir/${{ matrix.dataset }}/vector_feedback.md
+            results/beir/${{ matrix.dataset }}/vector_feedback.json
+            results/beir/${{ matrix.dataset }}/vector_results.jsonl
