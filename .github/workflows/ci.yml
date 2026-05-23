@@ -6,12 +6,17 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: write
+
 jobs:
   sample-experiment:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -94,3 +99,16 @@ jobs:
             results/vector_rank_movements.json
             results/experiment_summary.md
             results/experiment_summary.json
+
+      - name: Commit generated experiment snapshots
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/
+          if git diff --cached --quiet; then
+            echo "no generated result changes"
+          else
+            git commit -m "results: refresh generated experiment snapshots [skip ci]"
+            git push
+          fi
