@@ -35,6 +35,7 @@ def row_map(rows: List[Mapping[str, Any]]) -> Dict[str, Mapping[str, Any]]:
 def explain(
     results_path: Path,
     judgments_path: Path,
+    baseline_mode: str,
     compare_mode: str,
     k: int,
     max_items_per_query: int,
@@ -42,7 +43,7 @@ def explain(
     rows = load_jsonl(results_path)
     judgments = load_judgments(judgments_path)
     grouped = group_by_mode_query(rows)
-    baseline_by_query = grouped.get("baseline", {})
+    baseline_by_query = grouped.get(baseline_mode, {})
     compare_by_query = grouped.get(compare_mode, {})
     query_ids = sorted(set(baseline_by_query) | set(compare_by_query))
 
@@ -93,11 +94,12 @@ def explain(
         moves.sort(key=lambda item: (item["relevance"], item["rank_delta"] or 0), reverse=True)
         explanations.append({"query_id": query_id, "moves": moves[:max_items_per_query]})
 
-    return {"compare_mode": compare_mode, "k": k, "queries": explanations}
+    return {"baseline_mode": baseline_mode, "compare_mode": compare_mode, "k": k, "queries": explanations}
 
 
 def write_md(report: Mapping[str, Any], output_path: Path) -> None:
     lines: List[str] = ["# Rank movement explanations", ""]
+    lines.append(f"Baseline mode: **{report['baseline_mode']}**")
     lines.append(f"Compare mode: **{report['compare_mode']}**")
     lines.append(f"Cutoff: **top-{report['k']}**")
     lines.append("")
@@ -124,6 +126,7 @@ def run(
     judgments_path: Path = DEFAULT_JUDGMENTS,
     explanations_md_path: Path = DEFAULT_EXPLANATIONS_MD,
     explanations_json_path: Path = DEFAULT_EXPLANATIONS_JSON,
+    baseline_mode: str = "baseline",
     compare_mode: str = "structure_rerank",
     k: int = 10,
     max_items_per_query: int = 8,
@@ -131,7 +134,7 @@ def run(
 ) -> Dict[str, Any]:
     if not skip_rerank:
         run_rerank(output_path=results_path, top_k=k)
-    report = explain(results_path, judgments_path, compare_mode, k, max_items_per_query)
+    report = explain(results_path, judgments_path, baseline_mode, compare_mode, k, max_items_per_query)
     explanations_md_path.parent.mkdir(parents=True, exist_ok=True)
     explanations_json_path.parent.mkdir(parents=True, exist_ok=True)
     write_md(report, explanations_md_path)
@@ -147,6 +150,7 @@ def main() -> None:
     parser.add_argument("--judgments", type=Path, default=DEFAULT_JUDGMENTS)
     parser.add_argument("--explanations-md", type=Path, default=DEFAULT_EXPLANATIONS_MD)
     parser.add_argument("--explanations-json", type=Path, default=DEFAULT_EXPLANATIONS_JSON)
+    parser.add_argument("--baseline-mode", default="baseline")
     parser.add_argument("--compare-mode", default="structure_rerank")
     parser.add_argument("--k", type=int, default=10)
     parser.add_argument("--max-items-per-query", type=int, default=8)
@@ -157,6 +161,7 @@ def main() -> None:
         judgments_path=args.judgments,
         explanations_md_path=args.explanations_md,
         explanations_json_path=args.explanations_json,
+        baseline_mode=args.baseline_mode,
         compare_mode=args.compare_mode,
         k=args.k,
         max_items_per_query=args.max_items_per_query,
