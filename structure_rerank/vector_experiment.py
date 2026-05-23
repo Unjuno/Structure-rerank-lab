@@ -26,7 +26,7 @@ def rows_for_query(
     alpha: float = 0.8,
     beta: float = 0.2,
 ) -> List[Dict[str, Any]]:
-    raw_base = [(str(post["id"]), base_scores.get(str(post["id"], 0.0))) for post in posts]
+    raw_base = [(str(post["id"]), base_scores.get(str(post["id"]), 0.0)) for post in posts]
     raw_struct = []
     for post in posts:
         post_id = str(post["id"])
