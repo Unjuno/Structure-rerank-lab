@@ -2,37 +2,15 @@ name: BEIR Summary
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  summary:
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Generate BEIR summary
-        run: python -m structure_rerank.beir_summary
-
-      - name: Commit summary
-        if: github.event_name == 'push'
+      - name: Archived workflow
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase || true
-          git add results/beir/summary.md results/beir/summary.json
-          if git diff --cached --quiet; then
-            echo "no BEIR summary changes"
-          else
-            git commit -m "results: refresh BEIR summary [skip ci]"
-            git push || true
-          fi
+          echo "Archived: BEIR summary is preserved in results/beir/summary.md."
+          echo "Refresh manually only after benchmark result files are intentionally updated."
