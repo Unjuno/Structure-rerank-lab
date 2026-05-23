@@ -1,5 +1,5 @@
 {
-  "verdict": "UNCERTAIN",
+  "verdict": "PASS",
   "baseline_mode": "vector_baseline",
   "candidate_mode": "vector_structure_rerank",
   "primary_k": 3,
@@ -11,9 +11,9 @@
         "AvgRel@3": 1.066667
       },
       "vector_structure_rerank": {
-        "nDCG@3": 0.859447,
+        "nDCG@3": 0.865597,
         "MRR": 1.0,
-        "AvgRel@3": 1.1
+        "AvgRel@3": 1.133333
       }
     },
     "5": {
@@ -23,9 +23,9 @@
         "AvgRel@5": 0.78
       },
       "vector_structure_rerank": {
-        "nDCG@5": 0.889093,
+        "nDCG@5": 0.893304,
         "MRR": 1.0,
-        "AvgRel@5": 0.76
+        "AvgRel@5": 0.78
       }
     },
     "10": {
@@ -35,7 +35,7 @@
         "AvgRel@10": 0.44
       },
       "vector_structure_rerank": {
-        "nDCG@10": 0.91237,
+        "nDCG@10": 0.912199,
         "MRR": 1.0,
         "AvgRel@10": 0.44
       }
@@ -46,8 +46,8 @@
       {
         "query_id": "rq1",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 1.0,
-        "delta": 0.0,
+        "candidate_avg_rel": 1.333333,
+        "delta": 0.333333,
         "baseline_top": "r1",
         "candidate_top": "r1"
       },
@@ -128,8 +128,8 @@
       {
         "query_id": "rq1",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 0.8,
-        "delta": -0.2,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
         "baseline_top": "r1",
         "candidate_top": "r1"
       },
@@ -291,6 +291,14 @@
   },
   "improved_queries": [
     {
+      "query_id": "rq1",
+      "baseline_avg_rel": 1.0,
+      "candidate_avg_rel": 1.333333,
+      "delta": 0.333333,
+      "baseline_top": "r1",
+      "candidate_top": "r1"
+    },
+    {
       "query_id": "rq6",
       "baseline_avg_rel": 1.333333,
       "candidate_avg_rel": 1.666667,
@@ -301,8 +309,8 @@
   ],
   "worsened_queries": [],
   "next_actions": [
-    "Increase query count and add harder cases.",
-    "Do not claim improvement from this mode yet.",
-    "Inspect rank movement explanations for near misses."
+    "Keep the candidate mode for the next dataset expansion.",
+    "Add harder negative examples before tuning weights.",
+    "Compare against an optional neural embedding backend later."
   ]
 }

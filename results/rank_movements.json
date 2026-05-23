@@ -5,96 +5,7 @@
   "queries": [
     {
       "query_id": "q1",
-      "moves": [
-        {
-          "post_id": "p5",
-          "relevance": 2,
-          "direction": "up",
-          "baseline_rank": 6,
-          "compare_rank": 5,
-          "rank_delta": 1,
-          "baseline_score": 0.5,
-          "structure_score": 0.314815,
-          "rerank_score": 0.462963
-        },
-        {
-          "post_id": "p7",
-          "relevance": 1,
-          "direction": "entered_top_k",
-          "baseline_rank": null,
-          "compare_rank": 10,
-          "rank_delta": null,
-          "baseline_score": null,
-          "structure_score": 0.296296,
-          "rerank_score": 0.059259
-        },
-        {
-          "post_id": "p6",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 7,
-          "compare_rank": 4,
-          "rank_delta": 3,
-          "baseline_score": 0.5,
-          "structure_score": 0.333333,
-          "rerank_score": 0.466667
-        },
-        {
-          "post_id": "p14",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 3,
-          "compare_rank": 2,
-          "rank_delta": 1,
-          "baseline_score": 0.75,
-          "structure_score": 0.314815,
-          "rerank_score": 0.662963
-        },
-        {
-          "post_id": "p16",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 8,
-          "compare_rank": 7,
-          "rank_delta": 1,
-          "baseline_score": 0.5,
-          "structure_score": 0.052778,
-          "rerank_score": 0.410556
-        },
-        {
-          "post_id": "p2",
-          "relevance": 0,
-          "direction": "left_top_k",
-          "baseline_rank": 10,
-          "compare_rank": null,
-          "rank_delta": null,
-          "baseline_score": 0.0,
-          "structure_score": null,
-          "rerank_score": null
-        },
-        {
-          "post_id": "p9",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 2,
-          "compare_rank": 3,
-          "rank_delta": -1,
-          "baseline_score": 0.75,
-          "structure_score": 0.041667,
-          "rerank_score": 0.608333
-        },
-        {
-          "post_id": "p3",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 4,
-          "compare_rank": 6,
-          "rank_delta": -2,
-          "baseline_score": 0.5,
-          "structure_score": 0.052778,
-          "rerank_score": 0.410556
-        }
-      ]
+      "moves": []
     },
     {
       "query_id": "q10",
@@ -102,178 +13,11 @@
     },
     {
       "query_id": "q2",
-      "moves": [
-        {
-          "post_id": "p4",
-          "relevance": 1,
-          "direction": "down",
-          "baseline_rank": 4,
-          "compare_rank": 5,
-          "rank_delta": -1,
-          "baseline_score": 0.5,
-          "structure_score": 0.047059,
-          "rerank_score": 0.409412
-        },
-        {
-          "post_id": "p5",
-          "relevance": 1,
-          "direction": "down",
-          "baseline_rank": 6,
-          "compare_rank": 8,
-          "rank_delta": -2,
-          "baseline_score": 0.25,
-          "structure_score": 0.052941,
-          "rerank_score": 0.210588
-        },
-        {
-          "post_id": "p18",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 9,
-          "compare_rank": 6,
-          "rank_delta": 3,
-          "baseline_score": 0.25,
-          "structure_score": 0.352941,
-          "rerank_score": 0.270588
-        },
-        {
-          "post_id": "p15",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 5,
-          "compare_rank": 4,
-          "rank_delta": 1,
-          "baseline_score": 0.5,
-          "structure_score": 0.05,
-          "rerank_score": 0.41
-        },
-        {
-          "post_id": "p16",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 8,
-          "compare_rank": 7,
-          "rank_delta": 1,
-          "baseline_score": 0.25,
-          "structure_score": 0.055882,
-          "rerank_score": 0.211176
-        },
-        {
-          "post_id": "p19",
-          "relevance": 0,
-          "direction": "left_top_k",
-          "baseline_rank": 10,
-          "compare_rank": null,
-          "rank_delta": null,
-          "baseline_score": 0.25,
-          "structure_score": null,
-          "rerank_score": null
-        },
-        {
-          "post_id": "p20",
-          "relevance": 0,
-          "direction": "entered_top_k",
-          "baseline_rank": null,
-          "compare_rank": 10,
-          "rank_delta": null,
-          "baseline_score": null,
-          "structure_score": 0.052941,
-          "rerank_score": 0.210588
-        },
-        {
-          "post_id": "p11",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 7,
-          "compare_rank": 9,
-          "rank_delta": -2,
-          "baseline_score": 0.25,
-          "structure_score": 0.052941,
-          "rerank_score": 0.210588
-        }
-      ]
+      "moves": []
     },
     {
       "query_id": "q3",
-      "moves": [
-        {
-          "post_id": "p16",
-          "relevance": 3,
-          "direction": "up",
-          "baseline_rank": 9,
-          "compare_rank": 4,
-          "rank_delta": 5,
-          "baseline_score": 0.5,
-          "structure_score": 0.5,
-          "rerank_score": 0.5
-        },
-        {
-          "post_id": "p8",
-          "relevance": 2,
-          "direction": "down",
-          "baseline_rank": 6,
-          "compare_rank": 8,
-          "rank_delta": -2,
-          "baseline_score": 0.5,
-          "structure_score": 0.067105,
-          "rerank_score": 0.413421
-        },
-        {
-          "post_id": "p20",
-          "relevance": 1,
-          "direction": "up",
-          "baseline_rank": 10,
-          "compare_rank": 5,
-          "rank_delta": 5,
-          "baseline_score": 0.5,
-          "structure_score": 0.5,
-          "rerank_score": 0.5
-        },
-        {
-          "post_id": "p11",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 8,
-          "compare_rank": 7,
-          "rank_delta": 1,
-          "baseline_score": 0.5,
-          "structure_score": 0.071053,
-          "rerank_score": 0.414211
-        },
-        {
-          "post_id": "p5",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 5,
-          "compare_rank": 6,
-          "rank_delta": -1,
-          "baseline_score": 0.5,
-          "structure_score": 0.071053,
-          "rerank_score": 0.414211
-        },
-        {
-          "post_id": "p9",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 7,
-          "compare_rank": 10,
-          "rank_delta": -3,
-          "baseline_score": 0.5,
-          "structure_score": 0.0,
-          "rerank_score": 0.4
-        },
-        {
-          "post_id": "p4",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 4,
-          "compare_rank": 9,
-          "rank_delta": -5,
-          "baseline_score": 0.5,
-          "structure_score": 0.0,
-          "rerank_score": 0.4
-        }
-      ]
+      "moves": []
     },
     {
       "query_id": "q4",
@@ -299,72 +43,6 @@
           "baseline_score": 1.0,
           "structure_score": 0.894737,
           "rerank_score": 0.978947
-        },
-        {
-          "post_id": "p5",
-          "relevance": 1,
-          "direction": "down",
-          "baseline_rank": 3,
-          "compare_rank": 4,
-          "rank_delta": -1,
-          "baseline_score": 0.333333,
-          "structure_score": 0.0,
-          "rerank_score": 0.266667
-        },
-        {
-          "post_id": "p18",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 9,
-          "compare_rank": 3,
-          "rank_delta": 6,
-          "baseline_score": 0.333333,
-          "structure_score": 0.047368,
-          "rerank_score": 0.27614
-        },
-        {
-          "post_id": "p11",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 6,
-          "compare_rank": 7,
-          "rank_delta": -1,
-          "baseline_score": 0.333333,
-          "structure_score": 0.0,
-          "rerank_score": 0.266667
-        },
-        {
-          "post_id": "p15",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 7,
-          "compare_rank": 8,
-          "rank_delta": -1,
-          "baseline_score": 0.333333,
-          "structure_score": 0.0,
-          "rerank_score": 0.266667
-        },
-        {
-          "post_id": "p16",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 8,
-          "compare_rank": 9,
-          "rank_delta": -1,
-          "baseline_score": 0.333333,
-          "structure_score": 0.0,
-          "rerank_score": 0.266667
-        },
-        {
-          "post_id": "p7",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 4,
-          "compare_rank": 5,
-          "rank_delta": -1,
-          "baseline_score": 0.333333,
-          "structure_score": 0.0,
-          "rerank_score": 0.266667
         }
       ]
     },
@@ -379,52 +57,30 @@
           "compare_rank": 2,
           "rank_delta": 2,
           "baseline_score": 0.5,
-          "structure_score": 0.62963,
-          "rerank_score": 0.525926
+          "structure_score": 0.419753,
+          "rerank_score": 0.483951
         },
         {
-          "post_id": "p4",
-          "relevance": 2,
-          "direction": "down",
-          "baseline_rank": 6,
-          "compare_rank": 8,
-          "rank_delta": -2,
-          "baseline_score": 0.333333,
-          "structure_score": 0.022222,
-          "rerank_score": 0.271111
-        },
-        {
-          "post_id": "p5",
+          "post_id": "p16",
           "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 7,
-          "compare_rank": 5,
-          "rank_delta": 2,
-          "baseline_score": 0.333333,
-          "structure_score": 0.157407,
-          "rerank_score": 0.298148
+          "direction": "entered_top_k",
+          "baseline_rank": null,
+          "compare_rank": 10,
+          "rank_delta": null,
+          "baseline_score": null,
+          "structure_score": 0.005864,
+          "rerank_score": 0.134506
         },
         {
-          "post_id": "p11",
+          "post_id": "p2",
           "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 8,
-          "compare_rank": 7,
-          "rank_delta": 1,
-          "baseline_score": 0.333333,
-          "structure_score": 0.025,
-          "rerank_score": 0.271667
-        },
-        {
-          "post_id": "p3",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 5,
-          "compare_rank": 6,
-          "rank_delta": -1,
-          "baseline_score": 0.333333,
-          "structure_score": 0.052778,
-          "rerank_score": 0.277222
+          "direction": "left_top_k",
+          "baseline_rank": 10,
+          "compare_rank": null,
+          "rank_delta": null,
+          "baseline_score": 0.166667,
+          "structure_score": null,
+          "rerank_score": null
         },
         {
           "post_id": "p1",
@@ -461,8 +117,8 @@
           "compare_rank": 5,
           "rank_delta": null,
           "baseline_score": null,
-          "structure_score": 0.666667,
-          "rerank_score": 0.533333
+          "structure_score": 0.444444,
+          "rerank_score": 0.488889
         },
         {
           "post_id": "p1",
@@ -472,30 +128,8 @@
           "compare_rank": 6,
           "rank_delta": -1,
           "baseline_score": 0.5,
-          "structure_score": 0.084211,
-          "rerank_score": 0.416842
-        },
-        {
-          "post_id": "p14",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 9,
-          "compare_rank": 7,
-          "rank_delta": 2,
-          "baseline_score": 0.5,
-          "structure_score": 0.047368,
-          "rerank_score": 0.409474
-        },
-        {
-          "post_id": "p12",
-          "relevance": 0,
-          "direction": "left_top_k",
-          "baseline_rank": 8,
-          "compare_rank": null,
-          "rank_delta": null,
-          "baseline_score": 0.5,
-          "structure_score": null,
-          "rerank_score": null
+          "structure_score": 0.018713,
+          "rerank_score": 0.403743
         },
         {
           "post_id": "p15",
@@ -509,17 +143,6 @@
           "rerank_score": null
         },
         {
-          "post_id": "p18",
-          "relevance": 0,
-          "direction": "entered_top_k",
-          "baseline_rank": null,
-          "compare_rank": 8,
-          "rank_delta": null,
-          "baseline_score": null,
-          "structure_score": 0.047368,
-          "rerank_score": 0.409474
-        },
-        {
           "post_id": "p11",
           "relevance": 0,
           "direction": "down",
@@ -527,8 +150,41 @@
           "compare_rank": 3,
           "rank_delta": -1,
           "baseline_score": 1.0,
-          "structure_score": 0.047368,
-          "rerank_score": 0.809474
+          "structure_score": 0.0,
+          "rerank_score": 0.8
+        },
+        {
+          "post_id": "p12",
+          "relevance": 0,
+          "direction": "down",
+          "baseline_rank": 8,
+          "compare_rank": 9,
+          "rank_delta": -1,
+          "baseline_score": 0.5,
+          "structure_score": 0.0,
+          "rerank_score": 0.4
+        },
+        {
+          "post_id": "p14",
+          "relevance": 0,
+          "direction": "down",
+          "baseline_rank": 9,
+          "compare_rank": 10,
+          "rank_delta": -1,
+          "baseline_score": 0.5,
+          "structure_score": 0.0,
+          "rerank_score": 0.4
+        },
+        {
+          "post_id": "p2",
+          "relevance": 0,
+          "direction": "down",
+          "baseline_rank": 6,
+          "compare_rank": 7,
+          "rank_delta": -1,
+          "baseline_score": 0.5,
+          "structure_score": 0.0,
+          "rerank_score": 0.4
         }
       ]
     },
@@ -554,158 +210,58 @@
           "compare_rank": 2,
           "rank_delta": -1,
           "baseline_score": 1.0,
-          "structure_score": 0.875,
-          "rerank_score": 0.975
+          "structure_score": 0.765625,
+          "rerank_score": 0.953125
+        },
+        {
+          "post_id": "p13",
+          "relevance": 0,
+          "direction": "up",
+          "baseline_rank": 10,
+          "compare_rank": 7,
+          "rank_delta": 3,
+          "baseline_score": 0.25,
+          "structure_score": 0.003299,
+          "rerank_score": 0.20066
         },
         {
           "post_id": "p10",
           "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 8,
-          "compare_rank": 7,
-          "rank_delta": 1,
-          "baseline_score": 0.25,
-          "structure_score": 0.131944,
-          "rerank_score": 0.226389
-        },
-        {
-          "post_id": "p13",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 10,
-          "compare_rank": 9,
-          "rank_delta": 1,
-          "baseline_score": 0.25,
-          "structure_score": 0.039583,
-          "rerank_score": 0.207917
-        },
-        {
-          "post_id": "p3",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 5,
-          "compare_rank": 4,
-          "rank_delta": 1,
-          "baseline_score": 0.375,
-          "structure_score": 0.019792,
-          "rerank_score": 0.303958
-        },
-        {
-          "post_id": "p8",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 6,
-          "compare_rank": 5,
-          "rank_delta": 1,
-          "baseline_score": 0.375,
-          "structure_score": 0.01875,
-          "rerank_score": 0.30375
-        },
-        {
-          "post_id": "p17",
-          "relevance": 0,
-          "direction": "entered_top_k",
-          "baseline_rank": null,
-          "compare_rank": 8,
-          "rank_delta": null,
-          "baseline_score": null,
-          "structure_score": 0.125,
-          "rerank_score": 0.225
-        },
-        {
-          "post_id": "p7",
-          "relevance": 0,
-          "direction": "left_top_k",
-          "baseline_rank": 7,
-          "compare_rank": null,
-          "rank_delta": null,
-          "baseline_score": 0.25,
-          "structure_score": null,
-          "rerank_score": null
-        }
-      ]
-    },
-    {
-      "query_id": "q8",
-      "moves": [
-        {
-          "post_id": "p13",
-          "relevance": 1,
-          "direction": "up",
-          "baseline_rank": 8,
-          "compare_rank": 6,
-          "rank_delta": 2,
-          "baseline_score": 0.2,
-          "structure_score": 0.039583,
-          "rerank_score": 0.167917
-        },
-        {
-          "post_id": "p17",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 10,
-          "compare_rank": 5,
-          "rank_delta": 5,
-          "baseline_score": 0.2,
-          "structure_score": 0.25,
-          "rerank_score": 0.21
-        },
-        {
-          "post_id": "p5",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 6,
-          "compare_rank": 4,
-          "rank_delta": 2,
-          "baseline_score": 0.2,
-          "structure_score": 0.25,
-          "rerank_score": 0.21
-        },
-        {
-          "post_id": "p16",
-          "relevance": 0,
           "direction": "down",
-          "baseline_rank": 9,
-          "compare_rank": 10,
+          "baseline_rank": 8,
+          "compare_rank": 9,
           "rank_delta": -1,
-          "baseline_score": 0.2,
+          "baseline_score": 0.25,
           "structure_score": 0.0,
-          "rerank_score": 0.16
+          "rerank_score": 0.2
         },
         {
           "post_id": "p12",
           "relevance": 0,
           "direction": "down",
+          "baseline_rank": 9,
+          "compare_rank": 10,
+          "rank_delta": -1,
+          "baseline_score": 0.25,
+          "structure_score": 0.0,
+          "rerank_score": 0.2
+        },
+        {
+          "post_id": "p7",
+          "relevance": 0,
+          "direction": "down",
           "baseline_rank": 7,
-          "compare_rank": 9,
-          "rank_delta": -2,
-          "baseline_score": 0.2,
-          "structure_score": 0.0,
-          "rerank_score": 0.16
-        },
-        {
-          "post_id": "p1",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 4,
-          "compare_rank": 7,
-          "rank_delta": -3,
-          "baseline_score": 0.2,
-          "structure_score": 0.0375,
-          "rerank_score": 0.1675
-        },
-        {
-          "post_id": "p4",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 5,
           "compare_rank": 8,
-          "rank_delta": -3,
-          "baseline_score": 0.2,
+          "rank_delta": -1,
+          "baseline_score": 0.25,
           "structure_score": 0.0,
-          "rerank_score": 0.16
+          "rerank_score": 0.2
         }
       ]
+    },
+    {
+      "query_id": "q8",
+      "moves": []
     },
     {
       "query_id": "q9",
@@ -718,8 +274,8 @@
           "compare_rank": 2,
           "rank_delta": 1,
           "baseline_score": 0.8,
-          "structure_score": 0.158824,
-          "rerank_score": 0.671765
+          "structure_score": 0.052941,
+          "rerank_score": 0.650588
         },
         {
           "post_id": "p7",
@@ -731,28 +287,6 @@
           "baseline_score": 0.8,
           "structure_score": 0.0,
           "rerank_score": 0.64
-        },
-        {
-          "post_id": "p5",
-          "relevance": 0,
-          "direction": "up",
-          "baseline_rank": 5,
-          "compare_rank": 4,
-          "rank_delta": 1,
-          "baseline_score": 0.2,
-          "structure_score": 0.0375,
-          "rerank_score": 0.1675
-        },
-        {
-          "post_id": "p2",
-          "relevance": 0,
-          "direction": "down",
-          "baseline_rank": 4,
-          "compare_rank": 5,
-          "rank_delta": -1,
-          "baseline_score": 0.2,
-          "structure_score": 0.035294,
-          "rerank_score": 0.167059
         }
       ]
     }

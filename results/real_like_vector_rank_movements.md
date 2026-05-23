@@ -8,16 +8,12 @@ Cutoff: **top-10**
 
 | post_id | relevance | direction | baseline rank | compare rank | rank delta | structure score | rerank score |
 |---|---:|---|---:|---:|---:|---:|---:|
-| r2 | 1 | down | 5 | 6 | -1 | 0.047222 | 0.212241 |
-| r12 | 0 | up | 6 | 3 | 3 | 0.351852 | 0.26262 |
-| r6 | 0 | down | 3 | 5 | -2 | 0.052778 | 0.222292 |
+| r9 | 1 | up | 4 | 3 | 1 | 0.023457 | 0.2149 |
+| r6 | 0 | down | 3 | 4 | -1 | 0.0 | 0.211736 |
 
 ## rq10
 
-| post_id | relevance | direction | baseline rank | compare rank | rank delta | structure score | rerank score |
-|---|---:|---|---:|---:|---:|---:|---:|
-| r2 | 0 | up | 6 | 5 | 1 | 0.035417 | 0.09703 |
-| r5 | 0 | down | 5 | 6 | -1 | 0.0 | 0.09612 |
+No rank movements inside the cutoff.
 
 ## rq2
 
@@ -33,18 +29,15 @@ No rank movements inside the cutoff.
 
 ## rq5
 
-| post_id | relevance | direction | baseline rank | compare rank | rank delta | structure score | rerank score |
-|---|---:|---|---:|---:|---:|---:|---:|
-| r11 | 2 | up | 5 | 4 | 1 | 0.026842 | 0.099573 |
-| r13 | 0 | down | 4 | 5 | -1 | 0.0 | 0.096697 |
+No rank movements inside the cutoff.
 
 ## rq6
 
 | post_id | relevance | direction | baseline rank | compare rank | rank delta | structure score | rerank score |
 |---|---:|---|---:|---:|---:|---:|---:|
 | r9 | 1 | up | 5 | 3 | 2 | 0.894737 | 0.49521 |
-| r14 | 0 | down | 3 | 4 | -1 | 0.071053 | 0.445319 |
-| r2 | 0 | down | 4 | 5 | -1 | 0.067105 | 0.434024 |
+| r14 | 0 | down | 3 | 4 | -1 | 0.0 | 0.431108 |
+| r2 | 0 | down | 4 | 5 | -1 | 0.0 | 0.420603 |
 
 ## rq7
 

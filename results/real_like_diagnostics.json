@@ -3,27 +3,12 @@
   "query_count": 10,
   "helpful_modes": {
     "structure_contrast_only": 1,
-    "structure_definition_only": 1,
     "structure_rerank": 1
   },
-  "helpful_intent_matched_modes": {
-    "structure_definition_only": 1
-  },
-  "harmful_modes": {
-    "structure_conclusion_only": 2,
-    "structure_rerank": 2,
-    "structure_contrast_only": 1,
-    "structure_definition_only": 1
-  },
-  "harmful_intent_matched_modes": {
-    "structure_conclusion_only": 1,
-    "structure_contrast_only": 1
-  },
-  "harmful_off_intent_modes": {
-    "structure_rerank": 2,
-    "structure_conclusion_only": 1,
-    "structure_definition_only": 1
-  },
+  "helpful_intent_matched_modes": {},
+  "harmful_modes": {},
+  "harmful_intent_matched_modes": {},
+  "harmful_off_intent_modes": {},
   "per_query": [
     {
       "query_id": "rq1",
@@ -38,17 +23,25 @@
         "top_post": "r1"
       },
       "worst_mode": {
-        "mode": "structure_rerank",
-        "structure_type": null,
+        "mode": "structure_premise_only",
+        "structure_type": "premise",
         "intent_matched": false,
-        "avg_rel": 1.0,
-        "delta_vs_baseline": -0.333333,
+        "avg_rel": 1.333333,
+        "delta_vs_baseline": 0.0,
         "top_post": "r1"
       },
       "mode_scores": [
         {
           "mode": "structure_contrast_only",
           "structure_type": "contrast",
+          "intent_matched": false,
+          "avg_rel": 1.666667,
+          "delta_vs_baseline": 0.333333,
+          "top_post": "r1"
+        },
+        {
+          "mode": "structure_rerank",
+          "structure_type": null,
           "intent_matched": false,
           "avg_rel": 1.666667,
           "delta_vs_baseline": 0.333333,
@@ -71,6 +64,14 @@
           "top_post": "r1"
         },
         {
+          "mode": "structure_conclusion_only",
+          "structure_type": "conclusion",
+          "intent_matched": true,
+          "avg_rel": 1.333333,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r1"
+        },
+        {
           "mode": "structure_definition_only",
           "structure_type": "definition",
           "intent_matched": false,
@@ -84,22 +85,6 @@
           "intent_matched": false,
           "avg_rel": 1.333333,
           "delta_vs_baseline": 0.0,
-          "top_post": "r1"
-        },
-        {
-          "mode": "structure_conclusion_only",
-          "structure_type": "conclusion",
-          "intent_matched": true,
-          "avg_rel": 1.0,
-          "delta_vs_baseline": -0.333333,
-          "top_post": "r1"
-        },
-        {
-          "mode": "structure_rerank",
-          "structure_type": null,
-          "intent_matched": false,
-          "avg_rel": 1.0,
-          "delta_vs_baseline": -0.333333,
           "top_post": "r1"
         }
       ]
@@ -436,8 +421,8 @@
         "mode": "structure_rerank",
         "structure_type": null,
         "intent_matched": false,
-        "avg_rel": 1.0,
-        "delta_vs_baseline": -0.666667,
+        "avg_rel": 1.666667,
+        "delta_vs_baseline": 0.0,
         "top_post": "r5"
       },
       "mode_scores": [
@@ -458,6 +443,30 @@
           "top_post": "r5"
         },
         {
+          "mode": "structure_conclusion_only",
+          "structure_type": "conclusion",
+          "intent_matched": false,
+          "avg_rel": 1.666667,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r5"
+        },
+        {
+          "mode": "structure_contrast_only",
+          "structure_type": "contrast",
+          "intent_matched": true,
+          "avg_rel": 1.666667,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r5"
+        },
+        {
+          "mode": "structure_definition_only",
+          "structure_type": "definition",
+          "intent_matched": false,
+          "avg_rel": 1.666667,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r5"
+        },
+        {
           "mode": "structure_premise_only",
           "structure_type": "premise",
           "intent_matched": false,
@@ -466,35 +475,11 @@
           "top_post": "r5"
         },
         {
-          "mode": "structure_conclusion_only",
-          "structure_type": "conclusion",
-          "intent_matched": false,
-          "avg_rel": 1.0,
-          "delta_vs_baseline": -0.666667,
-          "top_post": "r5"
-        },
-        {
-          "mode": "structure_contrast_only",
-          "structure_type": "contrast",
-          "intent_matched": true,
-          "avg_rel": 1.0,
-          "delta_vs_baseline": -0.666667,
-          "top_post": "r5"
-        },
-        {
-          "mode": "structure_definition_only",
-          "structure_type": "definition",
-          "intent_matched": false,
-          "avg_rel": 1.0,
-          "delta_vs_baseline": -0.666667,
-          "top_post": "r5"
-        },
-        {
           "mode": "structure_rerank",
           "structure_type": null,
           "intent_matched": false,
-          "avg_rel": 1.0,
-          "delta_vs_baseline": -0.666667,
+          "avg_rel": 1.666667,
+          "delta_vs_baseline": 0.0,
           "top_post": "r5"
         }
       ]
@@ -504,38 +489,22 @@
       "intent_structure": "definition",
       "baseline_avg_rel": 1.333333,
       "best_mode": {
-        "mode": "structure_definition_only",
-        "structure_type": "definition",
-        "intent_matched": true,
-        "avg_rel": 1.666667,
-        "delta_vs_baseline": 0.333333,
+        "mode": "baseline",
+        "structure_type": null,
+        "intent_matched": false,
+        "avg_rel": 1.333333,
+        "delta_vs_baseline": 0.0,
         "top_post": "r6"
       },
       "worst_mode": {
-        "mode": "structure_premise_only",
-        "structure_type": "premise",
+        "mode": "structure_rerank",
+        "structure_type": null,
         "intent_matched": false,
         "avg_rel": 1.333333,
         "delta_vs_baseline": 0.0,
         "top_post": "r6"
       },
       "mode_scores": [
-        {
-          "mode": "structure_definition_only",
-          "structure_type": "definition",
-          "intent_matched": true,
-          "avg_rel": 1.666667,
-          "delta_vs_baseline": 0.333333,
-          "top_post": "r6"
-        },
-        {
-          "mode": "structure_rerank",
-          "structure_type": null,
-          "intent_matched": false,
-          "avg_rel": 1.666667,
-          "delta_vs_baseline": 0.333333,
-          "top_post": "r6"
-        },
         {
           "mode": "baseline",
           "structure_type": null,
@@ -569,8 +538,24 @@
           "top_post": "r6"
         },
         {
+          "mode": "structure_definition_only",
+          "structure_type": "definition",
+          "intent_matched": true,
+          "avg_rel": 1.333333,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r6"
+        },
+        {
           "mode": "structure_premise_only",
           "structure_type": "premise",
+          "intent_matched": false,
+          "avg_rel": 1.333333,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r6"
+        },
+        {
+          "mode": "structure_rerank",
+          "structure_type": null,
           "intent_matched": false,
           "avg_rel": 1.333333,
           "delta_vs_baseline": 0.0,

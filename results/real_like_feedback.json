@@ -1,5 +1,5 @@
 {
-  "verdict": "FAIL",
+  "verdict": "UNCERTAIN",
   "baseline_mode": "baseline",
   "candidate_mode": "structure_rerank",
   "primary_k": 3,
@@ -11,14 +11,14 @@
         "AvgRel@3": 1.2
       },
       "structure_rerank": {
-        "nDCG@3": 0.865597,
+        "nDCG@3": 0.889326,
         "MRR": 1.0,
-        "AvgRel@3": 1.133333
+        "AvgRel@3": 1.233333
       },
       "structure_conclusion_only": {
-        "nDCG@3": 0.861058,
+        "nDCG@3": 0.884787,
         "MRR": 1.0,
-        "AvgRel@3": 1.1
+        "AvgRel@3": 1.2
       },
       "structure_premise_only": {
         "nDCG@3": 0.883177,
@@ -31,14 +31,14 @@
         "AvgRel@3": 1.2
       },
       "structure_contrast_only": {
-        "nDCG@3": 0.874966,
+        "nDCG@3": 0.890936,
         "MRR": 1.0,
-        "AvgRel@3": 1.166667
+        "AvgRel@3": 1.233333
       },
       "structure_definition_only": {
-        "nDCG@3": 0.873356,
+        "nDCG@3": 0.884787,
         "MRR": 1.0,
-        "AvgRel@3": 1.166667
+        "AvgRel@3": 1.2
       }
     },
     "5": {
@@ -48,19 +48,19 @@
         "AvgRel@5": 0.8
       },
       "structure_rerank": {
-        "nDCG@5": 0.893843,
+        "nDCG@5": 0.904677,
         "MRR": 1.0,
-        "AvgRel@5": 0.78
+        "AvgRel@5": 0.8
       },
       "structure_conclusion_only": {
-        "nDCG@5": 0.895461,
+        "nDCG@5": 0.905435,
         "MRR": 1.0,
-        "AvgRel@5": 0.78
+        "AvgRel@5": 0.8
       },
       "structure_premise_only": {
-        "nDCG@5": 0.899067,
+        "nDCG@5": 0.903825,
         "MRR": 1.0,
-        "AvgRel@5": 0.78
+        "AvgRel@5": 0.8
       },
       "structure_causal_only": {
         "nDCG@5": 0.905435,
@@ -68,12 +68,12 @@
         "AvgRel@5": 0.8
       },
       "structure_contrast_only": {
-        "nDCG@5": 0.90937,
+        "nDCG@5": 0.906288,
         "MRR": 1.0,
-        "AvgRel@5": 0.82
+        "AvgRel@5": 0.8
       },
       "structure_definition_only": {
-        "nDCG@5": 0.903002,
+        "nDCG@5": 0.905435,
         "MRR": 1.0,
         "AvgRel@5": 0.8
       }
@@ -85,17 +85,17 @@
         "AvgRel@10": 0.44
       },
       "structure_rerank": {
-        "nDCG@10": 0.913814,
+        "nDCG@10": 0.920268,
         "MRR": 1.0,
         "AvgRel@10": 0.44
       },
       "structure_conclusion_only": {
-        "nDCG@10": 0.915433,
+        "nDCG@10": 0.921026,
         "MRR": 1.0,
         "AvgRel@10": 0.44
       },
       "structure_premise_only": {
-        "nDCG@10": 0.919038,
+        "nDCG@10": 0.919415,
         "MRR": 1.0,
         "AvgRel@10": 0.44
       },
@@ -105,12 +105,12 @@
         "AvgRel@10": 0.44
       },
       "structure_contrast_only": {
-        "nDCG@10": 0.920861,
+        "nDCG@10": 0.921878,
         "MRR": 1.0,
         "AvgRel@10": 0.44
       },
       "structure_definition_only": {
-        "nDCG@10": 0.918874,
+        "nDCG@10": 0.921026,
         "MRR": 1.0,
         "AvgRel@10": 0.44
       }
@@ -121,8 +121,8 @@
       {
         "query_id": "rq1",
         "baseline_avg_rel": 1.333333,
-        "candidate_avg_rel": 1.0,
-        "delta": -0.333333,
+        "candidate_avg_rel": 1.666667,
+        "delta": 0.333333,
         "baseline_top": "r1",
         "candidate_top": "r1"
       },
@@ -161,16 +161,16 @@
       {
         "query_id": "rq5",
         "baseline_avg_rel": 1.666667,
-        "candidate_avg_rel": 1.0,
-        "delta": -0.666667,
+        "candidate_avg_rel": 1.666667,
+        "delta": 0.0,
         "baseline_top": "r5",
         "candidate_top": "r5"
       },
       {
         "query_id": "rq6",
         "baseline_avg_rel": 1.333333,
-        "candidate_avg_rel": 1.666667,
-        "delta": 0.333333,
+        "candidate_avg_rel": 1.333333,
+        "delta": 0.0,
         "baseline_top": "r6",
         "candidate_top": "r6"
       },
@@ -203,16 +203,16 @@
       {
         "query_id": "rq1",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 0.8,
-        "delta": -0.2,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
         "baseline_top": "r1",
         "candidate_top": "r1"
       },
       {
         "query_id": "rq10",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 0.8,
-        "delta": -0.2,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
         "baseline_top": "r14",
         "candidate_top": "r14"
       },
@@ -251,8 +251,8 @@
       {
         "query_id": "rq6",
         "baseline_avg_rel": 0.8,
-        "candidate_avg_rel": 1.0,
-        "delta": 0.2,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
         "baseline_top": "r6",
         "candidate_top": "r6"
       },
@@ -366,35 +366,18 @@
   },
   "improved_queries": [
     {
-      "query_id": "rq6",
+      "query_id": "rq1",
       "baseline_avg_rel": 1.333333,
       "candidate_avg_rel": 1.666667,
       "delta": 0.333333,
-      "baseline_top": "r6",
-      "candidate_top": "r6"
-    }
-  ],
-  "worsened_queries": [
-    {
-      "query_id": "rq1",
-      "baseline_avg_rel": 1.333333,
-      "candidate_avg_rel": 1.0,
-      "delta": -0.333333,
       "baseline_top": "r1",
       "candidate_top": "r1"
-    },
-    {
-      "query_id": "rq5",
-      "baseline_avg_rel": 1.666667,
-      "candidate_avg_rel": 1.0,
-      "delta": -0.666667,
-      "baseline_top": "r5",
-      "candidate_top": "r5"
     }
   ],
+  "worsened_queries": [],
   "next_actions": [
-    "Inspect worsened queries before changing the dataset.",
-    "Lower structure beta or tighten query-intent gating.",
-    "Check whether vector similarity already captures the structure signal."
+    "Increase query count and add harder cases.",
+    "Do not claim improvement from this mode yet.",
+    "Inspect rank movement explanations for near misses."
   ]
 }

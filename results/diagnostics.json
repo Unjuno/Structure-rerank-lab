@@ -4,21 +4,14 @@
   "helpful_modes": {
     "structure_conclusion_only": 1,
     "structure_contrast_only": 1,
-    "structure_rerank": 1,
-    "structure_definition_only": 1
+    "structure_rerank": 1
   },
   "helpful_intent_matched_modes": {
     "structure_conclusion_only": 1
   },
-  "harmful_modes": {
-    "structure_causal_only": 1,
-    "structure_rerank": 1
-  },
+  "harmful_modes": {},
   "harmful_intent_matched_modes": {},
-  "harmful_off_intent_modes": {
-    "structure_causal_only": 1,
-    "structure_rerank": 1
-  },
+  "harmful_off_intent_modes": {},
   "per_query": [
     {
       "query_id": "q1",
@@ -292,7 +285,7 @@
           "intent_matched": false,
           "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
-          "top_post": "p12"
+          "top_post": "p3"
         },
         {
           "mode": "structure_conclusion_only",
@@ -352,14 +345,22 @@
         "mode": "structure_rerank",
         "structure_type": null,
         "intent_matched": false,
-        "avg_rel": 2.0,
-        "delta_vs_baseline": -0.333333,
+        "avg_rel": 2.333333,
+        "delta_vs_baseline": 0.0,
         "top_post": "p10"
       },
       "mode_scores": [
         {
           "mode": "baseline",
           "structure_type": null,
+          "intent_matched": false,
+          "avg_rel": 2.333333,
+          "delta_vs_baseline": 0.0,
+          "top_post": "p4"
+        },
+        {
+          "mode": "structure_causal_only",
+          "structure_type": "causal",
           "intent_matched": false,
           "avg_rel": 2.333333,
           "delta_vs_baseline": 0.0,
@@ -398,19 +399,11 @@
           "top_post": "p4"
         },
         {
-          "mode": "structure_causal_only",
-          "structure_type": "causal",
-          "intent_matched": false,
-          "avg_rel": 2.0,
-          "delta_vs_baseline": -0.333333,
-          "top_post": "p4"
-        },
-        {
           "mode": "structure_rerank",
           "structure_type": null,
           "intent_matched": false,
-          "avg_rel": 2.0,
-          "delta_vs_baseline": -0.333333,
+          "avg_rel": 2.333333,
+          "delta_vs_baseline": 0.0,
           "top_post": "p10"
         }
       ]
@@ -545,7 +538,7 @@
           "intent_matched": false,
           "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
-          "top_post": "p11"
+          "top_post": "p3"
         },
         {
           "mode": "structure_definition_only",
@@ -616,7 +609,7 @@
           "intent_matched": false,
           "avg_rel": 2.0,
           "delta_vs_baseline": 0.0,
-          "top_post": "p11"
+          "top_post": "p5"
         },
         {
           "mode": "structure_contrast_only",
@@ -657,11 +650,11 @@
       "intent_structure": "contrast",
       "baseline_avg_rel": 2.0,
       "best_mode": {
-        "mode": "structure_definition_only",
-        "structure_type": "definition",
+        "mode": "baseline",
+        "structure_type": null,
         "intent_matched": false,
-        "avg_rel": 2.333333,
-        "delta_vs_baseline": 0.333333,
+        "avg_rel": 2.0,
+        "delta_vs_baseline": 0.0,
         "top_post": "p14"
       },
       "worst_mode": {
@@ -673,14 +666,6 @@
         "top_post": "p14"
       },
       "mode_scores": [
-        {
-          "mode": "structure_definition_only",
-          "structure_type": "definition",
-          "intent_matched": false,
-          "avg_rel": 2.333333,
-          "delta_vs_baseline": 0.333333,
-          "top_post": "p14"
-        },
         {
           "mode": "baseline",
           "structure_type": null,
@@ -709,6 +694,14 @@
           "mode": "structure_contrast_only",
           "structure_type": "contrast",
           "intent_matched": true,
+          "avg_rel": 2.0,
+          "delta_vs_baseline": 0.0,
+          "top_post": "p14"
+        },
+        {
+          "mode": "structure_definition_only",
+          "structure_type": "definition",
+          "intent_matched": false,
           "avg_rel": 2.0,
           "delta_vs_baseline": 0.0,
           "top_post": "p14"
@@ -766,7 +759,7 @@
           "intent_matched": false,
           "avg_rel": 2.333333,
           "delta_vs_baseline": 0.0,
-          "top_post": "p19"
+          "top_post": "p18"
         },
         {
           "mode": "structure_conclusion_only",
