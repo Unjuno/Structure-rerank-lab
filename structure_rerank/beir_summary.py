@@ -35,16 +35,20 @@ def top3(feedback: Mapping[str, Any], base: str, cand: str) -> Dict[str, Any]:
     }
 
 
+def add_row(rows: list[Dict[str, Any]], dataset: str, mode: str, path: Path) -> None:
+    feedback = load(path)
+    if feedback.get("missing"):
+        return
+    rows.append({"dataset": dataset, "mode": mode, **top3(feedback, "vector_baseline", mode)})
+
+
 def build(root: Path) -> Dict[str, Any]:
-    rows = []
+    rows: list[Dict[str, Any]] = []
     for dataset in DATASETS:
         droot = root / dataset
-        structure = load(droot / "vector_feedback.json")
-        vertical = load(droot / "vertical_vector_feedback.json")
-        if not structure.get("missing"):
-            rows.append({"dataset": dataset, "mode": "vector_structure_rerank", **top3(structure, "vector_baseline", "vector_structure_rerank")})
-        if not vertical.get("missing"):
-            rows.append({"dataset": dataset, "mode": "vertical_vector_rerank", **top3(vertical, "vector_baseline", "vertical_vector_rerank")})
+        add_row(rows, dataset, "vector_structure_rerank", droot / "vector_feedback.json")
+        add_row(rows, dataset, "vertical_vector_rerank", droot / "vertical_vector_feedback.json")
+        add_row(rows, dataset, "corpus_vertical_rerank", droot / "corpus_vertical_feedback.json")
     return {"datasets": DATASETS, "rows": rows}
 
 
@@ -61,7 +65,7 @@ def write_md(summary: Mapping[str, Any], output: Path) -> None:
     lines.append("")
     lines.append("- Compare each dataset separately.")
     lines.append("- Do not average these datasets yet.")
-    lines.append("- `vertical_vector_rerank` is the current main candidate.")
+    lines.append("- `vertical_vector_rerank` is the current main candidate until corpus-derived axes show stronger evidence.")
     lines.append("")
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text("\n".join(lines), encoding="utf-8")
