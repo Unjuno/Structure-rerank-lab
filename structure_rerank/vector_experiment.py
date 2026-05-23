@@ -8,6 +8,7 @@ from typing import Any, Dict, List
 from .rerank import DEFAULT_POSTS, DEFAULT_QUERIES, DEFAULT_STRUCTURES
 from .structure_score import build_structure_index, combine_scores, load_jsonl, normalize_scores, structure_score
 from .vector_score import build_post_vectors, vector_scores
+from .vertical_vector import build_post_structure_vectors, build_structure_axes, vertical_vector_scores
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "results" / "vector_results.jsonl"
@@ -30,7 +31,19 @@ def rows_for_query(
         post_id = str(post["id"])
         score = structure_score(query, structure_index.get(post_id, [])) if use_structure else 0.0
         raw_struct.append((post_id, score))
+    return rows_from_raw(mode, query, posts, raw_base, raw_struct, top_k, alpha, beta if use_structure else 0.0)
 
+
+def rows_from_raw(
+    mode: str,
+    query: Dict[str, Any],
+    posts: List[Dict[str, Any]],
+    raw_base: List[tuple[str, float]],
+    raw_struct: List[tuple[str, float]],
+    top_k: int,
+    alpha: float,
+    beta: float,
+) -> List[Dict[str, Any]]:
     base_norm = normalize_scores(raw_base)
     struct_norm = normalize_scores(raw_struct)
     rows: List[Dict[str, Any]] = []
@@ -38,7 +51,7 @@ def rows_for_query(
         post_id = str(post["id"])
         base = base_norm.get(post_id, 0.0)
         struct = struct_norm.get(post_id, 0.0)
-        final = combine_scores(base, struct, alpha=alpha, beta=beta) if use_structure else base
+        final = combine_scores(base, struct, alpha=alpha, beta=beta)
         rows.append(
             {
                 "mode": mode,
@@ -67,14 +80,22 @@ def run(
     structures = load_jsonl(structures_path)
     structure_index = build_structure_index(structures)
     post_vectors, idf = build_post_vectors(posts)
+    axes = build_structure_axes(structures, idf)
+    post_structure_vectors = build_post_structure_vectors(structures, idf)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as handle:
         for query in queries:
-            base_scores = vector_scores(str(query["query"]), post_vectors, idf)
+            qtext = str(query["query"])
+            base_scores = vector_scores(qtext, post_vectors, idf)
+            vertical_scores = vertical_vector_scores(qtext, post_structure_vectors, axes, idf)
             for row in rows_for_query("vector_baseline", query, posts, base_scores, structure_index, top_k, False):
                 handle.write(json.dumps(row, ensure_ascii=False) + "\n")
             for row in rows_for_query("vector_structure_rerank", query, posts, base_scores, structure_index, top_k, True):
+                handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+            raw_base = [(str(post["id"]), base_scores.get(str(post["id"]), 0.0)) for post in posts]
+            raw_vertical = [(str(post["id"]), vertical_scores.get(str(post["id"]), 0.0)) for post in posts]
+            for row in rows_from_raw("vertical_vector_rerank", query, posts, raw_base, raw_vertical, top_k, 0.8, 0.2):
                 handle.write(json.dumps(row, ensure_ascii=False) + "\n")
     print(f"wrote {output_path}")
 
