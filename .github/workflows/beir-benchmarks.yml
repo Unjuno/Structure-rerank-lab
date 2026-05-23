@@ -47,7 +47,7 @@ jobs:
           --structures results/beir/${{ matrix.dataset }}/structures.jsonl
           --output results/beir/${{ matrix.dataset }}/vector_results.jsonl
 
-      - name: Generate feedback
+      - name: Generate structure feedback
         run: >-
           python -m structure_rerank.mode_feedback
           --results results/beir/${{ matrix.dataset }}/vector_results.jsonl
@@ -57,6 +57,16 @@ jobs:
           --baseline-mode vector_baseline
           --candidate-mode vector_structure_rerank
 
+      - name: Generate vertical vector feedback
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/beir/${{ matrix.dataset }}/vector_results.jsonl
+          --judgments results/beir/${{ matrix.dataset }}/judgments.jsonl
+          --output-md results/beir/${{ matrix.dataset }}/vertical_vector_feedback.md
+          --output-json results/beir/${{ matrix.dataset }}/vertical_vector_feedback.json
+          --baseline-mode vector_baseline
+          --candidate-mode vertical_vector_rerank
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -64,6 +74,8 @@ jobs:
           path: |
             results/beir/${{ matrix.dataset }}/vector_feedback.md
             results/beir/${{ matrix.dataset }}/vector_feedback.json
+            results/beir/${{ matrix.dataset }}/vertical_vector_feedback.md
+            results/beir/${{ matrix.dataset }}/vertical_vector_feedback.json
             results/beir/${{ matrix.dataset }}/vector_results.jsonl
 
       - name: Commit benchmark snapshot
@@ -72,7 +84,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase || true
-          git add results/beir/${{ matrix.dataset }}/vector_feedback.md results/beir/${{ matrix.dataset }}/vector_feedback.json
+          git add results/beir/${{ matrix.dataset }}/vector_feedback.md results/beir/${{ matrix.dataset }}/vector_feedback.json results/beir/${{ matrix.dataset }}/vertical_vector_feedback.md results/beir/${{ matrix.dataset }}/vertical_vector_feedback.json
           if git diff --cached --quiet; then
             echo "no result changes"
           else
