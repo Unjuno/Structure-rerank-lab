@@ -1,0 +1,4948 @@
+{
+  "verdict": "UNCERTAIN",
+  "baseline_mode": "vector_baseline",
+  "candidate_mode": "vertical_vector_rerank",
+  "primary_k": 3,
+  "metrics_by_k": {
+    "3": {
+      "vector_baseline": {
+        "nDCG@3": 0.391228,
+        "MRR": 0.531145,
+        "AvgRel@3": 0.393333
+      },
+      "vector_structure_rerank": {
+        "nDCG@3": 0.398333,
+        "MRR": 0.545456,
+        "AvgRel@3": 0.396667
+      },
+      "vertical_vector_rerank": {
+        "nDCG@3": 0.39958,
+        "MRR": 0.537728,
+        "AvgRel@3": 0.401667
+      }
+    },
+    "5": {
+      "vector_baseline": {
+        "nDCG@5": 0.365092,
+        "MRR": 0.531145,
+        "AvgRel@5": 0.33
+      },
+      "vector_structure_rerank": {
+        "nDCG@5": 0.368859,
+        "MRR": 0.545456,
+        "AvgRel@5": 0.327
+      },
+      "vertical_vector_rerank": {
+        "nDCG@5": 0.373378,
+        "MRR": 0.537728,
+        "AvgRel@5": 0.34
+      }
+    },
+    "10": {
+      "vector_baseline": {
+        "nDCG@10": 0.333482,
+        "MRR": 0.531145,
+        "AvgRel@10": 0.251
+      },
+      "vector_structure_rerank": {
+        "nDCG@10": 0.337448,
+        "MRR": 0.545456,
+        "AvgRel@10": 0.252
+      },
+      "vertical_vector_rerank": {
+        "nDCG@10": 0.341008,
+        "MRR": 0.537728,
+        "AvgRel@10": 0.258
+      }
+    }
+  },
+  "query_deltas_by_k": {
+    "3": [
+      {
+        "query_id": "PLAIN-1008",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1018",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-5095",
+        "candidate_top": "MED-5095"
+      },
+      {
+        "query_id": "PLAIN-102",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3954",
+        "candidate_top": "MED-3954"
+      },
+      {
+        "query_id": "PLAIN-1028",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4178",
+        "candidate_top": "MED-4178"
+      },
+      {
+        "query_id": "PLAIN-1039",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4380",
+        "candidate_top": "MED-4380"
+      },
+      {
+        "query_id": "PLAIN-1050",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1712",
+        "candidate_top": "MED-2510"
+      },
+      {
+        "query_id": "PLAIN-1066",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1712",
+        "candidate_top": "MED-2510"
+      },
+      {
+        "query_id": "PLAIN-1088",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-2109",
+        "candidate_top": "MED-2109"
+      },
+      {
+        "query_id": "PLAIN-1098",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1109",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2643",
+        "candidate_top": "MED-2643"
+      },
+      {
+        "query_id": "PLAIN-1119",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2718",
+        "candidate_top": "MED-2718"
+      },
+      {
+        "query_id": "PLAIN-112",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-3380",
+        "candidate_top": "MED-3380"
+      },
+      {
+        "query_id": "PLAIN-1130",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4165",
+        "candidate_top": "MED-4165"
+      },
+      {
+        "query_id": "PLAIN-1141",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-3113",
+        "candidate_top": "MED-3113"
+      },
+      {
+        "query_id": "PLAIN-1151",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3306",
+        "candidate_top": "MED-3306"
+      },
+      {
+        "query_id": "PLAIN-1161",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3584",
+        "candidate_top": "MED-3584"
+      },
+      {
+        "query_id": "PLAIN-1172",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4150",
+        "candidate_top": "MED-4150"
+      },
+      {
+        "query_id": "PLAIN-1183",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-1276",
+        "candidate_top": "MED-1276"
+      },
+      {
+        "query_id": "PLAIN-1193",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1825",
+        "candidate_top": "MED-1825"
+      },
+      {
+        "query_id": "PLAIN-12",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4711",
+        "candidate_top": "MED-4711"
+      },
+      {
+        "query_id": "PLAIN-1203",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4771",
+        "candidate_top": "MED-4771"
+      },
+      {
+        "query_id": "PLAIN-1214",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1225",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-1669",
+        "candidate_top": "MED-1669"
+      },
+      {
+        "query_id": "PLAIN-123",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4392",
+        "candidate_top": "MED-4392"
+      },
+      {
+        "query_id": "PLAIN-1236",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-1341",
+        "candidate_top": "MED-1341"
+      },
+      {
+        "query_id": "PLAIN-1249",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2303",
+        "candidate_top": "MED-2303"
+      },
+      {
+        "query_id": "PLAIN-1262",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-983",
+        "candidate_top": "MED-983"
+      },
+      {
+        "query_id": "PLAIN-1275",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4712",
+        "candidate_top": "MED-4712"
+      },
+      {
+        "query_id": "PLAIN-1288",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 0.666667,
+        "delta": -0.333333,
+        "baseline_top": "MED-1538",
+        "candidate_top": "MED-1538"
+      },
+      {
+        "query_id": "PLAIN-1299",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.333333,
+        "baseline_top": "MED-1223",
+        "candidate_top": "MED-1223"
+      },
+      {
+        "query_id": "PLAIN-1309",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1320",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2525",
+        "candidate_top": "MED-2525"
+      },
+      {
+        "query_id": "PLAIN-133",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3277",
+        "candidate_top": "MED-1666"
+      },
+      {
+        "query_id": "PLAIN-1331",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1049",
+        "candidate_top": "MED-1049"
+      },
+      {
+        "query_id": "PLAIN-1342",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.333333,
+        "baseline_top": "MED-4317",
+        "candidate_top": "MED-4317"
+      },
+      {
+        "query_id": "PLAIN-1353",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-976",
+        "candidate_top": "MED-976"
+      },
+      {
+        "query_id": "PLAIN-1363",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-3620",
+        "candidate_top": "MED-3620"
+      },
+      {
+        "query_id": "PLAIN-1374",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3429",
+        "candidate_top": "MED-3429"
+      },
+      {
+        "query_id": "PLAIN-1387",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-5063",
+        "candidate_top": "MED-5063"
+      },
+      {
+        "query_id": "PLAIN-1398",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1715",
+        "candidate_top": "MED-1715"
+      },
+      {
+        "query_id": "PLAIN-1409",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1675",
+        "candidate_top": "MED-1675"
+      },
+      {
+        "query_id": "PLAIN-1419",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4198",
+        "candidate_top": "MED-4198"
+      },
+      {
+        "query_id": "PLAIN-1429",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2428",
+        "candidate_top": "MED-2428"
+      },
+      {
+        "query_id": "PLAIN-143",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-3621",
+        "candidate_top": "MED-3621"
+      },
+      {
+        "query_id": "PLAIN-1441",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-2216",
+        "candidate_top": "MED-2216"
+      },
+      {
+        "query_id": "PLAIN-1453",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-2221",
+        "candidate_top": "MED-2221"
+      },
+      {
+        "query_id": "PLAIN-1463",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3584",
+        "candidate_top": "MED-3584"
+      },
+      {
+        "query_id": "PLAIN-1473",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4455",
+        "candidate_top": "MED-4455"
+      },
+      {
+        "query_id": "PLAIN-1485",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2099",
+        "candidate_top": "MED-2099"
+      },
+      {
+        "query_id": "PLAIN-1496",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1506",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-5239",
+        "candidate_top": "MED-5239"
+      },
+      {
+        "query_id": "PLAIN-1516",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4181",
+        "candidate_top": "MED-4181"
+      },
+      {
+        "query_id": "PLAIN-1527",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.333333,
+        "baseline_top": "MED-2160",
+        "candidate_top": "MED-2160"
+      },
+      {
+        "query_id": "PLAIN-153",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3677",
+        "candidate_top": "MED-3677"
+      },
+      {
+        "query_id": "PLAIN-1537",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4880",
+        "candidate_top": "MED-4880"
+      },
+      {
+        "query_id": "PLAIN-1547",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2360",
+        "candidate_top": "MED-2360"
+      },
+      {
+        "query_id": "PLAIN-1557",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-1406",
+        "candidate_top": "MED-1406"
+      },
+      {
+        "query_id": "PLAIN-1568",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4150",
+        "candidate_top": "MED-4150"
+      },
+      {
+        "query_id": "PLAIN-1579",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4801",
+        "candidate_top": "MED-4667"
+      },
+      {
+        "query_id": "PLAIN-1590",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-3604",
+        "candidate_top": "MED-3604"
+      },
+      {
+        "query_id": "PLAIN-1601",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4996",
+        "candidate_top": "MED-4996"
+      },
+      {
+        "query_id": "PLAIN-1611",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1621",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1635",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.333333,
+        "baseline_top": "MED-5118",
+        "candidate_top": "MED-5118"
+      },
+      {
+        "query_id": "PLAIN-1645",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-5056",
+        "candidate_top": "MED-5056"
+      },
+      {
+        "query_id": "PLAIN-165",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4445",
+        "candidate_top": "MED-4445"
+      },
+      {
+        "query_id": "PLAIN-1656",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3703",
+        "candidate_top": "MED-3703"
+      },
+      {
+        "query_id": "PLAIN-1667",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.333333,
+        "baseline_top": "MED-1474",
+        "candidate_top": "MED-1474"
+      },
+      {
+        "query_id": "PLAIN-1679",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1690",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2220",
+        "candidate_top": "MED-2220"
+      },
+      {
+        "query_id": "PLAIN-1700",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1417",
+        "candidate_top": "MED-1417"
+      },
+      {
+        "query_id": "PLAIN-1710",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3169",
+        "candidate_top": "MED-3169"
+      },
+      {
+        "query_id": "PLAIN-1721",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4787",
+        "candidate_top": "MED-4787"
+      },
+      {
+        "query_id": "PLAIN-1731",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-2749",
+        "candidate_top": "MED-2749"
+      },
+      {
+        "query_id": "PLAIN-1741",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2383",
+        "candidate_top": "MED-2383"
+      },
+      {
+        "query_id": "PLAIN-175",
+        "baseline_avg_rel": 1.333333,
+        "candidate_avg_rel": 1.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-3818",
+        "candidate_top": "MED-3818"
+      },
+      {
+        "query_id": "PLAIN-1752",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1762",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-759",
+        "candidate_top": "MED-759"
+      },
+      {
+        "query_id": "PLAIN-1772",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4728",
+        "candidate_top": "MED-4728"
+      },
+      {
+        "query_id": "PLAIN-1784",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-5326",
+        "candidate_top": "MED-5326"
+      },
+      {
+        "query_id": "PLAIN-1794",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-5041",
+        "candidate_top": "MED-5041"
+      },
+      {
+        "query_id": "PLAIN-1805",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3938",
+        "candidate_top": "MED-5196"
+      },
+      {
+        "query_id": "PLAIN-1817",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4284",
+        "candidate_top": "MED-4284"
+      },
+      {
+        "query_id": "PLAIN-1827",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1837",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1725",
+        "candidate_top": "MED-1725"
+      },
+      {
+        "query_id": "PLAIN-1847",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4000",
+        "candidate_top": "MED-4000"
+      },
+      {
+        "query_id": "PLAIN-1857",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2544",
+        "candidate_top": "MED-2988"
+      },
+      {
+        "query_id": "PLAIN-186",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2059",
+        "candidate_top": "MED-2059"
+      },
+      {
+        "query_id": "PLAIN-1867",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1877",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1991",
+        "candidate_top": "MED-1991"
+      },
+      {
+        "query_id": "PLAIN-1887",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-5083",
+        "candidate_top": "MED-5083"
+      },
+      {
+        "query_id": "PLAIN-1897",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2644",
+        "candidate_top": "MED-2644"
+      },
+      {
+        "query_id": "PLAIN-1909",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4818",
+        "candidate_top": "MED-4818"
+      },
+      {
+        "query_id": "PLAIN-1919",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3321",
+        "candidate_top": "MED-4431"
+      },
+      {
+        "query_id": "PLAIN-1929",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4872",
+        "candidate_top": "MED-4872"
+      },
+      {
+        "query_id": "PLAIN-1940",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-3792",
+        "candidate_top": "MED-3792"
+      },
+      {
+        "query_id": "PLAIN-1950",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-912",
+        "candidate_top": "MED-912"
+      },
+      {
+        "query_id": "PLAIN-196",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-3969",
+        "candidate_top": "MED-3969"
+      },
+      {
+        "query_id": "PLAIN-1962",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2438",
+        "candidate_top": "MED-2438"
+      },
+      {
+        "query_id": "PLAIN-1972",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1442",
+        "candidate_top": "MED-1442"
+      },
+      {
+        "query_id": "PLAIN-1983",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2137",
+        "candidate_top": "MED-2137"
+      },
+      {
+        "query_id": "PLAIN-1995",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-5257",
+        "candidate_top": "MED-5257"
+      },
+      {
+        "query_id": "PLAIN-2",
+        "baseline_avg_rel": 2.0,
+        "candidate_avg_rel": 2.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-2009",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-5173",
+        "candidate_top": "MED-5173"
+      },
+      {
+        "query_id": "PLAIN-2019",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4573",
+        "candidate_top": "MED-4573"
+      },
+      {
+        "query_id": "PLAIN-2030",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-2816",
+        "candidate_top": "MED-4051"
+      },
+      {
+        "query_id": "PLAIN-2040",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4933",
+        "candidate_top": "MED-4933"
+      },
+      {
+        "query_id": "PLAIN-2051",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-1781",
+        "candidate_top": "MED-1781"
+      },
+      {
+        "query_id": "PLAIN-2061",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3031",
+        "candidate_top": "MED-3031"
+      },
+      {
+        "query_id": "PLAIN-207",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4391",
+        "candidate_top": "MED-4391"
+      },
+      {
+        "query_id": "PLAIN-2071",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-3532",
+        "candidate_top": "MED-3532"
+      },
+      {
+        "query_id": "PLAIN-2081",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4303",
+        "candidate_top": "MED-4303"
+      },
+      {
+        "query_id": "PLAIN-2092",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1434",
+        "candidate_top": "MED-1434"
+      },
+      {
+        "query_id": "PLAIN-2102",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1545",
+        "candidate_top": "MED-1545"
+      },
+      {
+        "query_id": "PLAIN-2113",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3890",
+        "candidate_top": "MED-3890"
+      },
+      {
+        "query_id": "PLAIN-2124",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-1522",
+        "candidate_top": "MED-1522"
+      },
+      {
+        "query_id": "PLAIN-2134",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-2145",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-743",
+        "candidate_top": "MED-743"
+      },
+      {
+        "query_id": "PLAIN-2156",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4868",
+        "candidate_top": "MED-4868"
+      },
+      {
+        "query_id": "PLAIN-2167",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2488",
+        "candidate_top": "MED-2488"
+      },
+      {
+        "query_id": "PLAIN-217",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1991",
+        "candidate_top": "MED-1991"
+      },
+      {
+        "query_id": "PLAIN-2177",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.333333,
+        "baseline_top": "MED-3282",
+        "candidate_top": "MED-3282"
+      },
+      {
+        "query_id": "PLAIN-2187",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-1248",
+        "candidate_top": "MED-1248"
+      },
+      {
+        "query_id": "PLAIN-227",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4150",
+        "candidate_top": "MED-4150"
+      },
+      {
+        "query_id": "PLAIN-23",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 0.666667,
+        "delta": -0.333333,
+        "baseline_top": "MED-2658",
+        "candidate_top": "MED-2658"
+      },
+      {
+        "query_id": "PLAIN-238",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2489",
+        "candidate_top": "MED-2489"
+      },
+      {
+        "query_id": "PLAIN-248",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4645",
+        "candidate_top": "MED-4645"
+      },
+      {
+        "query_id": "PLAIN-259",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4296",
+        "candidate_top": "MED-4296"
+      },
+      {
+        "query_id": "PLAIN-270",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.333333,
+        "baseline_top": "MED-4776",
+        "candidate_top": "MED-5257"
+      },
+      {
+        "query_id": "PLAIN-280",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4376",
+        "candidate_top": "MED-4733"
+      },
+      {
+        "query_id": "PLAIN-291",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-2437",
+        "candidate_top": "MED-2437"
+      },
+      {
+        "query_id": "PLAIN-307",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4573",
+        "candidate_top": "MED-4573"
+      },
+      {
+        "query_id": "PLAIN-320",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2437",
+        "candidate_top": "MED-2437"
+      },
+      {
+        "query_id": "PLAIN-33",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1803",
+        "candidate_top": "MED-1803"
+      },
+      {
+        "query_id": "PLAIN-332",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-760",
+        "candidate_top": "MED-760"
+      },
+      {
+        "query_id": "PLAIN-344",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-1961",
+        "candidate_top": "MED-1961"
+      },
+      {
+        "query_id": "PLAIN-358",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3788",
+        "candidate_top": "MED-3788"
+      },
+      {
+        "query_id": "PLAIN-371",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4620",
+        "candidate_top": "MED-4620"
+      },
+      {
+        "query_id": "PLAIN-383",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1712",
+        "candidate_top": "MED-2510"
+      },
+      {
+        "query_id": "PLAIN-395",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2794",
+        "candidate_top": "MED-2794"
+      },
+      {
+        "query_id": "PLAIN-407",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-906",
+        "candidate_top": "MED-906"
+      },
+      {
+        "query_id": "PLAIN-418",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2453",
+        "candidate_top": "MED-2074"
+      },
+      {
+        "query_id": "PLAIN-430",
+        "baseline_avg_rel": 1.333333,
+        "candidate_avg_rel": 1.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-927",
+        "candidate_top": "MED-927"
+      },
+      {
+        "query_id": "PLAIN-44",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-2791",
+        "candidate_top": "MED-2791"
+      },
+      {
+        "query_id": "PLAIN-441",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-942",
+        "candidate_top": "MED-942"
+      },
+      {
+        "query_id": "PLAIN-457",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3109",
+        "candidate_top": "MED-3109"
+      },
+      {
+        "query_id": "PLAIN-468",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-3987",
+        "candidate_top": "MED-3988"
+      },
+      {
+        "query_id": "PLAIN-478",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2309",
+        "candidate_top": "MED-2309"
+      },
+      {
+        "query_id": "PLAIN-488",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4769",
+        "candidate_top": "MED-4769"
+      },
+      {
+        "query_id": "PLAIN-499",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-2900",
+        "candidate_top": "MED-2900"
+      },
+      {
+        "query_id": "PLAIN-510",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-520",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-531",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-3113",
+        "candidate_top": "MED-3113"
+      },
+      {
+        "query_id": "PLAIN-541",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4027",
+        "candidate_top": "MED-4027"
+      },
+      {
+        "query_id": "PLAIN-551",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-56",
+        "baseline_avg_rel": 1.666667,
+        "candidate_avg_rel": 1.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4384",
+        "candidate_top": "MED-4384"
+      },
+      {
+        "query_id": "PLAIN-561",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-3180",
+        "candidate_top": "MED-3180"
+      },
+      {
+        "query_id": "PLAIN-571",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-2346",
+        "candidate_top": "MED-2346"
+      },
+      {
+        "query_id": "PLAIN-583",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-593",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4402",
+        "candidate_top": "MED-4402"
+      },
+      {
+        "query_id": "PLAIN-603",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1957",
+        "candidate_top": "MED-1957"
+      },
+      {
+        "query_id": "PLAIN-613",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-909",
+        "candidate_top": "MED-909"
+      },
+      {
+        "query_id": "PLAIN-623",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-1674",
+        "candidate_top": "MED-1674"
+      },
+      {
+        "query_id": "PLAIN-634",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-1378",
+        "candidate_top": "MED-1378"
+      },
+      {
+        "query_id": "PLAIN-645",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-660",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3584",
+        "candidate_top": "MED-3584"
+      },
+      {
+        "query_id": "PLAIN-671",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4857",
+        "candidate_top": "MED-4857"
+      },
+      {
+        "query_id": "PLAIN-68",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-2991",
+        "candidate_top": "MED-2991"
+      },
+      {
+        "query_id": "PLAIN-681",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-5017",
+        "candidate_top": "MED-5017"
+      },
+      {
+        "query_id": "PLAIN-691",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4909",
+        "candidate_top": "MED-4909"
+      },
+      {
+        "query_id": "PLAIN-701",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-3720",
+        "candidate_top": "MED-3720"
+      },
+      {
+        "query_id": "PLAIN-711",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1492",
+        "candidate_top": "MED-1492"
+      },
+      {
+        "query_id": "PLAIN-721",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4876",
+        "candidate_top": "MED-4876"
+      },
+      {
+        "query_id": "PLAIN-731",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4226",
+        "candidate_top": "MED-5243"
+      },
+      {
+        "query_id": "PLAIN-741",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4237",
+        "candidate_top": "MED-4237"
+      },
+      {
+        "query_id": "PLAIN-751",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1797",
+        "candidate_top": "MED-1797"
+      },
+      {
+        "query_id": "PLAIN-761",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1667",
+        "candidate_top": "MED-1667"
+      },
+      {
+        "query_id": "PLAIN-771",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3386",
+        "candidate_top": "MED-3386"
+      },
+      {
+        "query_id": "PLAIN-78",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-2219",
+        "candidate_top": "MED-2219"
+      },
+      {
+        "query_id": "PLAIN-782",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1248",
+        "candidate_top": "MED-1055"
+      },
+      {
+        "query_id": "PLAIN-792",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4546",
+        "candidate_top": "MED-4546"
+      },
+      {
+        "query_id": "PLAIN-806",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2519",
+        "candidate_top": "MED-2519"
+      },
+      {
+        "query_id": "PLAIN-817",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-827",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4391",
+        "candidate_top": "MED-4391"
+      },
+      {
+        "query_id": "PLAIN-838",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3502",
+        "candidate_top": "MED-3502"
+      },
+      {
+        "query_id": "PLAIN-850",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2064",
+        "candidate_top": "MED-4455"
+      },
+      {
+        "query_id": "PLAIN-872",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4098",
+        "candidate_top": "MED-1291"
+      },
+      {
+        "query_id": "PLAIN-882",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-3622",
+        "candidate_top": "MED-3622"
+      },
+      {
+        "query_id": "PLAIN-892",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2010",
+        "candidate_top": "MED-2010"
+      },
+      {
+        "query_id": "PLAIN-902",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-4197",
+        "candidate_top": "MED-4195"
+      },
+      {
+        "query_id": "PLAIN-91",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4818",
+        "candidate_top": "MED-4818"
+      },
+      {
+        "query_id": "PLAIN-913",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3811",
+        "candidate_top": "MED-3811"
+      },
+      {
+        "query_id": "PLAIN-924",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-3044",
+        "candidate_top": "MED-3044"
+      },
+      {
+        "query_id": "PLAIN-934",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "MED-1648",
+        "candidate_top": "MED-1648"
+      },
+      {
+        "query_id": "PLAIN-946",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-4381",
+        "candidate_top": "MED-4381"
+      },
+      {
+        "query_id": "PLAIN-956",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2182",
+        "candidate_top": "MED-2182"
+      },
+      {
+        "query_id": "PLAIN-966",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3671",
+        "candidate_top": "MED-3671"
+      },
+      {
+        "query_id": "PLAIN-977",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1410",
+        "candidate_top": "MED-1410"
+      },
+      {
+        "query_id": "PLAIN-987",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "MED-1293",
+        "candidate_top": "MED-2780"
+      },
+      {
+        "query_id": "PLAIN-997",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      }
+    ],
+    "5": [
+      {
+        "query_id": "PLAIN-1008",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1018",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.2,
+        "baseline_top": "MED-5095",
+        "candidate_top": "MED-5095"
+      },
+      {
+        "query_id": "PLAIN-102",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3954",
+        "candidate_top": "MED-3954"
+      },
+      {
+        "query_id": "PLAIN-1028",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4178",
+        "candidate_top": "MED-4178"
+      },
+      {
+        "query_id": "PLAIN-1039",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4380",
+        "candidate_top": "MED-4380"
+      },
+      {
+        "query_id": "PLAIN-1050",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1712",
+        "candidate_top": "MED-2510"
+      },
+      {
+        "query_id": "PLAIN-1066",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1712",
+        "candidate_top": "MED-2510"
+      },
+      {
+        "query_id": "PLAIN-1088",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2109",
+        "candidate_top": "MED-2109"
+      },
+      {
+        "query_id": "PLAIN-1098",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1109",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-2643",
+        "candidate_top": "MED-2643"
+      },
+      {
+        "query_id": "PLAIN-1119",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2718",
+        "candidate_top": "MED-2718"
+      },
+      {
+        "query_id": "PLAIN-112",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-3380",
+        "candidate_top": "MED-3380"
+      },
+      {
+        "query_id": "PLAIN-1130",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4165",
+        "candidate_top": "MED-4165"
+      },
+      {
+        "query_id": "PLAIN-1141",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3113",
+        "candidate_top": "MED-3113"
+      },
+      {
+        "query_id": "PLAIN-1151",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-3306",
+        "candidate_top": "MED-3306"
+      },
+      {
+        "query_id": "PLAIN-1161",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3584",
+        "candidate_top": "MED-3584"
+      },
+      {
+        "query_id": "PLAIN-1172",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4150",
+        "candidate_top": "MED-4150"
+      },
+      {
+        "query_id": "PLAIN-1183",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1276",
+        "candidate_top": "MED-1276"
+      },
+      {
+        "query_id": "PLAIN-1193",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1825",
+        "candidate_top": "MED-1825"
+      },
+      {
+        "query_id": "PLAIN-12",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4711",
+        "candidate_top": "MED-4711"
+      },
+      {
+        "query_id": "PLAIN-1203",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4771",
+        "candidate_top": "MED-4771"
+      },
+      {
+        "query_id": "PLAIN-1214",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1225",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-1669",
+        "candidate_top": "MED-1669"
+      },
+      {
+        "query_id": "PLAIN-123",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4392",
+        "candidate_top": "MED-4392"
+      },
+      {
+        "query_id": "PLAIN-1236",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1341",
+        "candidate_top": "MED-1341"
+      },
+      {
+        "query_id": "PLAIN-1249",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2303",
+        "candidate_top": "MED-2303"
+      },
+      {
+        "query_id": "PLAIN-1262",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-983",
+        "candidate_top": "MED-983"
+      },
+      {
+        "query_id": "PLAIN-1275",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-4712",
+        "candidate_top": "MED-4712"
+      },
+      {
+        "query_id": "PLAIN-1288",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-1538",
+        "candidate_top": "MED-1538"
+      },
+      {
+        "query_id": "PLAIN-1299",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.2,
+        "baseline_top": "MED-1223",
+        "candidate_top": "MED-1223"
+      },
+      {
+        "query_id": "PLAIN-1309",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1320",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2525",
+        "candidate_top": "MED-2525"
+      },
+      {
+        "query_id": "PLAIN-133",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3277",
+        "candidate_top": "MED-1666"
+      },
+      {
+        "query_id": "PLAIN-1331",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1049",
+        "candidate_top": "MED-1049"
+      },
+      {
+        "query_id": "PLAIN-1342",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-4317",
+        "candidate_top": "MED-4317"
+      },
+      {
+        "query_id": "PLAIN-1353",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-976",
+        "candidate_top": "MED-976"
+      },
+      {
+        "query_id": "PLAIN-1363",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3620",
+        "candidate_top": "MED-3620"
+      },
+      {
+        "query_id": "PLAIN-1374",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.2,
+        "baseline_top": "MED-3429",
+        "candidate_top": "MED-3429"
+      },
+      {
+        "query_id": "PLAIN-1387",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.2,
+        "baseline_top": "MED-5063",
+        "candidate_top": "MED-5063"
+      },
+      {
+        "query_id": "PLAIN-1398",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1715",
+        "candidate_top": "MED-1715"
+      },
+      {
+        "query_id": "PLAIN-1409",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1675",
+        "candidate_top": "MED-1675"
+      },
+      {
+        "query_id": "PLAIN-1419",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4198",
+        "candidate_top": "MED-4198"
+      },
+      {
+        "query_id": "PLAIN-1429",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2428",
+        "candidate_top": "MED-2428"
+      },
+      {
+        "query_id": "PLAIN-143",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-3621",
+        "candidate_top": "MED-3621"
+      },
+      {
+        "query_id": "PLAIN-1441",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-2216",
+        "candidate_top": "MED-2216"
+      },
+      {
+        "query_id": "PLAIN-1453",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.2,
+        "baseline_top": "MED-2221",
+        "candidate_top": "MED-2221"
+      },
+      {
+        "query_id": "PLAIN-1463",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.0,
+        "delta": -0.2,
+        "baseline_top": "MED-3584",
+        "candidate_top": "MED-3584"
+      },
+      {
+        "query_id": "PLAIN-1473",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4455",
+        "candidate_top": "MED-4455"
+      },
+      {
+        "query_id": "PLAIN-1485",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-2099",
+        "candidate_top": "MED-2099"
+      },
+      {
+        "query_id": "PLAIN-1496",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1506",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-5239",
+        "candidate_top": "MED-5239"
+      },
+      {
+        "query_id": "PLAIN-1516",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4181",
+        "candidate_top": "MED-4181"
+      },
+      {
+        "query_id": "PLAIN-1527",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.4,
+        "baseline_top": "MED-2160",
+        "candidate_top": "MED-2160"
+      },
+      {
+        "query_id": "PLAIN-153",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-3677",
+        "candidate_top": "MED-3677"
+      },
+      {
+        "query_id": "PLAIN-1537",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4880",
+        "candidate_top": "MED-4880"
+      },
+      {
+        "query_id": "PLAIN-1547",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2360",
+        "candidate_top": "MED-2360"
+      },
+      {
+        "query_id": "PLAIN-1557",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-1406",
+        "candidate_top": "MED-1406"
+      },
+      {
+        "query_id": "PLAIN-1568",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4150",
+        "candidate_top": "MED-4150"
+      },
+      {
+        "query_id": "PLAIN-1579",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4801",
+        "candidate_top": "MED-4667"
+      },
+      {
+        "query_id": "PLAIN-1590",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3604",
+        "candidate_top": "MED-3604"
+      },
+      {
+        "query_id": "PLAIN-1601",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-4996",
+        "candidate_top": "MED-4996"
+      },
+      {
+        "query_id": "PLAIN-1611",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1621",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1635",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.2,
+        "baseline_top": "MED-5118",
+        "candidate_top": "MED-5118"
+      },
+      {
+        "query_id": "PLAIN-1645",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-5056",
+        "candidate_top": "MED-5056"
+      },
+      {
+        "query_id": "PLAIN-165",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-4445",
+        "candidate_top": "MED-4445"
+      },
+      {
+        "query_id": "PLAIN-1656",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3703",
+        "candidate_top": "MED-3703"
+      },
+      {
+        "query_id": "PLAIN-1667",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-1474",
+        "candidate_top": "MED-1474"
+      },
+      {
+        "query_id": "PLAIN-1679",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1690",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2220",
+        "candidate_top": "MED-2220"
+      },
+      {
+        "query_id": "PLAIN-1700",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1417",
+        "candidate_top": "MED-1417"
+      },
+      {
+        "query_id": "PLAIN-1710",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3169",
+        "candidate_top": "MED-3169"
+      },
+      {
+        "query_id": "PLAIN-1721",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.2,
+        "baseline_top": "MED-4787",
+        "candidate_top": "MED-4787"
+      },
+      {
+        "query_id": "PLAIN-1731",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2749",
+        "candidate_top": "MED-2749"
+      },
+      {
+        "query_id": "PLAIN-1741",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2383",
+        "candidate_top": "MED-2383"
+      },
+      {
+        "query_id": "PLAIN-175",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-3818",
+        "candidate_top": "MED-3818"
+      },
+      {
+        "query_id": "PLAIN-1752",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1762",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-759",
+        "candidate_top": "MED-759"
+      },
+      {
+        "query_id": "PLAIN-1772",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4728",
+        "candidate_top": "MED-4728"
+      },
+      {
+        "query_id": "PLAIN-1784",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-5326",
+        "candidate_top": "MED-5326"
+      },
+      {
+        "query_id": "PLAIN-1794",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-5041",
+        "candidate_top": "MED-5041"
+      },
+      {
+        "query_id": "PLAIN-1805",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3938",
+        "candidate_top": "MED-5196"
+      },
+      {
+        "query_id": "PLAIN-1817",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-4284",
+        "candidate_top": "MED-4284"
+      },
+      {
+        "query_id": "PLAIN-1827",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1837",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1725",
+        "candidate_top": "MED-1725"
+      },
+      {
+        "query_id": "PLAIN-1847",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4000",
+        "candidate_top": "MED-4000"
+      },
+      {
+        "query_id": "PLAIN-1857",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-2544",
+        "candidate_top": "MED-2988"
+      },
+      {
+        "query_id": "PLAIN-186",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-2059",
+        "candidate_top": "MED-2059"
+      },
+      {
+        "query_id": "PLAIN-1867",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1877",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1991",
+        "candidate_top": "MED-1991"
+      },
+      {
+        "query_id": "PLAIN-1887",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-5083",
+        "candidate_top": "MED-5083"
+      },
+      {
+        "query_id": "PLAIN-1897",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2644",
+        "candidate_top": "MED-2644"
+      },
+      {
+        "query_id": "PLAIN-1909",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4818",
+        "candidate_top": "MED-4818"
+      },
+      {
+        "query_id": "PLAIN-1919",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.2,
+        "baseline_top": "MED-3321",
+        "candidate_top": "MED-4431"
+      },
+      {
+        "query_id": "PLAIN-1929",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4872",
+        "candidate_top": "MED-4872"
+      },
+      {
+        "query_id": "PLAIN-1940",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-3792",
+        "candidate_top": "MED-3792"
+      },
+      {
+        "query_id": "PLAIN-1950",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-912",
+        "candidate_top": "MED-912"
+      },
+      {
+        "query_id": "PLAIN-196",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-3969",
+        "candidate_top": "MED-3969"
+      },
+      {
+        "query_id": "PLAIN-1962",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2438",
+        "candidate_top": "MED-2438"
+      },
+      {
+        "query_id": "PLAIN-1972",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1442",
+        "candidate_top": "MED-1442"
+      },
+      {
+        "query_id": "PLAIN-1983",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2137",
+        "candidate_top": "MED-2137"
+      },
+      {
+        "query_id": "PLAIN-1995",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-5257",
+        "candidate_top": "MED-5257"
+      },
+      {
+        "query_id": "PLAIN-2",
+        "baseline_avg_rel": 1.6,
+        "candidate_avg_rel": 1.8,
+        "delta": 0.2,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-2009",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-5173",
+        "candidate_top": "MED-5173"
+      },
+      {
+        "query_id": "PLAIN-2019",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4573",
+        "candidate_top": "MED-4573"
+      },
+      {
+        "query_id": "PLAIN-2030",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-2816",
+        "candidate_top": "MED-4051"
+      },
+      {
+        "query_id": "PLAIN-2040",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-4933",
+        "candidate_top": "MED-4933"
+      },
+      {
+        "query_id": "PLAIN-2051",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.4,
+        "delta": -0.2,
+        "baseline_top": "MED-1781",
+        "candidate_top": "MED-1781"
+      },
+      {
+        "query_id": "PLAIN-2061",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 0.8,
+        "delta": -0.2,
+        "baseline_top": "MED-3031",
+        "candidate_top": "MED-3031"
+      },
+      {
+        "query_id": "PLAIN-207",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.4,
+        "delta": -0.2,
+        "baseline_top": "MED-4391",
+        "candidate_top": "MED-4391"
+      },
+      {
+        "query_id": "PLAIN-2071",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-3532",
+        "candidate_top": "MED-3532"
+      },
+      {
+        "query_id": "PLAIN-2081",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4303",
+        "candidate_top": "MED-4303"
+      },
+      {
+        "query_id": "PLAIN-2092",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1434",
+        "candidate_top": "MED-1434"
+      },
+      {
+        "query_id": "PLAIN-2102",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-1545",
+        "candidate_top": "MED-1545"
+      },
+      {
+        "query_id": "PLAIN-2113",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3890",
+        "candidate_top": "MED-3890"
+      },
+      {
+        "query_id": "PLAIN-2124",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-1522",
+        "candidate_top": "MED-1522"
+      },
+      {
+        "query_id": "PLAIN-2134",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-2145",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-743",
+        "candidate_top": "MED-743"
+      },
+      {
+        "query_id": "PLAIN-2156",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-4868",
+        "candidate_top": "MED-4868"
+      },
+      {
+        "query_id": "PLAIN-2167",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2488",
+        "candidate_top": "MED-2488"
+      },
+      {
+        "query_id": "PLAIN-217",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1991",
+        "candidate_top": "MED-1991"
+      },
+      {
+        "query_id": "PLAIN-2177",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-3282",
+        "candidate_top": "MED-3282"
+      },
+      {
+        "query_id": "PLAIN-2187",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-1248",
+        "candidate_top": "MED-1248"
+      },
+      {
+        "query_id": "PLAIN-227",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4150",
+        "candidate_top": "MED-4150"
+      },
+      {
+        "query_id": "PLAIN-23",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-2658",
+        "candidate_top": "MED-2658"
+      },
+      {
+        "query_id": "PLAIN-238",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2489",
+        "candidate_top": "MED-2489"
+      },
+      {
+        "query_id": "PLAIN-248",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4645",
+        "candidate_top": "MED-4645"
+      },
+      {
+        "query_id": "PLAIN-259",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4296",
+        "candidate_top": "MED-4296"
+      },
+      {
+        "query_id": "PLAIN-270",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4776",
+        "candidate_top": "MED-5257"
+      },
+      {
+        "query_id": "PLAIN-280",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4376",
+        "candidate_top": "MED-4733"
+      },
+      {
+        "query_id": "PLAIN-291",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2437",
+        "candidate_top": "MED-2437"
+      },
+      {
+        "query_id": "PLAIN-307",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.4,
+        "baseline_top": "MED-4573",
+        "candidate_top": "MED-4573"
+      },
+      {
+        "query_id": "PLAIN-320",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2437",
+        "candidate_top": "MED-2437"
+      },
+      {
+        "query_id": "PLAIN-33",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1803",
+        "candidate_top": "MED-1803"
+      },
+      {
+        "query_id": "PLAIN-332",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-760",
+        "candidate_top": "MED-760"
+      },
+      {
+        "query_id": "PLAIN-344",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1961",
+        "candidate_top": "MED-1961"
+      },
+      {
+        "query_id": "PLAIN-358",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3788",
+        "candidate_top": "MED-3788"
+      },
+      {
+        "query_id": "PLAIN-371",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4620",
+        "candidate_top": "MED-4620"
+      },
+      {
+        "query_id": "PLAIN-383",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.0,
+        "delta": -0.2,
+        "baseline_top": "MED-1712",
+        "candidate_top": "MED-2510"
+      },
+      {
+        "query_id": "PLAIN-395",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2794",
+        "candidate_top": "MED-2794"
+      },
+      {
+        "query_id": "PLAIN-407",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-906",
+        "candidate_top": "MED-906"
+      },
+      {
+        "query_id": "PLAIN-418",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2453",
+        "candidate_top": "MED-2074"
+      },
+      {
+        "query_id": "PLAIN-430",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-927",
+        "candidate_top": "MED-927"
+      },
+      {
+        "query_id": "PLAIN-44",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-2791",
+        "candidate_top": "MED-2791"
+      },
+      {
+        "query_id": "PLAIN-441",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-942",
+        "candidate_top": "MED-942"
+      },
+      {
+        "query_id": "PLAIN-457",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3109",
+        "candidate_top": "MED-3109"
+      },
+      {
+        "query_id": "PLAIN-468",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-3987",
+        "candidate_top": "MED-3988"
+      },
+      {
+        "query_id": "PLAIN-478",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2309",
+        "candidate_top": "MED-2309"
+      },
+      {
+        "query_id": "PLAIN-488",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4769",
+        "candidate_top": "MED-4769"
+      },
+      {
+        "query_id": "PLAIN-499",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-2900",
+        "candidate_top": "MED-2900"
+      },
+      {
+        "query_id": "PLAIN-510",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-520",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-531",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3113",
+        "candidate_top": "MED-3113"
+      },
+      {
+        "query_id": "PLAIN-541",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4027",
+        "candidate_top": "MED-4027"
+      },
+      {
+        "query_id": "PLAIN-551",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-56",
+        "baseline_avg_rel": 1.4,
+        "candidate_avg_rel": 1.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4384",
+        "candidate_top": "MED-4384"
+      },
+      {
+        "query_id": "PLAIN-561",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-3180",
+        "candidate_top": "MED-3180"
+      },
+      {
+        "query_id": "PLAIN-571",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2346",
+        "candidate_top": "MED-2346"
+      },
+      {
+        "query_id": "PLAIN-583",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-593",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4402",
+        "candidate_top": "MED-4402"
+      },
+      {
+        "query_id": "PLAIN-603",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1957",
+        "candidate_top": "MED-1957"
+      },
+      {
+        "query_id": "PLAIN-613",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-909",
+        "candidate_top": "MED-909"
+      },
+      {
+        "query_id": "PLAIN-623",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-1674",
+        "candidate_top": "MED-1674"
+      },
+      {
+        "query_id": "PLAIN-634",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1378",
+        "candidate_top": "MED-1378"
+      },
+      {
+        "query_id": "PLAIN-645",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-660",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3584",
+        "candidate_top": "MED-3584"
+      },
+      {
+        "query_id": "PLAIN-671",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4857",
+        "candidate_top": "MED-4857"
+      },
+      {
+        "query_id": "PLAIN-68",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2991",
+        "candidate_top": "MED-2991"
+      },
+      {
+        "query_id": "PLAIN-681",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-5017",
+        "candidate_top": "MED-5017"
+      },
+      {
+        "query_id": "PLAIN-691",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4909",
+        "candidate_top": "MED-4909"
+      },
+      {
+        "query_id": "PLAIN-701",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3720",
+        "candidate_top": "MED-3720"
+      },
+      {
+        "query_id": "PLAIN-711",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1492",
+        "candidate_top": "MED-1492"
+      },
+      {
+        "query_id": "PLAIN-721",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4876",
+        "candidate_top": "MED-4876"
+      },
+      {
+        "query_id": "PLAIN-731",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4226",
+        "candidate_top": "MED-5243"
+      },
+      {
+        "query_id": "PLAIN-741",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4237",
+        "candidate_top": "MED-4237"
+      },
+      {
+        "query_id": "PLAIN-751",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1797",
+        "candidate_top": "MED-1797"
+      },
+      {
+        "query_id": "PLAIN-761",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1667",
+        "candidate_top": "MED-1667"
+      },
+      {
+        "query_id": "PLAIN-771",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-3386",
+        "candidate_top": "MED-3386"
+      },
+      {
+        "query_id": "PLAIN-78",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2219",
+        "candidate_top": "MED-2219"
+      },
+      {
+        "query_id": "PLAIN-782",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1248",
+        "candidate_top": "MED-1055"
+      },
+      {
+        "query_id": "PLAIN-792",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-4546",
+        "candidate_top": "MED-4546"
+      },
+      {
+        "query_id": "PLAIN-806",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2519",
+        "candidate_top": "MED-2519"
+      },
+      {
+        "query_id": "PLAIN-817",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-827",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.2,
+        "baseline_top": "MED-4391",
+        "candidate_top": "MED-4391"
+      },
+      {
+        "query_id": "PLAIN-838",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3502",
+        "candidate_top": "MED-3502"
+      },
+      {
+        "query_id": "PLAIN-850",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.2,
+        "baseline_top": "MED-2064",
+        "candidate_top": "MED-4455"
+      },
+      {
+        "query_id": "PLAIN-872",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4098",
+        "candidate_top": "MED-1291"
+      },
+      {
+        "query_id": "PLAIN-882",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-3622",
+        "candidate_top": "MED-3622"
+      },
+      {
+        "query_id": "PLAIN-892",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2010",
+        "candidate_top": "MED-2010"
+      },
+      {
+        "query_id": "PLAIN-902",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4197",
+        "candidate_top": "MED-4195"
+      },
+      {
+        "query_id": "PLAIN-91",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4818",
+        "candidate_top": "MED-4818"
+      },
+      {
+        "query_id": "PLAIN-913",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3811",
+        "candidate_top": "MED-3811"
+      },
+      {
+        "query_id": "PLAIN-924",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3044",
+        "candidate_top": "MED-3044"
+      },
+      {
+        "query_id": "PLAIN-934",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-1648",
+        "candidate_top": "MED-1648"
+      },
+      {
+        "query_id": "PLAIN-946",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4381",
+        "candidate_top": "MED-4381"
+      },
+      {
+        "query_id": "PLAIN-956",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-2182",
+        "candidate_top": "MED-2182"
+      },
+      {
+        "query_id": "PLAIN-966",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3671",
+        "candidate_top": "MED-3671"
+      },
+      {
+        "query_id": "PLAIN-977",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1410",
+        "candidate_top": "MED-1410"
+      },
+      {
+        "query_id": "PLAIN-987",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1293",
+        "candidate_top": "MED-2780"
+      },
+      {
+        "query_id": "PLAIN-997",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      }
+    ],
+    "10": [
+      {
+        "query_id": "PLAIN-1008",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1018",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-5095",
+        "candidate_top": "MED-5095"
+      },
+      {
+        "query_id": "PLAIN-102",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3954",
+        "candidate_top": "MED-3954"
+      },
+      {
+        "query_id": "PLAIN-1028",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4178",
+        "candidate_top": "MED-4178"
+      },
+      {
+        "query_id": "PLAIN-1039",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4380",
+        "candidate_top": "MED-4380"
+      },
+      {
+        "query_id": "PLAIN-1050",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-1712",
+        "candidate_top": "MED-2510"
+      },
+      {
+        "query_id": "PLAIN-1066",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1712",
+        "candidate_top": "MED-2510"
+      },
+      {
+        "query_id": "PLAIN-1088",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-2109",
+        "candidate_top": "MED-2109"
+      },
+      {
+        "query_id": "PLAIN-1098",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1109",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.1,
+        "baseline_top": "MED-2643",
+        "candidate_top": "MED-2643"
+      },
+      {
+        "query_id": "PLAIN-1119",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2718",
+        "candidate_top": "MED-2718"
+      },
+      {
+        "query_id": "PLAIN-112",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-3380",
+        "candidate_top": "MED-3380"
+      },
+      {
+        "query_id": "PLAIN-1130",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4165",
+        "candidate_top": "MED-4165"
+      },
+      {
+        "query_id": "PLAIN-1141",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-3113",
+        "candidate_top": "MED-3113"
+      },
+      {
+        "query_id": "PLAIN-1151",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-3306",
+        "candidate_top": "MED-3306"
+      },
+      {
+        "query_id": "PLAIN-1161",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3584",
+        "candidate_top": "MED-3584"
+      },
+      {
+        "query_id": "PLAIN-1172",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4150",
+        "candidate_top": "MED-4150"
+      },
+      {
+        "query_id": "PLAIN-1183",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1276",
+        "candidate_top": "MED-1276"
+      },
+      {
+        "query_id": "PLAIN-1193",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1825",
+        "candidate_top": "MED-1825"
+      },
+      {
+        "query_id": "PLAIN-12",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4711",
+        "candidate_top": "MED-4711"
+      },
+      {
+        "query_id": "PLAIN-1203",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4771",
+        "candidate_top": "MED-4771"
+      },
+      {
+        "query_id": "PLAIN-1214",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1225",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-1669",
+        "candidate_top": "MED-1669"
+      },
+      {
+        "query_id": "PLAIN-123",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4392",
+        "candidate_top": "MED-4392"
+      },
+      {
+        "query_id": "PLAIN-1236",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-1341",
+        "candidate_top": "MED-1341"
+      },
+      {
+        "query_id": "PLAIN-1249",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2303",
+        "candidate_top": "MED-2303"
+      },
+      {
+        "query_id": "PLAIN-1262",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.1,
+        "baseline_top": "MED-983",
+        "candidate_top": "MED-983"
+      },
+      {
+        "query_id": "PLAIN-1275",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-4712",
+        "candidate_top": "MED-4712"
+      },
+      {
+        "query_id": "PLAIN-1288",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.0,
+        "baseline_top": "MED-1538",
+        "candidate_top": "MED-1538"
+      },
+      {
+        "query_id": "PLAIN-1299",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.1,
+        "baseline_top": "MED-1223",
+        "candidate_top": "MED-1223"
+      },
+      {
+        "query_id": "PLAIN-1309",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1320",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-2525",
+        "candidate_top": "MED-2525"
+      },
+      {
+        "query_id": "PLAIN-133",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3277",
+        "candidate_top": "MED-1666"
+      },
+      {
+        "query_id": "PLAIN-1331",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1049",
+        "candidate_top": "MED-1049"
+      },
+      {
+        "query_id": "PLAIN-1342",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "MED-4317",
+        "candidate_top": "MED-4317"
+      },
+      {
+        "query_id": "PLAIN-1353",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-976",
+        "candidate_top": "MED-976"
+      },
+      {
+        "query_id": "PLAIN-1363",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-3620",
+        "candidate_top": "MED-3620"
+      },
+      {
+        "query_id": "PLAIN-1374",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.1,
+        "baseline_top": "MED-3429",
+        "candidate_top": "MED-3429"
+      },
+      {
+        "query_id": "PLAIN-1387",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "MED-5063",
+        "candidate_top": "MED-5063"
+      },
+      {
+        "query_id": "PLAIN-1398",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1715",
+        "candidate_top": "MED-1715"
+      },
+      {
+        "query_id": "PLAIN-1409",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-1675",
+        "candidate_top": "MED-1675"
+      },
+      {
+        "query_id": "PLAIN-1419",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4198",
+        "candidate_top": "MED-4198"
+      },
+      {
+        "query_id": "PLAIN-1429",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2428",
+        "candidate_top": "MED-2428"
+      },
+      {
+        "query_id": "PLAIN-143",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-3621",
+        "candidate_top": "MED-3621"
+      },
+      {
+        "query_id": "PLAIN-1441",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2216",
+        "candidate_top": "MED-2216"
+      },
+      {
+        "query_id": "PLAIN-1453",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2221",
+        "candidate_top": "MED-2221"
+      },
+      {
+        "query_id": "PLAIN-1463",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-3584",
+        "candidate_top": "MED-3584"
+      },
+      {
+        "query_id": "PLAIN-1473",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4455",
+        "candidate_top": "MED-4455"
+      },
+      {
+        "query_id": "PLAIN-1485",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-2099",
+        "candidate_top": "MED-2099"
+      },
+      {
+        "query_id": "PLAIN-1496",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1506",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-5239",
+        "candidate_top": "MED-5239"
+      },
+      {
+        "query_id": "PLAIN-1516",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4181",
+        "candidate_top": "MED-4181"
+      },
+      {
+        "query_id": "PLAIN-1527",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.0,
+        "baseline_top": "MED-2160",
+        "candidate_top": "MED-2160"
+      },
+      {
+        "query_id": "PLAIN-153",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-3677",
+        "candidate_top": "MED-3677"
+      },
+      {
+        "query_id": "PLAIN-1537",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.2,
+        "baseline_top": "MED-4880",
+        "candidate_top": "MED-4880"
+      },
+      {
+        "query_id": "PLAIN-1547",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2360",
+        "candidate_top": "MED-2360"
+      },
+      {
+        "query_id": "PLAIN-1557",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-1406",
+        "candidate_top": "MED-1406"
+      },
+      {
+        "query_id": "PLAIN-1568",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4150",
+        "candidate_top": "MED-4150"
+      },
+      {
+        "query_id": "PLAIN-1579",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4801",
+        "candidate_top": "MED-4667"
+      },
+      {
+        "query_id": "PLAIN-1590",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-3604",
+        "candidate_top": "MED-3604"
+      },
+      {
+        "query_id": "PLAIN-1601",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.0,
+        "baseline_top": "MED-4996",
+        "candidate_top": "MED-4996"
+      },
+      {
+        "query_id": "PLAIN-1611",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1621",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1635",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.1,
+        "baseline_top": "MED-5118",
+        "candidate_top": "MED-5118"
+      },
+      {
+        "query_id": "PLAIN-1645",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-5056",
+        "candidate_top": "MED-5056"
+      },
+      {
+        "query_id": "PLAIN-165",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "MED-4445",
+        "candidate_top": "MED-4445"
+      },
+      {
+        "query_id": "PLAIN-1656",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3703",
+        "candidate_top": "MED-3703"
+      },
+      {
+        "query_id": "PLAIN-1667",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.7,
+        "delta": -0.1,
+        "baseline_top": "MED-1474",
+        "candidate_top": "MED-1474"
+      },
+      {
+        "query_id": "PLAIN-1679",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1690",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2220",
+        "candidate_top": "MED-2220"
+      },
+      {
+        "query_id": "PLAIN-1700",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1417",
+        "candidate_top": "MED-1417"
+      },
+      {
+        "query_id": "PLAIN-1710",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3169",
+        "candidate_top": "MED-3169"
+      },
+      {
+        "query_id": "PLAIN-1721",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-4787",
+        "candidate_top": "MED-4787"
+      },
+      {
+        "query_id": "PLAIN-1731",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-2749",
+        "candidate_top": "MED-2749"
+      },
+      {
+        "query_id": "PLAIN-1741",
+        "baseline_avg_rel": 0.9,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.1,
+        "baseline_top": "MED-2383",
+        "candidate_top": "MED-2383"
+      },
+      {
+        "query_id": "PLAIN-175",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-3818",
+        "candidate_top": "MED-3818"
+      },
+      {
+        "query_id": "PLAIN-1752",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1762",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-759",
+        "candidate_top": "MED-759"
+      },
+      {
+        "query_id": "PLAIN-1772",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4728",
+        "candidate_top": "MED-4728"
+      },
+      {
+        "query_id": "PLAIN-1784",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-5326",
+        "candidate_top": "MED-5326"
+      },
+      {
+        "query_id": "PLAIN-1794",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-5041",
+        "candidate_top": "MED-5041"
+      },
+      {
+        "query_id": "PLAIN-1805",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-3938",
+        "candidate_top": "MED-5196"
+      },
+      {
+        "query_id": "PLAIN-1817",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4284",
+        "candidate_top": "MED-4284"
+      },
+      {
+        "query_id": "PLAIN-1827",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1837",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1725",
+        "candidate_top": "MED-1725"
+      },
+      {
+        "query_id": "PLAIN-1847",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4000",
+        "candidate_top": "MED-4000"
+      },
+      {
+        "query_id": "PLAIN-1857",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2544",
+        "candidate_top": "MED-2988"
+      },
+      {
+        "query_id": "PLAIN-186",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-2059",
+        "candidate_top": "MED-2059"
+      },
+      {
+        "query_id": "PLAIN-1867",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-1877",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1991",
+        "candidate_top": "MED-1991"
+      },
+      {
+        "query_id": "PLAIN-1887",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-5083",
+        "candidate_top": "MED-5083"
+      },
+      {
+        "query_id": "PLAIN-1897",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2644",
+        "candidate_top": "MED-2644"
+      },
+      {
+        "query_id": "PLAIN-1909",
+        "baseline_avg_rel": 0.9,
+        "candidate_avg_rel": 0.9,
+        "delta": 0.0,
+        "baseline_top": "MED-4818",
+        "candidate_top": "MED-4818"
+      },
+      {
+        "query_id": "PLAIN-1919",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.0,
+        "baseline_top": "MED-3321",
+        "candidate_top": "MED-4431"
+      },
+      {
+        "query_id": "PLAIN-1929",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4872",
+        "candidate_top": "MED-4872"
+      },
+      {
+        "query_id": "PLAIN-1940",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3792",
+        "candidate_top": "MED-3792"
+      },
+      {
+        "query_id": "PLAIN-1950",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-912",
+        "candidate_top": "MED-912"
+      },
+      {
+        "query_id": "PLAIN-196",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.1,
+        "baseline_top": "MED-3969",
+        "candidate_top": "MED-3969"
+      },
+      {
+        "query_id": "PLAIN-1962",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2438",
+        "candidate_top": "MED-2438"
+      },
+      {
+        "query_id": "PLAIN-1972",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1442",
+        "candidate_top": "MED-1442"
+      },
+      {
+        "query_id": "PLAIN-1983",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2137",
+        "candidate_top": "MED-2137"
+      },
+      {
+        "query_id": "PLAIN-1995",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-5257",
+        "candidate_top": "MED-5257"
+      },
+      {
+        "query_id": "PLAIN-2",
+        "baseline_avg_rel": 1.1,
+        "candidate_avg_rel": 1.1,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-2009",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-5173",
+        "candidate_top": "MED-5173"
+      },
+      {
+        "query_id": "PLAIN-2019",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4573",
+        "candidate_top": "MED-4573"
+      },
+      {
+        "query_id": "PLAIN-2030",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-2816",
+        "candidate_top": "MED-4051"
+      },
+      {
+        "query_id": "PLAIN-2040",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-4933",
+        "candidate_top": "MED-4933"
+      },
+      {
+        "query_id": "PLAIN-2051",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "MED-1781",
+        "candidate_top": "MED-1781"
+      },
+      {
+        "query_id": "PLAIN-2061",
+        "baseline_avg_rel": 0.9,
+        "candidate_avg_rel": 0.9,
+        "delta": 0.0,
+        "baseline_top": "MED-3031",
+        "candidate_top": "MED-3031"
+      },
+      {
+        "query_id": "PLAIN-207",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-4391",
+        "candidate_top": "MED-4391"
+      },
+      {
+        "query_id": "PLAIN-2071",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.1,
+        "baseline_top": "MED-3532",
+        "candidate_top": "MED-3532"
+      },
+      {
+        "query_id": "PLAIN-2081",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4303",
+        "candidate_top": "MED-4303"
+      },
+      {
+        "query_id": "PLAIN-2092",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "MED-1434",
+        "candidate_top": "MED-1434"
+      },
+      {
+        "query_id": "PLAIN-2102",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-1545",
+        "candidate_top": "MED-1545"
+      },
+      {
+        "query_id": "PLAIN-2113",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3890",
+        "candidate_top": "MED-3890"
+      },
+      {
+        "query_id": "PLAIN-2124",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1522",
+        "candidate_top": "MED-1522"
+      },
+      {
+        "query_id": "PLAIN-2134",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-2145",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-743",
+        "candidate_top": "MED-743"
+      },
+      {
+        "query_id": "PLAIN-2156",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-4868",
+        "candidate_top": "MED-4868"
+      },
+      {
+        "query_id": "PLAIN-2167",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2488",
+        "candidate_top": "MED-2488"
+      },
+      {
+        "query_id": "PLAIN-217",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1991",
+        "candidate_top": "MED-1991"
+      },
+      {
+        "query_id": "PLAIN-2177",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-3282",
+        "candidate_top": "MED-3282"
+      },
+      {
+        "query_id": "PLAIN-2187",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1248",
+        "candidate_top": "MED-1248"
+      },
+      {
+        "query_id": "PLAIN-227",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4150",
+        "candidate_top": "MED-4150"
+      },
+      {
+        "query_id": "PLAIN-23",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.1,
+        "baseline_top": "MED-2658",
+        "candidate_top": "MED-2658"
+      },
+      {
+        "query_id": "PLAIN-238",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2489",
+        "candidate_top": "MED-2489"
+      },
+      {
+        "query_id": "PLAIN-248",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4645",
+        "candidate_top": "MED-4645"
+      },
+      {
+        "query_id": "PLAIN-259",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4296",
+        "candidate_top": "MED-4296"
+      },
+      {
+        "query_id": "PLAIN-270",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-4776",
+        "candidate_top": "MED-5257"
+      },
+      {
+        "query_id": "PLAIN-280",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4376",
+        "candidate_top": "MED-4733"
+      },
+      {
+        "query_id": "PLAIN-291",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-2437",
+        "candidate_top": "MED-2437"
+      },
+      {
+        "query_id": "PLAIN-307",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-4573",
+        "candidate_top": "MED-4573"
+      },
+      {
+        "query_id": "PLAIN-320",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2437",
+        "candidate_top": "MED-2437"
+      },
+      {
+        "query_id": "PLAIN-33",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1803",
+        "candidate_top": "MED-1803"
+      },
+      {
+        "query_id": "PLAIN-332",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-760",
+        "candidate_top": "MED-760"
+      },
+      {
+        "query_id": "PLAIN-344",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-1961",
+        "candidate_top": "MED-1961"
+      },
+      {
+        "query_id": "PLAIN-358",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3788",
+        "candidate_top": "MED-3788"
+      },
+      {
+        "query_id": "PLAIN-371",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4620",
+        "candidate_top": "MED-4620"
+      },
+      {
+        "query_id": "PLAIN-383",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-1712",
+        "candidate_top": "MED-2510"
+      },
+      {
+        "query_id": "PLAIN-395",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2794",
+        "candidate_top": "MED-2794"
+      },
+      {
+        "query_id": "PLAIN-407",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-906",
+        "candidate_top": "MED-906"
+      },
+      {
+        "query_id": "PLAIN-418",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-2453",
+        "candidate_top": "MED-2074"
+      },
+      {
+        "query_id": "PLAIN-430",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "MED-927",
+        "candidate_top": "MED-927"
+      },
+      {
+        "query_id": "PLAIN-44",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-2791",
+        "candidate_top": "MED-2791"
+      },
+      {
+        "query_id": "PLAIN-441",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "MED-942",
+        "candidate_top": "MED-942"
+      },
+      {
+        "query_id": "PLAIN-457",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3109",
+        "candidate_top": "MED-3109"
+      },
+      {
+        "query_id": "PLAIN-468",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "MED-3987",
+        "candidate_top": "MED-3988"
+      },
+      {
+        "query_id": "PLAIN-478",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-2309",
+        "candidate_top": "MED-2309"
+      },
+      {
+        "query_id": "PLAIN-488",
+        "baseline_avg_rel": 0.9,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.1,
+        "baseline_top": "MED-4769",
+        "candidate_top": "MED-4769"
+      },
+      {
+        "query_id": "PLAIN-499",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-2900",
+        "candidate_top": "MED-2900"
+      },
+      {
+        "query_id": "PLAIN-510",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-520",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-531",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3113",
+        "candidate_top": "MED-3113"
+      },
+      {
+        "query_id": "PLAIN-541",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4027",
+        "candidate_top": "MED-4027"
+      },
+      {
+        "query_id": "PLAIN-551",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-56",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-4384",
+        "candidate_top": "MED-4384"
+      },
+      {
+        "query_id": "PLAIN-561",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3180",
+        "candidate_top": "MED-3180"
+      },
+      {
+        "query_id": "PLAIN-571",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-2346",
+        "candidate_top": "MED-2346"
+      },
+      {
+        "query_id": "PLAIN-583",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-593",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4402",
+        "candidate_top": "MED-4402"
+      },
+      {
+        "query_id": "PLAIN-603",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1957",
+        "candidate_top": "MED-1957"
+      },
+      {
+        "query_id": "PLAIN-613",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.1,
+        "baseline_top": "MED-909",
+        "candidate_top": "MED-909"
+      },
+      {
+        "query_id": "PLAIN-623",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-1674",
+        "candidate_top": "MED-1674"
+      },
+      {
+        "query_id": "PLAIN-634",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-1378",
+        "candidate_top": "MED-1378"
+      },
+      {
+        "query_id": "PLAIN-645",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-660",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-3584",
+        "candidate_top": "MED-3584"
+      },
+      {
+        "query_id": "PLAIN-671",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-4857",
+        "candidate_top": "MED-4857"
+      },
+      {
+        "query_id": "PLAIN-68",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-2991",
+        "candidate_top": "MED-2991"
+      },
+      {
+        "query_id": "PLAIN-681",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-5017",
+        "candidate_top": "MED-5017"
+      },
+      {
+        "query_id": "PLAIN-691",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4909",
+        "candidate_top": "MED-4909"
+      },
+      {
+        "query_id": "PLAIN-701",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.1,
+        "delta": -0.1,
+        "baseline_top": "MED-3720",
+        "candidate_top": "MED-3720"
+      },
+      {
+        "query_id": "PLAIN-711",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-1492",
+        "candidate_top": "MED-1492"
+      },
+      {
+        "query_id": "PLAIN-721",
+        "baseline_avg_rel": 1.0,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4876",
+        "candidate_top": "MED-4876"
+      },
+      {
+        "query_id": "PLAIN-731",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.1,
+        "baseline_top": "MED-4226",
+        "candidate_top": "MED-5243"
+      },
+      {
+        "query_id": "PLAIN-741",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.1,
+        "baseline_top": "MED-4237",
+        "candidate_top": "MED-4237"
+      },
+      {
+        "query_id": "PLAIN-751",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1797",
+        "candidate_top": "MED-1797"
+      },
+      {
+        "query_id": "PLAIN-761",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1667",
+        "candidate_top": "MED-1667"
+      },
+      {
+        "query_id": "PLAIN-771",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-3386",
+        "candidate_top": "MED-3386"
+      },
+      {
+        "query_id": "PLAIN-78",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-2219",
+        "candidate_top": "MED-2219"
+      },
+      {
+        "query_id": "PLAIN-782",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-1248",
+        "candidate_top": "MED-1055"
+      },
+      {
+        "query_id": "PLAIN-792",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "MED-4546",
+        "candidate_top": "MED-4546"
+      },
+      {
+        "query_id": "PLAIN-806",
+        "baseline_avg_rel": 0.9,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.1,
+        "baseline_top": "MED-2519",
+        "candidate_top": "MED-2519"
+      },
+      {
+        "query_id": "PLAIN-817",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      },
+      {
+        "query_id": "PLAIN-827",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-4391",
+        "candidate_top": "MED-4391"
+      },
+      {
+        "query_id": "PLAIN-838",
+        "baseline_avg_rel": 0.7,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.0,
+        "baseline_top": "MED-3502",
+        "candidate_top": "MED-3502"
+      },
+      {
+        "query_id": "PLAIN-850",
+        "baseline_avg_rel": 0.5,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
+        "baseline_top": "MED-2064",
+        "candidate_top": "MED-4455"
+      },
+      {
+        "query_id": "PLAIN-872",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-4098",
+        "candidate_top": "MED-1291"
+      },
+      {
+        "query_id": "PLAIN-882",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-3622",
+        "candidate_top": "MED-3622"
+      },
+      {
+        "query_id": "PLAIN-892",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-2010",
+        "candidate_top": "MED-2010"
+      },
+      {
+        "query_id": "PLAIN-902",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4197",
+        "candidate_top": "MED-4195"
+      },
+      {
+        "query_id": "PLAIN-91",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4818",
+        "candidate_top": "MED-4818"
+      },
+      {
+        "query_id": "PLAIN-913",
+        "baseline_avg_rel": 0.9,
+        "candidate_avg_rel": 0.9,
+        "delta": 0.0,
+        "baseline_top": "MED-3811",
+        "candidate_top": "MED-3811"
+      },
+      {
+        "query_id": "PLAIN-924",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-3044",
+        "candidate_top": "MED-3044"
+      },
+      {
+        "query_id": "PLAIN-934",
+        "baseline_avg_rel": 0.8,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
+        "baseline_top": "MED-1648",
+        "candidate_top": "MED-1648"
+      },
+      {
+        "query_id": "PLAIN-946",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "MED-4381",
+        "candidate_top": "MED-4381"
+      },
+      {
+        "query_id": "PLAIN-956",
+        "baseline_avg_rel": 0.6,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
+        "baseline_top": "MED-2182",
+        "candidate_top": "MED-2182"
+      },
+      {
+        "query_id": "PLAIN-966",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-3671",
+        "candidate_top": "MED-3671"
+      },
+      {
+        "query_id": "PLAIN-977",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-1410",
+        "candidate_top": "MED-1410"
+      },
+      {
+        "query_id": "PLAIN-987",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "MED-1293",
+        "candidate_top": "MED-2780"
+      },
+      {
+        "query_id": "PLAIN-997",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "MED-10",
+        "candidate_top": "MED-10"
+      }
+    ]
+  },
+  "improved_queries": [
+    {
+      "query_id": "PLAIN-1299",
+      "baseline_avg_rel": 0.333333,
+      "candidate_avg_rel": 0.666667,
+      "delta": 0.333333,
+      "baseline_top": "MED-1223",
+      "candidate_top": "MED-1223"
+    },
+    {
+      "query_id": "PLAIN-1342",
+      "baseline_avg_rel": 0.333333,
+      "candidate_avg_rel": 0.666667,
+      "delta": 0.333333,
+      "baseline_top": "MED-4317",
+      "candidate_top": "MED-4317"
+    },
+    {
+      "query_id": "PLAIN-1527",
+      "baseline_avg_rel": 0.666667,
+      "candidate_avg_rel": 1.0,
+      "delta": 0.333333,
+      "baseline_top": "MED-2160",
+      "candidate_top": "MED-2160"
+    },
+    {
+      "query_id": "PLAIN-1635",
+      "baseline_avg_rel": 0.333333,
+      "candidate_avg_rel": 0.666667,
+      "delta": 0.333333,
+      "baseline_top": "MED-5118",
+      "candidate_top": "MED-5118"
+    },
+    {
+      "query_id": "PLAIN-1667",
+      "baseline_avg_rel": 0.333333,
+      "candidate_avg_rel": 0.666667,
+      "delta": 0.333333,
+      "baseline_top": "MED-1474",
+      "candidate_top": "MED-1474"
+    },
+    {
+      "query_id": "PLAIN-2177",
+      "baseline_avg_rel": 0.333333,
+      "candidate_avg_rel": 0.666667,
+      "delta": 0.333333,
+      "baseline_top": "MED-3282",
+      "candidate_top": "MED-3282"
+    },
+    {
+      "query_id": "PLAIN-270",
+      "baseline_avg_rel": 0.0,
+      "candidate_avg_rel": 0.333333,
+      "delta": 0.333333,
+      "baseline_top": "MED-4776",
+      "candidate_top": "MED-5257"
+    }
+  ],
+  "worsened_queries": [
+    {
+      "query_id": "PLAIN-1288",
+      "baseline_avg_rel": 1.0,
+      "candidate_avg_rel": 0.666667,
+      "delta": -0.333333,
+      "baseline_top": "MED-1538",
+      "candidate_top": "MED-1538"
+    },
+    {
+      "query_id": "PLAIN-23",
+      "baseline_avg_rel": 1.0,
+      "candidate_avg_rel": 0.666667,
+      "delta": -0.333333,
+      "baseline_top": "MED-2658",
+      "candidate_top": "MED-2658"
+    }
+  ],
+  "next_actions": [
+    "Increase query count and add harder cases.",
+    "Do not claim improvement from this mode yet.",
+    "Inspect rank movement explanations for near misses."
+  ]
+}
