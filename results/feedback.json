@@ -1,0 +1,65 @@
+{
+  "verdict": "PASS",
+  "metrics": {
+    "baseline": {
+      "nDCG@10": 0.951711,
+      "MRR": 1.0,
+      "AvgRel@10": 0.625
+    },
+    "structure_rerank": {
+      "nDCG@10": 0.967181,
+      "MRR": 1.0,
+      "AvgRel@10": 0.625
+    }
+  },
+  "query_deltas": [
+    {
+      "query_id": "q1",
+      "baseline_avg_rel": 0.75,
+      "structure_rerank_avg_rel": 0.75,
+      "delta": 0.0,
+      "baseline_top": "p1",
+      "structure_top": "p1"
+    },
+    {
+      "query_id": "q2",
+      "baseline_avg_rel": 0.625,
+      "structure_rerank_avg_rel": 0.625,
+      "delta": 0.0,
+      "baseline_top": "p8",
+      "structure_top": "p8"
+    },
+    {
+      "query_id": "q3",
+      "baseline_avg_rel": 0.625,
+      "structure_rerank_avg_rel": 0.625,
+      "delta": 0.0,
+      "baseline_top": "p3",
+      "structure_top": "p3"
+    },
+    {
+      "query_id": "q4",
+      "baseline_avg_rel": 0.5,
+      "structure_rerank_avg_rel": 0.5,
+      "delta": 0.0,
+      "baseline_top": "p4",
+      "structure_top": "p4"
+    },
+    {
+      "query_id": "q5",
+      "baseline_avg_rel": 0.625,
+      "structure_rerank_avg_rel": 0.625,
+      "delta": 0.0,
+      "baseline_top": "p6",
+      "structure_top": "p6"
+    }
+  ],
+  "improved_queries": [],
+  "worsened_queries": [],
+  "unchanged_queries": ["q1", "q2", "q3", "q4", "q5"],
+  "next_actions": [
+    "Add a small real exported dataset without production secrets.",
+    "Keep the same metrics and compare again before changing the scoring formula.",
+    "Inspect ranking-order changes where AvgRel@10 is unchanged but nDCG@10 improves."
+  ]
+}
