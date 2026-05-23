@@ -8,17 +8,44 @@ Primary cutoff: **top-3**
 | k | mode | nDCG | MRR | AvgRel |
 |---:|---|---:|---:|---:|
 | 3 | baseline | 0.799869 | 0.933333 | 1.633333 |
+| 3 | structure_causal_only | 0.782264 | 0.883333 | 1.600000 |
+| 3 | structure_conclusion_only | 0.840654 | 0.933333 | 1.733333 |
+| 3 | structure_contrast_only | 0.834062 | 0.933333 | 1.733333 |
+| 3 | structure_definition_only | 0.841327 | 1.000000 | 1.666667 |
+| 3 | structure_premise_only | 0.804065 | 0.933333 | 1.666667 |
 | 3 | structure_rerank | 0.871324 | 1.000000 | 1.733333 |
 | 5 | baseline | 0.825725 | 0.933333 | 1.080000 |
+| 5 | structure_causal_only | 0.817942 | 0.883333 | 1.100000 |
+| 5 | structure_conclusion_only | 0.855526 | 0.933333 | 1.120000 |
+| 5 | structure_contrast_only | 0.832459 | 0.933333 | 1.060000 |
+| 5 | structure_definition_only | 0.898532 | 1.000000 | 1.200000 |
+| 5 | structure_premise_only | 0.835272 | 0.933333 | 1.120000 |
 | 5 | structure_rerank | 0.919919 | 1.000000 | 1.220000 |
 | 10 | baseline | 0.876868 | 0.933333 | 0.660000 |
+| 10 | structure_causal_only | 0.864540 | 0.883333 | 0.660000 |
+| 10 | structure_conclusion_only | 0.896243 | 0.933333 | 0.670000 |
+| 10 | structure_contrast_only | 0.888890 | 0.933333 | 0.670000 |
+| 10 | structure_definition_only | 0.935066 | 1.000000 | 0.690000 |
+| 10 | structure_premise_only | 0.878141 | 0.933333 | 0.660000 |
 | 10 | structure_rerank | 0.950782 | 1.000000 | 0.700000 |
+
+## Ablation summary at primary cutoff
+
+| mode | nDCG | AvgRel | MRR | delta nDCG | delta AvgRel |
+|---|---:|---:|---:|---:|---:|
+| structure_rerank | 0.871324 | 1.733333 | 1.000000 | 0.071455 | 0.100000 |
+| structure_definition_only | 0.841327 | 1.666667 | 1.000000 | 0.041458 | 0.033334 |
+| structure_conclusion_only | 0.840654 | 1.733333 | 0.933333 | 0.040785 | 0.100000 |
+| structure_contrast_only | 0.834062 | 1.733333 | 0.933333 | 0.034193 | 0.100000 |
+| structure_premise_only | 0.804065 | 1.666667 | 0.933333 | 0.004196 | 0.033334 |
+| structure_causal_only | 0.782264 | 1.600000 | 0.883333 | -0.017605 | -0.033333 |
 
 ## Interpretation
 
-- The expanded sample now includes 20 posts and lexical hard negatives.
-- Structure rerank improves nDCG and AvgRel at top-3, top-5, and top-10.
-- The strongest visible top-3 gain is q5, where the reranker promotes the Markdown/reasoning-structure result over lexical traps.
+- The expanded sample includes 20 posts and lexical hard negatives.
+- Full structure rerank remains the best primary mode.
+- `definition_only`, `conclusion_only`, and `contrast_only` are useful partial signals.
+- `causal_only` currently hurts top-3. That is a concrete failure signal, not a reason to add more features blindly.
 - This is still synthetic. It demonstrates the feedback mechanism, not production validity.
 
 ## Primary query deltas
@@ -38,6 +65,7 @@ Primary cutoff: **top-3**
 
 ## Next actions
 
+- Keep full structure rerank as the default candidate.
+- Investigate why `causal_only` hurts top-3 before increasing causal weight.
 - Add a small real exported dataset without production secrets.
 - Keep top-3/top-5/top-10 metrics and compare again before changing the scoring formula.
-- Inspect improved queries to identify which structure types carried the gain.
