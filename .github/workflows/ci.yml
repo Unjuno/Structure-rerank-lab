@@ -62,6 +62,16 @@ jobs:
           --baseline-mode vector_baseline
           --candidate-mode vector_structure_rerank
 
+      - name: Generate vector rank movement explanations
+        run: >-
+          python -m structure_rerank.explain_moves
+          --results results/vector_results.jsonl
+          --explanations-md results/vector_rank_movements.md
+          --explanations-json results/vector_rank_movements.json
+          --baseline-mode vector_baseline
+          --compare-mode vector_structure_rerank
+          --skip-rerank
+
       - name: Upload experiment artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -77,3 +87,5 @@ jobs:
             results/vector_results.jsonl
             results/vector_feedback.md
             results/vector_feedback.json
+            results/vector_rank_movements.md
+            results/vector_rank_movements.json
