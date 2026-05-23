@@ -34,6 +34,7 @@ sample data
   -> diagnostics
   -> rank movement explanations
   -> combined experiment summary
+  -> generated result snapshots
 ```
 
 The goal is not to claim production validity from a tiny synthetic dataset. The goal is to create a closed loop that can say:
@@ -75,9 +76,9 @@ python -m structure_rerank.explain_moves \
 python -m structure_rerank.experiment_summary
 ```
 
-## CI artifacts
+## Generated results
 
-GitHub Actions generates the following artifacts:
+GitHub Actions generates these files:
 
 - `results/sample_results.jsonl`
 - `results/feedback.md`
@@ -94,7 +95,12 @@ GitHub Actions generates the following artifacts:
 - `results/experiment_summary.md`
 - `results/experiment_summary.json`
 
-`results/` files committed to the repository are snapshots or placeholders. The CI artifact is the source of truth for the latest generated result.
+On push to `main`, CI also commits changed `results/` snapshots back to the repository with `[skip ci]`. Therefore the intended reading order is:
+
+1. open `results/experiment_summary.md`
+2. inspect `results/vector_feedback.md` if vector results block progress
+3. inspect `results/diagnostics.md` and rank movement reports for failure causes
+4. use workflow artifacts only when debugging CI itself
 
 ## Current limitations
 
