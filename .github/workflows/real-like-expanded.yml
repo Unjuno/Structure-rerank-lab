@@ -1,0 +1,91 @@
+name: Real-like Expanded
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  expanded-real-like:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build expanded inputs
+        run: |
+          mkdir -p results
+          cat examples/real_like_queries.jsonl examples/real_like_queries_extra.jsonl > results/real_like_queries_20.jsonl
+          cat examples/real_like_judgments.jsonl examples/real_like_judgments_extra.jsonl > results/real_like_judgments_20.jsonl
+
+      - name: Run expanded lexical experiment
+        run: >-
+          python -m structure_rerank.rerank
+          --posts examples/real_like_posts.jsonl
+          --queries results/real_like_queries_20.jsonl
+          --structures examples/real_like_structures.jsonl
+          --output results/real_like_expanded_results.jsonl
+
+      - name: Report expanded lexical result
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/real_like_expanded_results.jsonl
+          --judgments results/real_like_judgments_20.jsonl
+          --output-md results/real_like_expanded_feedback.md
+          --output-json results/real_like_expanded_feedback.json
+          --baseline-mode baseline
+          --candidate-mode structure_rerank
+
+      - name: Run expanded vector experiment
+        run: >-
+          python -m structure_rerank.vector_experiment
+          --posts examples/real_like_posts.jsonl
+          --queries results/real_like_queries_20.jsonl
+          --structures examples/real_like_structures.jsonl
+          --output results/real_like_expanded_vector_results.jsonl
+
+      - name: Report expanded vector result
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/real_like_expanded_vector_results.jsonl
+          --judgments results/real_like_judgments_20.jsonl
+          --output-md results/real_like_expanded_vector_feedback.md
+          --output-json results/real_like_expanded_vector_feedback.json
+          --baseline-mode vector_baseline
+          --candidate-mode vector_structure_rerank
+
+      - name: Upload expanded artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: real-like-expanded
+          path: |
+            results/real_like_queries_20.jsonl
+            results/real_like_judgments_20.jsonl
+            results/real_like_expanded_results.jsonl
+            results/real_like_expanded_feedback.md
+            results/real_like_expanded_feedback.json
+            results/real_like_expanded_vector_results.jsonl
+            results/real_like_expanded_vector_feedback.md
+            results/real_like_expanded_vector_feedback.json
+
+      - name: Commit expanded snapshots
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/real_like_queries_20.jsonl results/real_like_judgments_20.jsonl results/real_like_expanded_*
+          if git diff --cached --quiet; then
+            echo "no expanded result changes"
+          else
+            git commit -m "results: refresh expanded real-like snapshots [skip ci]"
+            git push
+          fi
