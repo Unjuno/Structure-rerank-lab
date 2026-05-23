@@ -1,0 +1,26 @@
+{
+  "k": 3,
+  "query_count": 10,
+  "helpful_modes": {
+    "structure_premise_only": 1,
+    "structure_rerank": 1,
+    "structure_conclusion_only": 1,
+    "structure_contrast_only": 1,
+    "structure_definition_only": 1
+  },
+  "harmful_modes": {
+    "structure_causal_only": 1
+  },
+  "per_query": [
+    {"query_id": "q1", "baseline_avg_rel": 1.0, "best_mode": {"mode": "baseline", "avg_rel": 1.0, "delta_vs_baseline": 0.0, "top_post": "p1"}, "worst_mode": {"mode": "structure_definition_only", "avg_rel": 1.0, "delta_vs_baseline": 0.0, "top_post": "p1"}},
+    {"query_id": "q2", "baseline_avg_rel": 2.0, "best_mode": {"mode": "structure_premise_only", "avg_rel": 2.333333, "delta_vs_baseline": 0.333333, "top_post": "p8"}, "worst_mode": {"mode": "structure_definition_only", "avg_rel": 2.0, "delta_vs_baseline": 0.0, "top_post": "p8"}},
+    {"query_id": "q3", "baseline_avg_rel": 1.0, "best_mode": {"mode": "baseline", "avg_rel": 1.0, "delta_vs_baseline": 0.0, "top_post": "p3"}, "worst_mode": {"mode": "structure_definition_only", "avg_rel": 1.0, "delta_vs_baseline": 0.0, "top_post": "p3"}},
+    {"query_id": "q4", "baseline_avg_rel": 2.333333, "best_mode": {"mode": "baseline", "avg_rel": 2.333333, "delta_vs_baseline": 0.0, "top_post": "p4"}, "worst_mode": {"mode": "structure_causal_only", "avg_rel": 2.0, "delta_vs_baseline": -0.333333, "top_post": "p4"}},
+    {"query_id": "q5", "baseline_avg_rel": 1.0, "best_mode": {"mode": "structure_rerank", "avg_rel": 2.0, "delta_vs_baseline": 1.0, "top_post": "p6"}, "worst_mode": {"mode": "structure_definition_only", "avg_rel": 1.0, "delta_vs_baseline": 0.0, "top_post": "p6"}},
+    {"query_id": "q6", "baseline_avg_rel": 1.0, "best_mode": {"mode": "baseline", "avg_rel": 1.0, "delta_vs_baseline": 0.0, "top_post": "p3"}, "worst_mode": {"mode": "structure_definition_only", "avg_rel": 1.0, "delta_vs_baseline": 0.0, "top_post": "p13"}},
+    {"query_id": "q7", "baseline_avg_rel": 2.0, "best_mode": {"mode": "baseline", "avg_rel": 2.0, "delta_vs_baseline": 0.0, "top_post": "p5"}, "worst_mode": {"mode": "structure_definition_only", "avg_rel": 2.0, "delta_vs_baseline": 0.0, "top_post": "p5"}},
+    {"query_id": "q8", "baseline_avg_rel": 2.0, "best_mode": {"mode": "structure_definition_only", "avg_rel": 2.333333, "delta_vs_baseline": 0.333333, "top_post": "p14"}, "worst_mode": {"mode": "structure_contrast_only", "avg_rel": 2.0, "delta_vs_baseline": 0.0, "top_post": "p14"}},
+    {"query_id": "q9", "baseline_avg_rel": 2.333333, "best_mode": {"mode": "baseline", "avg_rel": 2.333333, "delta_vs_baseline": 0.0, "top_post": "p19"}, "worst_mode": {"mode": "structure_definition_only", "avg_rel": 2.333333, "delta_vs_baseline": 0.0, "top_post": "p19"}},
+    {"query_id": "q10", "baseline_avg_rel": 1.666667, "best_mode": {"mode": "baseline", "avg_rel": 1.666667, "delta_vs_baseline": 0.0, "top_post": "p20"}, "worst_mode": {"mode": "structure_definition_only", "avg_rel": 1.666667, "delta_vs_baseline": 0.0, "top_post": "p20"}}
+  ]
+}
