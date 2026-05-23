@@ -1,0 +1,30 @@
+name: ArguAna Corpus Vertical
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m structure_rerank.beir_adapter --dataset arguana --out results/beir/arguana --max-queries 200 --max-corpus 8000
+      - run: python -m structure_rerank.vector_experiment --posts results/beir/arguana/posts.jsonl --queries results/beir/arguana/queries.jsonl --structures results/beir/arguana/structures.jsonl --output results/beir/arguana/vector_results.jsonl
+      - run: python -m structure_rerank.mode_feedback --results results/beir/arguana/vector_results.jsonl --judgments results/beir/arguana/judgments.jsonl --output-md results/beir/arguana/corpus_vertical_feedback.md --output-json results/beir/arguana/corpus_vertical_feedback.json --baseline-mode vector_baseline --candidate-mode corpus_vertical_rerank
+      - run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git pull --rebase || true
+          git add results/beir/arguana/corpus_vertical_feedback.md results/beir/arguana/corpus_vertical_feedback.json
+          git commit -m "results: arguana corpus vertical" || exit 0
+          git push || true
