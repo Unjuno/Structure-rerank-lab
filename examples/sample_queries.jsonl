@@ -3,3 +3,8 @@
 {"id":"q3","query":"what does structure reranking mean","intent_structure":"definition"}
 {"id":"q4","query":"difference between topical similarity and argument similarity","intent_structure":"contrast"}
 {"id":"q5","query":"formatting should not dominate reasoning search","intent_structure":"conclusion"}
+{"id":"q6","query":"what is the definition of premise and conclusion","intent_structure":"definition"}
+{"id":"q7","query":"reranking is not a replacement for dense retrieval","intent_structure":"contrast"}
+{"id":"q8","query":"same premise but opposite conclusions","intent_structure":"contrast"}
+{"id":"q9","query":"public experiments improve or reduce trust","intent_structure":"contrast"}
+{"id":"q10","query":"definition versus causal explanation","intent_structure":"definition"}
