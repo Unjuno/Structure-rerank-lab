@@ -53,7 +53,7 @@ jobs:
           --structures examples/real_like_structures.jsonl
           --output results/real_like_expanded_vector_results.jsonl
 
-      - name: Report expanded vector result
+      - name: Report expanded vector structure result
         run: >-
           python -m structure_rerank.mode_feedback
           --results results/real_like_expanded_vector_results.jsonl
@@ -62,6 +62,16 @@ jobs:
           --output-json results/real_like_expanded_vector_feedback.json
           --baseline-mode vector_baseline
           --candidate-mode vector_structure_rerank
+
+      - name: Report expanded vertical vector result
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/real_like_expanded_vector_results.jsonl
+          --judgments results/real_like_judgments_20.jsonl
+          --output-md results/real_like_expanded_vertical_feedback.md
+          --output-json results/real_like_expanded_vertical_feedback.json
+          --baseline-mode vector_baseline
+          --candidate-mode vertical_vector_rerank
 
       - name: Upload expanded artifacts
         uses: actions/upload-artifact@v4
@@ -76,6 +86,8 @@ jobs:
             results/real_like_expanded_vector_results.jsonl
             results/real_like_expanded_vector_feedback.md
             results/real_like_expanded_vector_feedback.json
+            results/real_like_expanded_vertical_feedback.md
+            results/real_like_expanded_vertical_feedback.json
 
       - name: Commit expanded snapshots
         if: github.event_name == 'push'
