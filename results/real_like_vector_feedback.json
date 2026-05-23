@@ -14,6 +14,11 @@
         "nDCG@3": 0.851688,
         "MRR": 1.0,
         "AvgRel@3": 1.066667
+      },
+      "vertical_vector_rerank": {
+        "nDCG@3": 0.851688,
+        "MRR": 1.0,
+        "AvgRel@3": 1.066667
       }
     },
     "5": {
@@ -26,6 +31,11 @@
         "nDCG@5": 0.871258,
         "MRR": 1.0,
         "AvgRel@5": 0.72
+      },
+      "vertical_vector_rerank": {
+        "nDCG@5": 0.867039,
+        "MRR": 1.0,
+        "AvgRel@5": 0.7
       }
     },
     "10": {
@@ -36,6 +46,11 @@
       },
       "vector_structure_rerank": {
         "nDCG@10": 0.883293,
+        "MRR": 1.0,
+        "AvgRel@10": 0.39
+      },
+      "vertical_vector_rerank": {
+        "nDCG@10": 0.883174,
         "MRR": 1.0,
         "AvgRel@10": 0.39
       }
