@@ -23,11 +23,15 @@
     "candidate_AvgRel": 1.8,
     "delta_AvgRel": 0.10000000000000009
   },
-  "harmful_modes": {
+  "degrading_modes": {
+    "structure_causal_only": 1
+  },
+  "degrading_intent_matched_modes": {},
+  "degrading_off_intent_modes": {
     "structure_causal_only": 1
   },
   "next_actions": [
-    "inspect harmful modes: structure_causal_only",
+    "track off-intent ablation degradation separately: structure_causal_only",
     "add a real-like exported sample without secrets",
     "keep TF-IDF vector baseline as CI-safe baseline",
     "add optional neural embedding backend only after real-like sample check"

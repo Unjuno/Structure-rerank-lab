@@ -13,13 +13,21 @@ Overall status: **PASS**
 
 - none
 
-## Harmful modes
+## Degrading modes
+
+- structure_causal_only: 1
+
+## Degrading intent-matched modes
+
+- none
+
+## Degrading off-intent modes
 
 - structure_causal_only: 1
 
 ## Next actions
 
-- inspect harmful modes: structure_causal_only
+- track off-intent ablation degradation separately: structure_causal_only
 - add a real-like exported sample without secrets
 - keep TF-IDF vector baseline as CI-safe baseline
 - add optional neural embedding backend only after real-like sample check
