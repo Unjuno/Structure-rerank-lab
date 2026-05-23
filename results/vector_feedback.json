@@ -19,6 +19,11 @@
         "nDCG@3": 0.844563,
         "MRR": 0.95,
         "AvgRel@3": 1.7
+      },
+      "corpus_vertical_rerank": {
+        "nDCG@3": 0.819216,
+        "MRR": 0.933333,
+        "AvgRel@3": 1.633333
       }
     },
     "5": {
@@ -36,6 +41,11 @@
         "nDCG@5": 0.900176,
         "MRR": 0.95,
         "AvgRel@5": 1.22
+      },
+      "corpus_vertical_rerank": {
+        "nDCG@5": 0.868684,
+        "MRR": 0.933333,
+        "AvgRel@5": 1.16
       }
     },
     "10": {
@@ -53,6 +63,11 @@
         "nDCG@10": 0.925805,
         "MRR": 0.95,
         "AvgRel@10": 0.68
+      },
+      "corpus_vertical_rerank": {
+        "nDCG@10": 0.910258,
+        "MRR": 0.933333,
+        "AvgRel@10": 0.67
       }
     }
   },
