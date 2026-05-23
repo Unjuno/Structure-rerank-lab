@@ -1,0 +1,10 @@
+{"id":"rq1","query":"AI discussion logs usefulness reasoning path","intent_structure":"conclusion"}
+{"id":"rq2","query":"question sharing site conclusions prevent misreading","intent_structure":"causal"}
+{"id":"rq3","query":"public experiments improve reduce trust","intent_structure":"contrast"}
+{"id":"rq4","query":"government app hard to use organizational complexity","intent_structure":"causal"}
+{"id":"rq5","query":"structure reranking replacement vector search","intent_structure":"contrast"}
+{"id":"rq6","query":"premise conclusion definition","intent_structure":"definition"}
+{"id":"rq7","query":"structure extraction search worse wrong premise","intent_structure":"causal"}
+{"id":"rq8","query":"positive feedback negative feedback product design","intent_structure":"contrast"}
+{"id":"rq9","query":"topical similarity argument similarity difference","intent_structure":"contrast"}
+{"id":"rq10","query":"same premise opposite conclusions comparison","intent_structure":"contrast"}
