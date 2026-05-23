@@ -1,0 +1,8 @@
+{"id":"p1","text":"A search system should not only match similar words. If the user asks for the conclusion, the system should rank posts with matching conclusions higher."}
+{"id":"p2","text":"The site is slow because every page loads too many unrelated assets. Reducing unnecessary assets should improve response time."}
+{"id":"p3","text":"A definition is useful when terms are ambiguous. In this experiment, structure reranking means changing the order of baseline search results using extracted reasoning structures."}
+{"id":"p4","text":"Vector search can find topical similarity, but it may confuse formatting similarity with argument similarity. Structure extraction can separate those signals."}
+{"id":"p5","text":"This approach is not a replacement for dense retrieval. It is a small reranking layer that tests whether conclusions, premises, causes, contrasts, and definitions improve search."}
+{"id":"p6","text":"Markdown lists often look similar even when the ideas are unrelated. Formatting should not dominate the search score when the query asks about reasoning."}
+{"id":"p7","text":"If a post claims that public experiments improve trust, and another post argues the opposite from the same premise, both should be discoverable for comparison."}
+{"id":"p8","text":"A causal explanation connects a reason to an outcome. For example, if extraction errors are frequent, reranking can become worse."}
