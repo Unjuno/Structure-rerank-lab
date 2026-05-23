@@ -83,6 +83,14 @@ jobs:
           --baseline-mode vector_baseline
           --candidate-mode corpus_vertical_rerank
 
+      - name: Generate angle sweep
+        run: >-
+          python -m structure_rerank.angle_sweep
+          --results results/real_like_expanded_vector_results.jsonl
+          --judgments results/real_like_judgments_20.jsonl
+          --output-md results/angle_sweep.md
+          --output-json results/angle_sweep.json
+
       - name: Upload expanded artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -100,13 +108,15 @@ jobs:
             results/real_like_expanded_vertical_feedback.json
             results/real_like_expanded_corpus_vertical_feedback.md
             results/real_like_expanded_corpus_vertical_feedback.json
+            results/angle_sweep.md
+            results/angle_sweep.json
 
       - name: Commit expanded snapshots
         if: github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add results/real_like_queries_20.jsonl results/real_like_judgments_20.jsonl results/real_like_expanded_*
+          git add results/real_like_queries_20.jsonl results/real_like_judgments_20.jsonl results/real_like_expanded_* results/angle_sweep.md results/angle_sweep.json
           if git diff --cached --quiet; then
             echo "no expanded result changes"
           else
