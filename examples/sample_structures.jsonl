@@ -1,0 +1,8 @@
+{"post_id":"p1","structures":[{"type":"conclusion","text":"rank posts with matching conclusions higher","confidence":0.9},{"type":"premise","text":"the user asks for the conclusion","confidence":0.8}]}
+{"post_id":"p2","structures":[{"type":"causal","text":"too many unrelated assets cause slow pages","confidence":0.9},{"type":"conclusion","text":"reducing unnecessary assets should improve response time","confidence":0.8}]}
+{"post_id":"p3","structures":[{"type":"definition","text":"structure reranking means changing the order of baseline search results using extracted reasoning structures","confidence":0.95}]}
+{"post_id":"p4","structures":[{"type":"contrast","text":"topical similarity differs from argument similarity","confidence":0.85},{"type":"premise","text":"formatting similarity can be confused with argument similarity","confidence":0.8}]}
+{"post_id":"p5","structures":[{"type":"contrast","text":"not a replacement for dense retrieval but a small reranking layer","confidence":0.9},{"type":"conclusion","text":"test whether structures improve search","confidence":0.85}]}
+{"post_id":"p6","structures":[{"type":"premise","text":"Markdown lists often look similar even when ideas are unrelated","confidence":0.85},{"type":"conclusion","text":"formatting should not dominate reasoning search","confidence":0.9}]}
+{"post_id":"p7","structures":[{"type":"contrast","text":"same premise can support opposite conclusions","confidence":0.9},{"type":"conclusion","text":"both posts should be discoverable for comparison","confidence":0.8}]}
+{"post_id":"p8","structures":[{"type":"definition","text":"causal explanation connects a reason to an outcome","confidence":0.9},{"type":"causal","text":"extraction errors can make reranking worse","confidence":0.85}]}
