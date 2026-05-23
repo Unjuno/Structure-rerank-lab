@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - 'structure_rerank/beir_adapter.py'
-      - '.github/workflows/beir-benchmarks.yml'
 
 permissions:
   contents: write
