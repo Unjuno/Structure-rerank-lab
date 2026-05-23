@@ -69,13 +69,12 @@ def query_axis_weights(query_text: str, axes: Mapping[str, SparseVector], idf: M
     return {axis_id: value / total for axis_id, value in raw.items()}
 
 
-def corpus_vertical_scores(
+def corpus_vertical_scores_with_axes(
     query_text: str,
     post_vectors: Mapping[str, SparseVector],
     idf: Mapping[str, float],
-    axis_count: int = 8,
+    axes: Mapping[str, SparseVector],
 ) -> Dict[str, float]:
-    axes = build_corpus_axes(post_vectors, axis_count=axis_count)
     query_weights = query_axis_weights(query_text, axes, idf)
     query_vec = vectorize(query_text, idf)
     scores: Dict[str, float] = {}
@@ -84,3 +83,13 @@ def corpus_vertical_scores(
         axis_alignment = sum(weight * cosine(post_vec, axes[axis_id]) for axis_id, weight in query_weights.items())
         scores[post_id] = base * max(axis_alignment, 0.0)
     return scores
+
+
+def corpus_vertical_scores(
+    query_text: str,
+    post_vectors: Mapping[str, SparseVector],
+    idf: Mapping[str, float],
+    axis_count: int = 8,
+) -> Dict[str, float]:
+    axes = build_corpus_axes(post_vectors, axis_count=axis_count)
+    return corpus_vertical_scores_with_axes(query_text, post_vectors, idf, axes)
