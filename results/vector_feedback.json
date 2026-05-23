@@ -1,0 +1,5 @@
+{
+  "status": "pending CI artifact refresh",
+  "modes": ["vector_baseline", "vector_structure_rerank"],
+  "purpose": "Check whether structure-aware reranking helps against a dependency-free TF-IDF vector baseline."
+}
