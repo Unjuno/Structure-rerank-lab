@@ -46,11 +46,23 @@ jobs:
           --baseline-mode vector_baseline
           --candidate-mode vertical_vector_rerank
 
+      - name: Report vertical movements
+        run: >-
+          python -m structure_rerank.explain_moves
+          --results results/beir/nfcorpus/vector_results.jsonl
+          --judgments results/beir/nfcorpus/judgments.jsonl
+          --explanations-md results/beir/nfcorpus/vertical_rank_movements.md
+          --explanations-json results/beir/nfcorpus/vertical_rank_movements.json
+          --baseline-mode vector_baseline
+          --compare-mode vertical_vector_rerank
+          --skip-rerank
+
       - name: Commit result
         if: github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add results/beir/nfcorpus/vertical_vector_feedback.md results/beir/nfcorpus/vertical_vector_feedback.json
+          git pull --rebase || true
+          git add results/beir/nfcorpus/vertical_vector_feedback.md results/beir/nfcorpus/vertical_vector_feedback.json results/beir/nfcorpus/vertical_rank_movements.md results/beir/nfcorpus/vertical_rank_movements.json
           git commit -m "results: refresh BEIR nfcorpus vertical [skip ci]" || exit 0
-          git push
+          git push || true
