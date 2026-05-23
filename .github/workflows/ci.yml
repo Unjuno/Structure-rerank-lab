@@ -32,20 +32,29 @@ jobs:
               print(f'valid jsonl: {path}')
           PY
 
-      - name: Run sample rerank
+      - name: Run lexical sample rerank
         run: python -m structure_rerank.rerank
 
-      - name: Run evaluation
+      - name: Run lexical evaluation
         run: python -m structure_rerank.evaluate --skip-rerank
 
-      - name: Generate feedback report
+      - name: Generate lexical feedback report
         run: python -m structure_rerank.feedback --skip-rerank
 
-      - name: Generate diagnostics report
+      - name: Generate lexical diagnostics report
         run: python -m structure_rerank.diagnose --skip-rerank
 
-      - name: Generate rank movement explanations
+      - name: Generate lexical rank movement explanations
         run: python -m structure_rerank.explain_moves --skip-rerank
+
+      - name: Run vector experiment
+        run: python -m structure_rerank.vector_experiment
+
+      - name: Evaluate vector experiment
+        run: python -m structure_rerank.evaluate --results results/vector_results.jsonl --skip-rerank
+
+      - name: Generate vector feedback report
+        run: python -m structure_rerank.feedback --results results/vector_results.jsonl --feedback-md results/vector_feedback.md --feedback-json results/vector_feedback.json --skip-rerank
 
       - name: Upload experiment artifacts
         uses: actions/upload-artifact@v4
@@ -59,3 +68,6 @@ jobs:
             results/diagnostics.json
             results/rank_movements.md
             results/rank_movements.json
+            results/vector_results.jsonl
+            results/vector_feedback.md
+            results/vector_feedback.json
