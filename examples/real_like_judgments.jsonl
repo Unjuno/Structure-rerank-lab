@@ -5,8 +5,8 @@
 {"query_id":"rq2","post_id":"r1","relevance":1}
 {"query_id":"rq2","post_id":"r12","relevance":1}
 {"query_id":"rq3","post_id":"r3","relevance":3}
-{"query_id":"rq3","post_id":"r18","relevance":0}
-{"query_id":"rq3","post_id":"r19","relevance":0}
+{"query_id":"rq3","post_id":"r8","relevance":1}
+{"query_id":"rq3","post_id":"r11","relevance":1}
 {"query_id":"rq4","post_id":"r4","relevance":3}
 {"query_id":"rq4","post_id":"r11","relevance":1}
 {"query_id":"rq4","post_id":"r7","relevance":1}
