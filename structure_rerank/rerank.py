@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Set
 
 from .structure_score import (
     build_structure_index,
@@ -19,6 +19,7 @@ DEFAULT_POSTS = ROOT / "examples" / "sample_posts.jsonl"
 DEFAULT_QUERIES = ROOT / "examples" / "sample_queries.jsonl"
 DEFAULT_STRUCTURES = ROOT / "examples" / "sample_structures.jsonl"
 DEFAULT_OUTPUT = ROOT / "results" / "sample_results.jsonl"
+DEFAULT_STRUCTURE_TYPES = ["conclusion", "premise", "causal", "contrast", "definition"]
 
 
 def rank_for_query(
@@ -28,13 +29,14 @@ def rank_for_query(
     top_k: int = 10,
     alpha: float = 0.8,
     beta: float = 0.2,
+    enabled_types: Set[str] | None = None,
 ) -> List[Dict[str, Any]]:
     raw_base = []
     raw_struct = []
     for post in posts:
         post_id = str(post["id"])
         base = lexical_score(str(query["query"]), str(post["text"]))
-        struct = structure_score(query, structure_index.get(post_id, []))
+        struct = structure_score(query, structure_index.get(post_id, []), enabled_types=enabled_types)
         raw_base.append((post_id, base))
         raw_struct.append((post_id, struct))
 
@@ -96,13 +98,18 @@ def run(
     structures = load_jsonl(structures_path)
     structure_index = build_structure_index(structures)
 
+    ablation_modes: Dict[str, Set[str] | None] = {"structure_rerank": None}
+    for structure_type in DEFAULT_STRUCTURE_TYPES:
+        ablation_modes[f"structure_{structure_type}_only"] = {structure_type}
+
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as handle:
         for query in queries:
             for row in baseline_for_query(query, posts, top_k=top_k):
                 handle.write(json.dumps({"mode": "baseline", **row}, ensure_ascii=False) + "\n")
-            for row in rank_for_query(query, posts, structure_index, top_k=top_k):
-                handle.write(json.dumps({"mode": "structure_rerank", **row}, ensure_ascii=False) + "\n")
+            for mode, enabled_types in ablation_modes.items():
+                for row in rank_for_query(query, posts, structure_index, top_k=top_k, enabled_types=enabled_types):
+                    handle.write(json.dumps({"mode": mode, **row}, ensure_ascii=False) + "\n")
 
     print(f"wrote {output_path}")
 
