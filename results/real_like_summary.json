@@ -1,0 +1,25 @@
+{
+  "status": "VECTOR_ONLY_PASS",
+  "lexical_verdict": "UNCERTAIN",
+  "vector_verdict": "PASS",
+  "lexical_top3": {
+    "base": "baseline",
+    "candidate": "structure_rerank",
+    "base_nDCG": 0.884787,
+    "candidate_nDCG": 0.889326,
+    "delta_nDCG": 0.00453899999999996,
+    "base_AvgRel": 1.2,
+    "candidate_AvgRel": 1.233333,
+    "delta_AvgRel": 0.03333300000000006
+  },
+  "vector_top3": {
+    "base": "vector_baseline",
+    "candidate": "vector_structure_rerank",
+    "base_nDCG": 0.853298,
+    "candidate_nDCG": 0.865597,
+    "delta_nDCG": 0.012298999999999949,
+    "base_AvgRel": 1.066667,
+    "candidate_AvgRel": 1.133333,
+    "delta_AvgRel": 0.06666599999999989
+  }
+}
