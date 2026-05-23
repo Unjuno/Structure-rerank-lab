@@ -1,0 +1,162 @@
+{
+  "baseline_mode": "vector_baseline",
+  "compare_mode": "vertical_vector_rerank",
+  "k": 10,
+  "improved_relevant_moves": 24,
+  "harmed_relevant_moves": 17,
+  "neutral_or_irrelevant_moves": 1266,
+  "entered_relevant": 5,
+  "left_relevant": 1,
+  "queries_with_relevant_up": [
+    {
+      "query_id": "113",
+      "count": 1
+    },
+    {
+      "query_id": "133",
+      "count": 1
+    },
+    {
+      "query_id": "148",
+      "count": 1
+    },
+    {
+      "query_id": "212",
+      "count": 1
+    },
+    {
+      "query_id": "213",
+      "count": 1
+    },
+    {
+      "query_id": "294",
+      "count": 1
+    },
+    {
+      "query_id": "298",
+      "count": 1
+    },
+    {
+      "query_id": "343",
+      "count": 1
+    },
+    {
+      "query_id": "36",
+      "count": 1
+    },
+    {
+      "query_id": "385",
+      "count": 1
+    },
+    {
+      "query_id": "415",
+      "count": 1
+    },
+    {
+      "query_id": "452",
+      "count": 2
+    },
+    {
+      "query_id": "532",
+      "count": 1
+    },
+    {
+      "query_id": "533",
+      "count": 1
+    },
+    {
+      "query_id": "552",
+      "count": 1
+    },
+    {
+      "query_id": "575",
+      "count": 1
+    },
+    {
+      "query_id": "597",
+      "count": 1
+    },
+    {
+      "query_id": "659",
+      "count": 1
+    },
+    {
+      "query_id": "691",
+      "count": 1
+    },
+    {
+      "query_id": "729",
+      "count": 1
+    }
+  ],
+  "queries_with_relevant_down": [
+    {
+      "query_id": "133",
+      "count": 1
+    },
+    {
+      "query_id": "230",
+      "count": 1
+    },
+    {
+      "query_id": "275",
+      "count": 1
+    },
+    {
+      "query_id": "324",
+      "count": 1
+    },
+    {
+      "query_id": "343",
+      "count": 1
+    },
+    {
+      "query_id": "350",
+      "count": 1
+    },
+    {
+      "query_id": "48",
+      "count": 1
+    },
+    {
+      "query_id": "50",
+      "count": 1
+    },
+    {
+      "query_id": "569",
+      "count": 1
+    },
+    {
+      "query_id": "715",
+      "count": 1
+    },
+    {
+      "query_id": "756",
+      "count": 1
+    },
+    {
+      "query_id": "768",
+      "count": 1
+    },
+    {
+      "query_id": "785",
+      "count": 1
+    },
+    {
+      "query_id": "830",
+      "count": 1
+    },
+    {
+      "query_id": "837",
+      "count": 1
+    },
+    {
+      "query_id": "859",
+      "count": 1
+    },
+    {
+      "query_id": "873",
+      "count": 1
+    }
+  ]
+}
