@@ -1,0 +1,5 @@
+{"id":"q1","query":"find posts about matching conclusions in search","intent_structure":"conclusion"}
+{"id":"q2","query":"why can structure reranking become worse","intent_structure":"causal"}
+{"id":"q3","query":"what does structure reranking mean","intent_structure":"definition"}
+{"id":"q4","query":"difference between topical similarity and argument similarity","intent_structure":"contrast"}
+{"id":"q5","query":"formatting should not dominate reasoning search","intent_structure":"conclusion"}
