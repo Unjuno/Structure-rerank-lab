@@ -38,6 +38,8 @@ queries
 
 `diagonal_*` modes sweep different mixtures of horizontal and vertical-style scores.
 
+The compact angle workflow writes `results/angle_sweep.*` when it completes.
+
 This is still not neural embedding search. It is the CI-safe sparse-vector version of the vertical-vector idea.
 
 ## External benchmark check
