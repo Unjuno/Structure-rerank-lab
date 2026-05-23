@@ -61,6 +61,7 @@ This does not prove superiority over dense neural embeddings.
 
 - Generate BEIR summary from CI outputs.
 - Generate BEIR vertical rank movement reports.
+- Generate BEIR vertical rank movement summaries.
 - Use rank movements to inspect why SciFact and NFCorpus gains are small.
 
 ## Next work
