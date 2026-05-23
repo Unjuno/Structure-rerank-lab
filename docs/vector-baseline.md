@@ -37,7 +37,7 @@ This is still not neural embedding search. It is the CI-safe sparse-vector versi
 
 BEIR vertical-vector workflows run the same mode on ArguAna, SciFact, and NFCorpus.
 
-ArguAna also has a compact corpus-vertical workflow for quick validation.
+ArguAna also has a compact corpus-vertical workflow with a persisted status file.
 
 ## Next upgrade path
 
