@@ -30,6 +30,10 @@ queries
 
 This is still not neural embedding search. It is the CI-safe sparse-vector version of the vertical-vector idea.
 
+## External benchmark check
+
+BEIR vertical-vector workflows run the same mode on ArguAna, SciFact, and NFCorpus.
+
 ## Next upgrade path
 
 1. Keep the TF-IDF vector baseline as the CI-safe baseline.
