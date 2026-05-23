@@ -4,18 +4,12 @@ import json
 import math
 import re
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Mapping, Sequence, Tuple
+from typing import Any, Dict, Iterable, List, Mapping, Sequence, Set, Tuple
 
 _TOKEN_RE = re.compile(r"[A-Za-z0-9_]+")
 
 
 def load_jsonl(path: str | Path) -> List[Dict[str, Any]]:
-    """Load a JSONL file.
-
-    Empty lines are ignored. The function is intentionally dependency-free so the
-    initial experiment can run in GitHub Actions without installing packages.
-    """
-
     rows: List[Dict[str, Any]] = []
     with Path(path).open("r", encoding="utf-8") as handle:
         for line_no, line in enumerate(handle, start=1):
@@ -34,21 +28,13 @@ def tokenize(text: str) -> List[str]:
 
 
 def lexical_score(query: str, text: str) -> float:
-    """Small baseline lexical score.
-
-    This is deliberately simple. It is not intended to be a strong retrieval
-    model; it is a reproducible baseline for measuring whether structure signals
-    move relevant items upward.
-    """
-
     query_terms = set(tokenize(query))
     if not query_terms:
         return 0.0
     text_terms = set(tokenize(text))
     if not text_terms:
         return 0.0
-    overlap = query_terms & text_terms
-    return len(overlap) / len(query_terms)
+    return len(query_terms & text_terms) / len(query_terms)
 
 
 def normalize_scores(items: Sequence[Tuple[str, float]]) -> Dict[str, float]:
@@ -73,19 +59,19 @@ def build_structure_index(structure_rows: Iterable[Mapping[str, Any]]) -> Dict[s
     return index
 
 
-def structure_score(query: Mapping[str, Any], structures: Sequence[Mapping[str, Any]]) -> float:
-    """Score how well a post's structures match the query intent.
-
-    The initial score combines:
-    - type match: does the post contain the requested structure type?
-    - text match: does extracted structure text overlap with the query?
-    """
-
+def structure_score(
+    query: Mapping[str, Any],
+    structures: Sequence[Mapping[str, Any]],
+    enabled_types: Set[str] | None = None,
+) -> float:
     intent = str(query.get("intent_structure", "")).strip().lower()
     query_text = str(query.get("query", ""))
+    type_filter = {item.strip().lower() for item in enabled_types} if enabled_types is not None else None
     best = 0.0
     for item in structures:
         stype = str(item.get("type", "")).strip().lower()
+        if type_filter is not None and stype not in type_filter:
+            continue
         text = str(item.get("text", ""))
         confidence = float(item.get("confidence", 0.0) or 0.0)
         type_score = confidence if intent and stype == intent else 0.0
