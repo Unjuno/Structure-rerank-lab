@@ -1,0 +1,11 @@
+{
+  "status": "pending CI artifact refresh",
+  "summary_target": "results/experiment_summary.md",
+  "checks": [
+    "lexical baseline vs structure rerank",
+    "TF-IDF vector baseline vs vector structure rerank",
+    "top-3 delta",
+    "harmful modes",
+    "next actions"
+  ]
+}
