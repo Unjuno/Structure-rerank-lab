@@ -1,0 +1,87 @@
+{
+  "datasets": [
+    "arguana",
+    "scifact",
+    "nfcorpus"
+  ],
+  "rows": [
+    {
+      "dataset": "arguana",
+      "mode": "vector_structure_rerank",
+      "base": "vector_baseline",
+      "candidate": "vector_structure_rerank",
+      "base_nDCG": 0.174341,
+      "candidate_nDCG": 0.174341,
+      "delta_nDCG": 0.0,
+      "base_AvgRel": 0.098333,
+      "candidate_AvgRel": 0.098333,
+      "delta_AvgRel": 0.0,
+      "verdict": "UNCERTAIN"
+    },
+    {
+      "dataset": "arguana",
+      "mode": "vertical_vector_rerank",
+      "base": "vector_baseline",
+      "candidate": "vertical_vector_rerank",
+      "base_nDCG": 0.174341,
+      "candidate_nDCG": 0.198268,
+      "delta_nDCG": 0.023927000000000004,
+      "base_AvgRel": 0.098333,
+      "candidate_AvgRel": 0.111667,
+      "delta_AvgRel": 0.013333999999999999,
+      "verdict": "PASS"
+    },
+    {
+      "dataset": "scifact",
+      "mode": "vector_structure_rerank",
+      "base": "vector_baseline",
+      "candidate": "vector_structure_rerank",
+      "base_nDCG": 0.552231,
+      "candidate_nDCG": 0.558092,
+      "delta_nDCG": 0.005861000000000005,
+      "base_AvgRel": 0.22,
+      "candidate_AvgRel": 0.215,
+      "delta_AvgRel": -0.0050000000000000044,
+      "verdict": "FAIL"
+    },
+    {
+      "dataset": "scifact",
+      "mode": "vertical_vector_rerank",
+      "base": "vector_baseline",
+      "candidate": "vertical_vector_rerank",
+      "base_nDCG": 0.552231,
+      "candidate_nDCG": 0.558624,
+      "delta_nDCG": 0.006392999999999982,
+      "base_AvgRel": 0.22,
+      "candidate_AvgRel": 0.225,
+      "delta_AvgRel": 0.0050000000000000044,
+      "verdict": "UNCERTAIN"
+    },
+    {
+      "dataset": "nfcorpus",
+      "mode": "vector_structure_rerank",
+      "base": "vector_baseline",
+      "candidate": "vector_structure_rerank",
+      "base_nDCG": 0.391228,
+      "candidate_nDCG": 0.398333,
+      "delta_nDCG": 0.0071049999999999724,
+      "base_AvgRel": 0.393333,
+      "candidate_AvgRel": 0.396667,
+      "delta_AvgRel": 0.0033340000000000036,
+      "verdict": "UNCERTAIN"
+    },
+    {
+      "dataset": "nfcorpus",
+      "mode": "vertical_vector_rerank",
+      "base": "vector_baseline",
+      "candidate": "vertical_vector_rerank",
+      "base_nDCG": 0.391228,
+      "candidate_nDCG": 0.39958,
+      "delta_nDCG": 0.00835199999999997,
+      "base_AvgRel": 0.393333,
+      "candidate_AvgRel": 0.401667,
+      "delta_AvgRel": 0.008334000000000008,
+      "verdict": "UNCERTAIN"
+    }
+  ]
+}
