@@ -7,7 +7,6 @@ Query count: **10**
 
 | mode | improved query count |
 |---|---:|
-| structure_premise_only | 1 |
 | structure_conclusion_only | 1 |
 | structure_contrast_only | 1 |
 | structure_rerank | 1 |
@@ -24,6 +23,7 @@ Query count: **10**
 | mode | worsened query count |
 |---|---:|
 | structure_causal_only | 1 |
+| structure_rerank | 1 |
 
 ## Harmful intent-matched modes
 
@@ -36,6 +36,7 @@ Query count: **10**
 | mode | worsened query count |
 |---|---:|
 | structure_causal_only | 1 |
+| structure_rerank | 1 |
 
 ## Per-query best/worst modes
 
@@ -43,9 +44,9 @@ Query count: **10**
 |---|---|---:|---|---:|---|---:|
 | q1 | conclusion | 1.000000 | baseline | 1.000000 | structure_rerank | 1.000000 |
 | q10 | definition | 1.666667 | baseline | 1.666667 | structure_rerank | 1.666667 |
-| q2 | causal | 2.000000 | structure_premise_only | 2.333333 | structure_rerank | 2.000000 |
+| q2 | causal | 2.000000 | baseline | 2.000000 | structure_rerank | 2.000000 |
 | q3 | definition | 1.000000 | baseline | 1.000000 | structure_rerank | 1.000000 |
-| q4 | contrast | 2.333333 | baseline | 2.333333 | structure_causal_only | 2.000000 |
+| q4 | contrast | 2.333333 | baseline | 2.333333 | structure_rerank | 2.000000 |
 | q5 | conclusion | 1.000000 | structure_conclusion_only | 2.000000 | structure_premise_only | 1.000000 |
 | q6 | definition | 1.000000 | baseline | 1.000000 | structure_rerank | 1.000000 |
 | q7 | contrast | 2.000000 | baseline | 2.000000 | structure_rerank | 2.000000 |

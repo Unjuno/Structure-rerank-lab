@@ -11,7 +11,7 @@
         "AvgRel@3": 1.7
       },
       "vector_structure_rerank": {
-        "nDCG@3": 0.860886,
+        "nDCG@3": 0.867478,
         "MRR": 0.95,
         "AvgRel@3": 1.8
       }
@@ -23,9 +23,9 @@
         "AvgRel@5": 1.16
       },
       "vector_structure_rerank": {
-        "nDCG@5": 0.887667,
+        "nDCG@5": 0.89963,
         "MRR": 0.95,
-        "AvgRel@5": 1.2
+        "AvgRel@5": 1.22
       }
     },
     "10": {
@@ -35,7 +35,7 @@
         "AvgRel@10": 0.67
       },
       "vector_structure_rerank": {
-        "nDCG@10": 0.920002,
+        "nDCG@10": 0.924533,
         "MRR": 0.95,
         "AvgRel@10": 0.68
       }
@@ -105,7 +105,7 @@
         "candidate_avg_rel": 2.0,
         "delta": 0.0,
         "baseline_top": "p5",
-        "candidate_top": "p5"
+        "candidate_top": "p11"
       },
       {
         "query_id": "q8",
@@ -160,16 +160,16 @@
       {
         "query_id": "q4",
         "baseline_avg_rel": 1.2,
-        "candidate_avg_rel": 1.4,
-        "delta": 0.2,
+        "candidate_avg_rel": 1.2,
+        "delta": 0.0,
         "baseline_top": "p4",
         "candidate_top": "p4"
       },
       {
         "query_id": "q5",
         "baseline_avg_rel": 1.6,
-        "candidate_avg_rel": 1.2,
-        "delta": -0.4,
+        "candidate_avg_rel": 1.6,
+        "delta": 0.0,
         "baseline_top": "p6",
         "candidate_top": "p6"
       },
@@ -187,7 +187,7 @@
         "candidate_avg_rel": 1.2,
         "delta": 0.0,
         "baseline_top": "p5",
-        "candidate_top": "p5"
+        "candidate_top": "p11"
       },
       {
         "query_id": "q8",
@@ -218,8 +218,8 @@
       {
         "query_id": "q10",
         "baseline_avg_rel": 0.5,
-        "candidate_avg_rel": 0.6,
-        "delta": 0.1,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
         "baseline_top": "p20",
         "candidate_top": "p20"
       },
@@ -269,13 +269,13 @@
         "candidate_avg_rel": 0.6,
         "delta": 0.0,
         "baseline_top": "p5",
-        "candidate_top": "p5"
+        "candidate_top": "p11"
       },
       {
         "query_id": "q8",
         "baseline_avg_rel": 0.7,
-        "candidate_avg_rel": 0.6,
-        "delta": -0.1,
+        "candidate_avg_rel": 0.7,
+        "delta": 0.0,
         "baseline_top": "p14",
         "candidate_top": "p14"
       },

@@ -2,19 +2,16 @@
   "k": 3,
   "query_count": 10,
   "helpful_modes": {
-    "structure_rerank": 4,
-    "structure_contrast_only": 3,
-    "structure_causal_only": 1,
-    "structure_definition_only": 1
+    "structure_contrast_only": 1,
+    "structure_definition_only": 1,
+    "structure_rerank": 1
   },
   "helpful_intent_matched_modes": {
-    "structure_contrast_only": 2,
-    "structure_causal_only": 1,
     "structure_definition_only": 1
   },
   "harmful_modes": {
+    "structure_conclusion_only": 2,
     "structure_rerank": 2,
-    "structure_conclusion_only": 1,
     "structure_contrast_only": 1,
     "structure_definition_only": 1
   },
@@ -24,6 +21,7 @@
   },
   "harmful_off_intent_modes": {
     "structure_rerank": 2,
+    "structure_conclusion_only": 1,
     "structure_definition_only": 1
   },
   "per_query": [
@@ -348,16 +346,16 @@
       "intent_structure": "causal",
       "baseline_avg_rel": 1.0,
       "best_mode": {
-        "mode": "structure_causal_only",
-        "structure_type": "causal",
-        "intent_matched": true,
-        "avg_rel": 1.333333,
-        "delta_vs_baseline": 0.333333,
+        "mode": "baseline",
+        "structure_type": null,
+        "intent_matched": false,
+        "avg_rel": 1.0,
+        "delta_vs_baseline": 0.0,
         "top_post": "r4"
       },
       "worst_mode": {
-        "mode": "structure_premise_only",
-        "structure_type": "premise",
+        "mode": "structure_rerank",
+        "structure_type": null,
         "intent_matched": false,
         "avg_rel": 1.0,
         "delta_vs_baseline": 0.0,
@@ -365,25 +363,17 @@
       },
       "mode_scores": [
         {
-          "mode": "structure_causal_only",
-          "structure_type": "causal",
-          "intent_matched": true,
-          "avg_rel": 1.333333,
-          "delta_vs_baseline": 0.333333,
-          "top_post": "r4"
-        },
-        {
-          "mode": "structure_rerank",
-          "structure_type": null,
-          "intent_matched": false,
-          "avg_rel": 1.333333,
-          "delta_vs_baseline": 0.333333,
-          "top_post": "r4"
-        },
-        {
           "mode": "baseline",
           "structure_type": null,
           "intent_matched": false,
+          "avg_rel": 1.0,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r4"
+        },
+        {
+          "mode": "structure_causal_only",
+          "structure_type": "causal",
+          "intent_matched": true,
           "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
           "top_post": "r4"
@@ -415,6 +405,14 @@
         {
           "mode": "structure_premise_only",
           "structure_type": "premise",
+          "intent_matched": false,
+          "avg_rel": 1.0,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r4"
+        },
+        {
+          "mode": "structure_rerank",
+          "structure_type": null,
           "intent_matched": false,
           "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
@@ -460,19 +458,19 @@
           "top_post": "r5"
         },
         {
-          "mode": "structure_conclusion_only",
-          "structure_type": "conclusion",
+          "mode": "structure_premise_only",
+          "structure_type": "premise",
           "intent_matched": false,
           "avg_rel": 1.666667,
           "delta_vs_baseline": 0.0,
           "top_post": "r5"
         },
         {
-          "mode": "structure_premise_only",
-          "structure_type": "premise",
+          "mode": "structure_conclusion_only",
+          "structure_type": "conclusion",
           "intent_matched": false,
-          "avg_rel": 1.666667,
-          "delta_vs_baseline": 0.0,
+          "avg_rel": 1.0,
+          "delta_vs_baseline": -0.666667,
           "top_post": "r5"
         },
         {
@@ -664,38 +662,22 @@
       "intent_structure": "contrast",
       "baseline_avg_rel": 1.0,
       "best_mode": {
-        "mode": "structure_contrast_only",
-        "structure_type": "contrast",
-        "intent_matched": true,
-        "avg_rel": 1.333333,
-        "delta_vs_baseline": 0.333333,
+        "mode": "baseline",
+        "structure_type": null,
+        "intent_matched": false,
+        "avg_rel": 1.0,
+        "delta_vs_baseline": 0.0,
         "top_post": "r8"
       },
       "worst_mode": {
-        "mode": "structure_premise_only",
-        "structure_type": "premise",
+        "mode": "structure_rerank",
+        "structure_type": null,
         "intent_matched": false,
         "avg_rel": 1.0,
         "delta_vs_baseline": 0.0,
         "top_post": "r8"
       },
       "mode_scores": [
-        {
-          "mode": "structure_contrast_only",
-          "structure_type": "contrast",
-          "intent_matched": true,
-          "avg_rel": 1.333333,
-          "delta_vs_baseline": 0.333333,
-          "top_post": "r8"
-        },
-        {
-          "mode": "structure_rerank",
-          "structure_type": null,
-          "intent_matched": false,
-          "avg_rel": 1.333333,
-          "delta_vs_baseline": 0.333333,
-          "top_post": "r8"
-        },
         {
           "mode": "baseline",
           "structure_type": null,
@@ -721,6 +703,14 @@
           "top_post": "r8"
         },
         {
+          "mode": "structure_contrast_only",
+          "structure_type": "contrast",
+          "intent_matched": true,
+          "avg_rel": 1.0,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r8"
+        },
+        {
           "mode": "structure_definition_only",
           "structure_type": "definition",
           "intent_matched": false,
@@ -731,6 +721,14 @@
         {
           "mode": "structure_premise_only",
           "structure_type": "premise",
+          "intent_matched": false,
+          "avg_rel": 1.0,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r8"
+        },
+        {
+          "mode": "structure_rerank",
+          "structure_type": null,
           "intent_matched": false,
           "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
@@ -743,38 +741,22 @@
       "intent_structure": "contrast",
       "baseline_avg_rel": 1.0,
       "best_mode": {
-        "mode": "structure_contrast_only",
-        "structure_type": "contrast",
-        "intent_matched": true,
-        "avg_rel": 1.333333,
-        "delta_vs_baseline": 0.333333,
+        "mode": "baseline",
+        "structure_type": null,
+        "intent_matched": false,
+        "avg_rel": 1.0,
+        "delta_vs_baseline": 0.0,
         "top_post": "r9"
       },
       "worst_mode": {
-        "mode": "structure_premise_only",
-        "structure_type": "premise",
+        "mode": "structure_rerank",
+        "structure_type": null,
         "intent_matched": false,
         "avg_rel": 1.0,
         "delta_vs_baseline": 0.0,
         "top_post": "r9"
       },
       "mode_scores": [
-        {
-          "mode": "structure_contrast_only",
-          "structure_type": "contrast",
-          "intent_matched": true,
-          "avg_rel": 1.333333,
-          "delta_vs_baseline": 0.333333,
-          "top_post": "r9"
-        },
-        {
-          "mode": "structure_rerank",
-          "structure_type": null,
-          "intent_matched": false,
-          "avg_rel": 1.333333,
-          "delta_vs_baseline": 0.333333,
-          "top_post": "r9"
-        },
         {
           "mode": "baseline",
           "structure_type": null,
@@ -800,6 +782,14 @@
           "top_post": "r9"
         },
         {
+          "mode": "structure_contrast_only",
+          "structure_type": "contrast",
+          "intent_matched": true,
+          "avg_rel": 1.0,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r9"
+        },
+        {
           "mode": "structure_definition_only",
           "structure_type": "definition",
           "intent_matched": false,
@@ -810,6 +800,14 @@
         {
           "mode": "structure_premise_only",
           "structure_type": "premise",
+          "intent_matched": false,
+          "avg_rel": 1.0,
+          "delta_vs_baseline": 0.0,
+          "top_post": "r9"
+        },
+        {
+          "mode": "structure_rerank",
+          "structure_type": null,
           "intent_matched": false,
           "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,

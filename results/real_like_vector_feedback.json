@@ -1,5 +1,5 @@
 {
-  "verdict": "PASS",
+  "verdict": "UNCERTAIN",
   "baseline_mode": "vector_baseline",
   "candidate_mode": "vector_structure_rerank",
   "primary_k": 3,
@@ -11,9 +11,9 @@
         "AvgRel@3": 1.066667
       },
       "vector_structure_rerank": {
-        "nDCG@3": 0.887265,
+        "nDCG@3": 0.859447,
         "MRR": 1.0,
-        "AvgRel@3": 1.233333
+        "AvgRel@3": 1.1
       }
     },
     "5": {
@@ -23,9 +23,9 @@
         "AvgRel@5": 0.78
       },
       "vector_structure_rerank": {
-        "nDCG@5": 0.907374,
+        "nDCG@5": 0.889093,
         "MRR": 1.0,
-        "AvgRel@5": 0.82
+        "AvgRel@5": 0.76
       }
     },
     "10": {
@@ -35,9 +35,9 @@
         "AvgRel@10": 0.44
       },
       "vector_structure_rerank": {
-        "nDCG@10": 0.931915,
+        "nDCG@10": 0.91237,
         "MRR": 1.0,
-        "AvgRel@10": 0.46
+        "AvgRel@10": 0.44
       }
     }
   },
@@ -54,8 +54,8 @@
       {
         "query_id": "rq10",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 1.333333,
-        "delta": 0.333333,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
         "baseline_top": "r14",
         "candidate_top": "r14"
       },
@@ -78,8 +78,8 @@
       {
         "query_id": "rq4",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 1.333333,
-        "delta": 0.333333,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
         "baseline_top": "r4",
         "candidate_top": "r4"
       },
@@ -110,16 +110,16 @@
       {
         "query_id": "rq8",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 1.333333,
-        "delta": 0.333333,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
         "baseline_top": "r8",
         "candidate_top": "r8"
       },
       {
         "query_id": "rq9",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 1.333333,
-        "delta": 0.333333,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
         "baseline_top": "r9",
         "candidate_top": "r9"
       }
@@ -128,16 +128,16 @@
       {
         "query_id": "rq1",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 1.0,
-        "delta": 0.0,
+        "candidate_avg_rel": 0.8,
+        "delta": -0.2,
         "baseline_top": "r1",
         "candidate_top": "r1"
       },
       {
         "query_id": "rq10",
         "baseline_avg_rel": 0.8,
-        "candidate_avg_rel": 1.0,
-        "delta": 0.2,
+        "candidate_avg_rel": 0.8,
+        "delta": 0.0,
         "baseline_top": "r14",
         "candidate_top": "r14"
       },
@@ -160,16 +160,16 @@
       {
         "query_id": "rq4",
         "baseline_avg_rel": 0.6,
-        "candidate_avg_rel": 1.0,
-        "delta": 0.4,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
         "baseline_top": "r4",
         "candidate_top": "r4"
       },
       {
         "query_id": "rq5",
         "baseline_avg_rel": 1.0,
-        "candidate_avg_rel": 0.6,
-        "delta": -0.4,
+        "candidate_avg_rel": 1.0,
+        "delta": 0.0,
         "baseline_top": "r5",
         "candidate_top": "r5"
       },
@@ -200,8 +200,8 @@
       {
         "query_id": "rq9",
         "baseline_avg_rel": 0.6,
-        "candidate_avg_rel": 0.8,
-        "delta": 0.2,
+        "candidate_avg_rel": 0.6,
+        "delta": 0.0,
         "baseline_top": "r9",
         "candidate_top": "r9"
       }
@@ -226,8 +226,8 @@
       {
         "query_id": "rq2",
         "baseline_avg_rel": 0.4,
-        "candidate_avg_rel": 0.3,
-        "delta": -0.1,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
         "baseline_top": "r2",
         "candidate_top": "r2"
       },
@@ -242,8 +242,8 @@
       {
         "query_id": "rq4",
         "baseline_avg_rel": 0.4,
-        "candidate_avg_rel": 0.5,
-        "delta": 0.1,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
         "baseline_top": "r4",
         "candidate_top": "r4"
       },
@@ -266,16 +266,16 @@
       {
         "query_id": "rq7",
         "baseline_avg_rel": 0.3,
-        "candidate_avg_rel": 0.6,
-        "delta": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
         "baseline_top": "r7",
         "candidate_top": "r7"
       },
       {
         "query_id": "rq8",
         "baseline_avg_rel": 0.5,
-        "candidate_avg_rel": 0.4,
-        "delta": -0.1,
+        "candidate_avg_rel": 0.5,
+        "delta": 0.0,
         "baseline_top": "r8",
         "candidate_top": "r8"
       },
@@ -291,50 +291,18 @@
   },
   "improved_queries": [
     {
-      "query_id": "rq10",
-      "baseline_avg_rel": 1.0,
-      "candidate_avg_rel": 1.333333,
-      "delta": 0.333333,
-      "baseline_top": "r14",
-      "candidate_top": "r14"
-    },
-    {
-      "query_id": "rq4",
-      "baseline_avg_rel": 1.0,
-      "candidate_avg_rel": 1.333333,
-      "delta": 0.333333,
-      "baseline_top": "r4",
-      "candidate_top": "r4"
-    },
-    {
       "query_id": "rq6",
       "baseline_avg_rel": 1.333333,
       "candidate_avg_rel": 1.666667,
       "delta": 0.333333,
       "baseline_top": "r6",
       "candidate_top": "r6"
-    },
-    {
-      "query_id": "rq8",
-      "baseline_avg_rel": 1.0,
-      "candidate_avg_rel": 1.333333,
-      "delta": 0.333333,
-      "baseline_top": "r8",
-      "candidate_top": "r8"
-    },
-    {
-      "query_id": "rq9",
-      "baseline_avg_rel": 1.0,
-      "candidate_avg_rel": 1.333333,
-      "delta": 0.333333,
-      "baseline_top": "r9",
-      "candidate_top": "r9"
     }
   ],
   "worsened_queries": [],
   "next_actions": [
-    "Keep the candidate mode for the next dataset expansion.",
-    "Add harder negative examples before tuning weights.",
-    "Compare against an optional neural embedding backend later."
+    "Increase query count and add harder cases.",
+    "Do not claim improvement from this mode yet.",
+    "Inspect rank movement explanations for near misses."
   ]
 }

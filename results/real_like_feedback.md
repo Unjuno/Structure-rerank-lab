@@ -1,6 +1,6 @@
 # Mode feedback report
 
-Judgment: **UNCERTAIN**
+Judgment: **FAIL**
 Baseline mode: **baseline**
 Candidate mode: **structure_rerank**
 Primary cutoff: **top-3**
@@ -10,11 +10,11 @@ Primary cutoff: **top-3**
 | k | mode | nDCG | MRR | AvgRel |
 |---:|---|---:|---:|---:|
 | 3 | baseline | 0.884787 | 1.000000 | 1.200000 |
-| 3 | structure_rerank | 0.887265 | 1.000000 | 1.233333 |
+| 3 | structure_rerank | 0.865597 | 1.000000 | 1.133333 |
 | 5 | baseline | 0.905435 | 1.000000 | 0.800000 |
-| 5 | structure_rerank | 0.919730 | 1.000000 | 0.860000 |
+| 5 | structure_rerank | 0.893843 | 1.000000 | 0.780000 |
 | 10 | baseline | 0.921026 | 1.000000 | 0.440000 |
-| 10 | structure_rerank | 0.938211 | 1.000000 | 0.470000 |
+| 10 | structure_rerank | 0.913814 | 1.000000 | 0.440000 |
 
 ## Primary query deltas
 
@@ -24,15 +24,15 @@ Primary cutoff: **top-3**
 | rq10 | 1.333333 | 1.333333 | 0.000000 | r14 | r14 |
 | rq2 | 1.000000 | 1.000000 | 0.000000 | r2 | r2 |
 | rq3 | 1.333333 | 1.333333 | 0.000000 | r3 | r3 |
-| rq4 | 1.000000 | 1.333333 | 0.333333 | r4 | r4 |
+| rq4 | 1.000000 | 1.000000 | 0.000000 | r4 | r4 |
 | rq5 | 1.666667 | 1.000000 | -0.666667 | r5 | r5 |
 | rq6 | 1.333333 | 1.666667 | 0.333333 | r6 | r6 |
 | rq7 | 1.000000 | 1.000000 | 0.000000 | r7 | r7 |
-| rq8 | 1.000000 | 1.333333 | 0.333333 | r8 | r8 |
-| rq9 | 1.000000 | 1.333333 | 0.333333 | r9 | r9 |
+| rq8 | 1.000000 | 1.000000 | 0.000000 | r8 | r8 |
+| rq9 | 1.000000 | 1.000000 | 0.000000 | r9 | r9 |
 
 ## Next actions
 
-- Increase query count and add harder cases.
-- Do not claim improvement from this mode yet.
-- Inspect rank movement explanations for near misses.
+- Inspect worsened queries before changing the dataset.
+- Lower structure beta or tighten query-intent gating.
+- Check whether vector similarity already captures the structure signal.

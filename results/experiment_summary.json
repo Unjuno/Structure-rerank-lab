@@ -6,32 +6,34 @@
     "baseline_mode": "baseline",
     "candidate_mode": "structure_rerank",
     "baseline_nDCG": 0.799869,
-    "candidate_nDCG": 0.871324,
-    "delta_nDCG": 0.07145499999999994,
+    "candidate_nDCG": 0.873721,
+    "delta_nDCG": 0.07385199999999992,
     "baseline_AvgRel": 1.633333,
-    "candidate_AvgRel": 1.733333,
-    "delta_AvgRel": 0.10000000000000009
+    "candidate_AvgRel": 1.7,
+    "delta_AvgRel": 0.06666700000000003
   },
   "vector_top3": {
     "k": 3,
     "baseline_mode": "vector_baseline",
     "candidate_mode": "vector_structure_rerank",
     "baseline_nDCG": 0.827494,
-    "candidate_nDCG": 0.860886,
-    "delta_nDCG": 0.03339200000000009,
+    "candidate_nDCG": 0.867478,
+    "delta_nDCG": 0.03998400000000002,
     "baseline_AvgRel": 1.7,
     "candidate_AvgRel": 1.8,
     "delta_AvgRel": 0.10000000000000009
   },
   "degrading_modes": {
-    "structure_causal_only": 1
+    "structure_causal_only": 1,
+    "structure_rerank": 1
   },
   "degrading_intent_matched_modes": {},
   "degrading_off_intent_modes": {
-    "structure_causal_only": 1
+    "structure_causal_only": 1,
+    "structure_rerank": 1
   },
   "next_actions": [
-    "track off-intent ablation degradation separately: structure_causal_only",
+    "track off-intent ablation degradation separately: structure_causal_only, structure_rerank",
     "add a real-like exported sample without secrets",
     "keep TF-IDF vector baseline as CI-safe baseline",
     "add optional neural embedding backend only after real-like sample check"
