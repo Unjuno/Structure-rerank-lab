@@ -1,0 +1,4932 @@
+{
+  "verdict": "UNCERTAIN",
+  "baseline_mode": "vector_baseline",
+  "candidate_mode": "vertical_vector_rerank",
+  "primary_k": 3,
+  "metrics_by_k": {
+    "3": {
+      "vector_baseline": {
+        "nDCG@3": 0.552231,
+        "MRR": 0.56397,
+        "AvgRel@3": 0.22
+      },
+      "vector_structure_rerank": {
+        "nDCG@3": 0.558092,
+        "MRR": 0.578262,
+        "AvgRel@3": 0.215
+      },
+      "vertical_vector_rerank": {
+        "nDCG@3": 0.558624,
+        "MRR": 0.563927,
+        "AvgRel@3": 0.225
+      }
+    },
+    "5": {
+      "vector_baseline": {
+        "nDCG@5": 0.581891,
+        "MRR": 0.56397,
+        "AvgRel@5": 0.149
+      },
+      "vector_structure_rerank": {
+        "nDCG@5": 0.58974,
+        "MRR": 0.578262,
+        "AvgRel@5": 0.147
+      },
+      "vertical_vector_rerank": {
+        "nDCG@5": 0.579265,
+        "MRR": 0.563927,
+        "AvgRel@5": 0.147
+      }
+    },
+    "10": {
+      "vector_baseline": {
+        "nDCG@10": 0.59976,
+        "MRR": 0.56397,
+        "AvgRel@10": 0.081
+      },
+      "vector_structure_rerank": {
+        "nDCG@10": 0.615456,
+        "MRR": 0.578262,
+        "AvgRel@10": 0.083
+      },
+      "vertical_vector_rerank": {
+        "nDCG@10": 0.606416,
+        "MRR": 0.563927,
+        "AvgRel@10": 0.083
+      }
+    }
+  },
+  "query_deltas_by_k": {
+    "3": [
+      {
+        "query_id": "1",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17482507",
+        "candidate_top": "17482507"
+      },
+      {
+        "query_id": "100",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4381486",
+        "candidate_top": "4381486"
+      },
+      {
+        "query_id": "113",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "14584755",
+        "candidate_top": "14584755"
+      },
+      {
+        "query_id": "115",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "33872649",
+        "candidate_top": "33872649"
+      },
+      {
+        "query_id": "118",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "6372244",
+        "candidate_top": "6372244"
+      },
+      {
+        "query_id": "124",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4883040",
+        "candidate_top": "4883040"
+      },
+      {
+        "query_id": "127",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "293661",
+        "candidate_top": "293661"
+      },
+      {
+        "query_id": "128",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "1122279",
+        "candidate_top": "1122279"
+      },
+      {
+        "query_id": "129",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "27768226",
+        "candidate_top": "27768226"
+      },
+      {
+        "query_id": "13",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "7662395",
+        "candidate_top": "7662395"
+      },
+      {
+        "query_id": "130",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "27768226",
+        "candidate_top": "27768226"
+      },
+      {
+        "query_id": "132",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "7613033",
+        "candidate_top": "7613033"
+      },
+      {
+        "query_id": "133",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "17934082",
+        "candidate_top": "45764440"
+      },
+      {
+        "query_id": "137",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "26016929",
+        "candidate_top": "26016929"
+      },
+      {
+        "query_id": "141",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "14437255",
+        "candidate_top": "14437255"
+      },
+      {
+        "query_id": "142",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "10582939",
+        "candidate_top": "10582939"
+      },
+      {
+        "query_id": "143",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "10582939",
+        "candidate_top": "10582939"
+      },
+      {
+        "query_id": "146",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "10582939",
+        "candidate_top": "10582939"
+      },
+      {
+        "query_id": "148",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "15728433",
+        "candidate_top": "15728433"
+      },
+      {
+        "query_id": "163",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "18872233",
+        "candidate_top": "18872233"
+      },
+      {
+        "query_id": "171",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "12670680",
+        "candidate_top": "12670680"
+      },
+      {
+        "query_id": "179",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "16322674",
+        "candidate_top": "16322674"
+      },
+      {
+        "query_id": "180",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "16966326",
+        "candidate_top": "16966326"
+      },
+      {
+        "query_id": "183",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "46193388",
+        "candidate_top": "46193388"
+      },
+      {
+        "query_id": "185",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "5864770",
+        "candidate_top": "5864770"
+      },
+      {
+        "query_id": "198",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "13949015",
+        "candidate_top": "13949015"
+      },
+      {
+        "query_id": "208",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "13519661",
+        "candidate_top": "13519661"
+      },
+      {
+        "query_id": "212",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "7808055",
+        "candidate_top": "7808055"
+      },
+      {
+        "query_id": "213",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "27054878",
+        "candidate_top": "27054878"
+      },
+      {
+        "query_id": "216",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "217",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "218",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "219",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "230",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "26456326",
+        "candidate_top": "26456326"
+      },
+      {
+        "query_id": "232",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "10536636",
+        "candidate_top": "10536636"
+      },
+      {
+        "query_id": "233",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4388470",
+        "candidate_top": "4388470"
+      },
+      {
+        "query_id": "236",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4388470",
+        "candidate_top": "4388470"
+      },
+      {
+        "query_id": "237",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4942718",
+        "candidate_top": "4942718"
+      },
+      {
+        "query_id": "238",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "4463811",
+        "candidate_top": "4463811"
+      },
+      {
+        "query_id": "239",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "3230557",
+        "candidate_top": "3230557"
+      },
+      {
+        "query_id": "248",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "23369842",
+        "candidate_top": "23369842"
+      },
+      {
+        "query_id": "249",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23369842",
+        "candidate_top": "23369842"
+      },
+      {
+        "query_id": "261",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "46743299",
+        "candidate_top": "46743299"
+      },
+      {
+        "query_id": "268",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "1568684",
+        "candidate_top": "1568684"
+      },
+      {
+        "query_id": "269",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "1568684",
+        "candidate_top": "1568684"
+      },
+      {
+        "query_id": "274",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "11614737",
+        "candidate_top": "11614737"
+      },
+      {
+        "query_id": "275",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4961038",
+        "candidate_top": "17462437"
+      },
+      {
+        "query_id": "279",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "14376683",
+        "candidate_top": "14376683"
+      },
+      {
+        "query_id": "294",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "13949015",
+        "candidate_top": "13949015"
+      },
+      {
+        "query_id": "295",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "24044977",
+        "candidate_top": "24044977"
+      },
+      {
+        "query_id": "298",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "23887844",
+        "candidate_top": "23887844"
+      },
+      {
+        "query_id": "3",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "23389795",
+        "candidate_top": "23389795"
+      },
+      {
+        "query_id": "300",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "16120395",
+        "candidate_top": "16120395"
+      },
+      {
+        "query_id": "303",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4085204",
+        "candidate_top": "4085204"
+      },
+      {
+        "query_id": "312",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "15966318",
+        "candidate_top": "15966318"
+      },
+      {
+        "query_id": "314",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "544971",
+        "candidate_top": "544971"
+      },
+      {
+        "query_id": "324",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23816832",
+        "candidate_top": "23816832"
+      },
+      {
+        "query_id": "327",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "17997584",
+        "candidate_top": "17997584"
+      },
+      {
+        "query_id": "338",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "23349986",
+        "candidate_top": "23349986"
+      },
+      {
+        "query_id": "343",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "308862",
+        "candidate_top": "308862"
+      },
+      {
+        "query_id": "350",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "16927286",
+        "candidate_top": "16242975"
+      },
+      {
+        "query_id": "354",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "8774475",
+        "candidate_top": "8774475"
+      },
+      {
+        "query_id": "36",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "42441846",
+        "candidate_top": "42441846"
+      },
+      {
+        "query_id": "362",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "38587347",
+        "candidate_top": "38587347"
+      },
+      {
+        "query_id": "380",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "2248870",
+        "candidate_top": "2248870"
+      },
+      {
+        "query_id": "384",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "51972698",
+        "candidate_top": "51972698"
+      },
+      {
+        "query_id": "385",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "1032372",
+        "candidate_top": "1032372"
+      },
+      {
+        "query_id": "386",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "16495649",
+        "candidate_top": "16495649"
+      },
+      {
+        "query_id": "388",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "1148122",
+        "candidate_top": "1148122"
+      },
+      {
+        "query_id": "399",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "791050",
+        "candidate_top": "791050"
+      },
+      {
+        "query_id": "410",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "14924526",
+        "candidate_top": "14924526"
+      },
+      {
+        "query_id": "411",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "14924526",
+        "candidate_top": "14924526"
+      },
+      {
+        "query_id": "415",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.333333,
+        "baseline_top": "4709641",
+        "candidate_top": "4709641"
+      },
+      {
+        "query_id": "42",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "40913091",
+        "candidate_top": "40913091"
+      },
+      {
+        "query_id": "421",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17631671",
+        "candidate_top": "17631671"
+      },
+      {
+        "query_id": "431",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "19922508",
+        "candidate_top": "19922508"
+      },
+      {
+        "query_id": "436",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "14637235",
+        "candidate_top": "14637235"
+      },
+      {
+        "query_id": "437",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "24466904",
+        "candidate_top": "2359152"
+      },
+      {
+        "query_id": "439",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "18575183",
+        "candidate_top": "18575183"
+      },
+      {
+        "query_id": "440",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "18575183",
+        "candidate_top": "18575183"
+      },
+      {
+        "query_id": "443",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "10165258",
+        "candidate_top": "10165258"
+      },
+      {
+        "query_id": "452",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.333333,
+        "baseline_top": "4632921",
+        "candidate_top": "4632921"
+      },
+      {
+        "query_id": "475",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23576165",
+        "candidate_top": "23576165"
+      },
+      {
+        "query_id": "478",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "34854444",
+        "candidate_top": "34854444"
+      },
+      {
+        "query_id": "48",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.0,
+        "delta": -0.333333,
+        "baseline_top": "18617259",
+        "candidate_top": "18617259"
+      },
+      {
+        "query_id": "49",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "5953485",
+        "candidate_top": "5953485"
+      },
+      {
+        "query_id": "491",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "56893404",
+        "candidate_top": "56893404"
+      },
+      {
+        "query_id": "5",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "42240424",
+        "candidate_top": "17333231"
+      },
+      {
+        "query_id": "50",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "39559521",
+        "candidate_top": "39559521"
+      },
+      {
+        "query_id": "501",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "21274919",
+        "candidate_top": "21274919"
+      },
+      {
+        "query_id": "502",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "43990286",
+        "candidate_top": "43990286"
+      },
+      {
+        "query_id": "507",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "30774694",
+        "candidate_top": "30774694"
+      },
+      {
+        "query_id": "508",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "25516011",
+        "candidate_top": "25516011"
+      },
+      {
+        "query_id": "51",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "45638119",
+        "candidate_top": "45638119"
+      },
+      {
+        "query_id": "513",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "13230773",
+        "candidate_top": "13230773"
+      },
+      {
+        "query_id": "514",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "22023404",
+        "candidate_top": "22023404"
+      },
+      {
+        "query_id": "516",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "29564505",
+        "candidate_top": "29564505"
+      },
+      {
+        "query_id": "517",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "19658917",
+        "candidate_top": "19658917"
+      },
+      {
+        "query_id": "521",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "34873974",
+        "candidate_top": "34873974"
+      },
+      {
+        "query_id": "525",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "13639330",
+        "candidate_top": "13639330"
+      },
+      {
+        "query_id": "527",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "1617327",
+        "candidate_top": "1617327"
+      },
+      {
+        "query_id": "528",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "5476778",
+        "candidate_top": "5476778"
+      },
+      {
+        "query_id": "53",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "45638119",
+        "candidate_top": "45638119"
+      },
+      {
+        "query_id": "532",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "1387104",
+        "candidate_top": "12991445"
+      },
+      {
+        "query_id": "533",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "1387104",
+        "candidate_top": "12991445"
+      },
+      {
+        "query_id": "535",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "44660616",
+        "candidate_top": "44660616"
+      },
+      {
+        "query_id": "536",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17097974",
+        "candidate_top": "43566999"
+      },
+      {
+        "query_id": "539",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "13282296",
+        "candidate_top": "13282296"
+      },
+      {
+        "query_id": "54",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "49556906",
+        "candidate_top": "49556906"
+      },
+      {
+        "query_id": "540",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17150648",
+        "candidate_top": "2039912"
+      },
+      {
+        "query_id": "544",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "32556431",
+        "candidate_top": "32556431"
+      },
+      {
+        "query_id": "549",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "9433958",
+        "candidate_top": "9433958"
+      },
+      {
+        "query_id": "551",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "8903143",
+        "candidate_top": "8903143"
+      },
+      {
+        "query_id": "552",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "10669582",
+        "candidate_top": "1471041"
+      },
+      {
+        "query_id": "554",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "52925737",
+        "candidate_top": "364522"
+      },
+      {
+        "query_id": "56",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4709641",
+        "candidate_top": "4709641"
+      },
+      {
+        "query_id": "560",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "29347970",
+        "candidate_top": "29347970"
+      },
+      {
+        "query_id": "569",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "21320417",
+        "candidate_top": "21320417"
+      },
+      {
+        "query_id": "57",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4709641",
+        "candidate_top": "4709641"
+      },
+      {
+        "query_id": "575",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "9548440",
+        "candidate_top": "9548440"
+      },
+      {
+        "query_id": "577",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "42065070",
+        "candidate_top": "42065070"
+      },
+      {
+        "query_id": "578",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "8764879",
+        "candidate_top": "8764879"
+      },
+      {
+        "query_id": "587",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "16999023",
+        "candidate_top": "16999023"
+      },
+      {
+        "query_id": "589",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "10984005",
+        "candidate_top": "10984005"
+      },
+      {
+        "query_id": "593",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "19675911",
+        "candidate_top": "19675911"
+      },
+      {
+        "query_id": "597",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "36355784",
+        "candidate_top": "36355784"
+      },
+      {
+        "query_id": "598",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "27446873",
+        "candidate_top": "27446873"
+      },
+      {
+        "query_id": "613",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "9638032",
+        "candidate_top": "9638032"
+      },
+      {
+        "query_id": "619",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "49556906",
+        "candidate_top": "49556906"
+      },
+      {
+        "query_id": "623",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "4462079",
+        "candidate_top": "22843838"
+      },
+      {
+        "query_id": "628",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "22705234",
+        "candidate_top": "22705234"
+      },
+      {
+        "query_id": "636",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "22025252",
+        "candidate_top": "22025252"
+      },
+      {
+        "query_id": "637",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "73473433",
+        "candidate_top": "73473433"
+      },
+      {
+        "query_id": "641",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "24865781",
+        "candidate_top": "24865781"
+      },
+      {
+        "query_id": "644",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "120626",
+        "candidate_top": "120626"
+      },
+      {
+        "query_id": "649",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "12789595",
+        "candidate_top": "12789595"
+      },
+      {
+        "query_id": "659",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.333333,
+        "baseline_top": "46926352",
+        "candidate_top": "46926352"
+      },
+      {
+        "query_id": "660",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "7662206",
+        "candidate_top": "7662206"
+      },
+      {
+        "query_id": "674",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "2095573",
+        "candidate_top": "2095573"
+      },
+      {
+        "query_id": "684",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4942718",
+        "candidate_top": "4942718"
+      },
+      {
+        "query_id": "690",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "36653415",
+        "candidate_top": "36653415"
+      },
+      {
+        "query_id": "691",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "28195565",
+        "candidate_top": "28195565"
+      },
+      {
+        "query_id": "692",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23203102",
+        "candidate_top": "27049238"
+      },
+      {
+        "query_id": "693",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23203102",
+        "candidate_top": "27049238"
+      },
+      {
+        "query_id": "70",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "5956380",
+        "candidate_top": "5956380"
+      },
+      {
+        "query_id": "700",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "25670099",
+        "candidate_top": "25670099"
+      },
+      {
+        "query_id": "702",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "16557565",
+        "candidate_top": "16557565"
+      },
+      {
+        "query_id": "715",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "28390999",
+        "candidate_top": "28390999"
+      },
+      {
+        "query_id": "716",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23581096",
+        "candidate_top": "23581096"
+      },
+      {
+        "query_id": "718",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "17587795",
+        "candidate_top": "17587795"
+      },
+      {
+        "query_id": "72",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "1744752",
+        "candidate_top": "1744752"
+      },
+      {
+        "query_id": "721",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "1834762",
+        "candidate_top": "1834762"
+      },
+      {
+        "query_id": "723",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "5531479",
+        "candidate_top": "5531479"
+      },
+      {
+        "query_id": "727",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "7521113",
+        "candidate_top": "7521113"
+      },
+      {
+        "query_id": "728",
+        "baseline_avg_rel": 0.666667,
+        "candidate_avg_rel": 0.666667,
+        "delta": 0.0,
+        "baseline_top": "7521113",
+        "candidate_top": "7521113"
+      },
+      {
+        "query_id": "729",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "18038250",
+        "candidate_top": "18038250"
+      },
+      {
+        "query_id": "742",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "32159283",
+        "candidate_top": "32159283"
+      },
+      {
+        "query_id": "743",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "32159283",
+        "candidate_top": "32159283"
+      },
+      {
+        "query_id": "744",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "4138659",
+        "candidate_top": "4138659"
+      },
+      {
+        "query_id": "75",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.333333,
+        "baseline_top": "2837758",
+        "candidate_top": "13965483"
+      },
+      {
+        "query_id": "756",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "2831620",
+        "candidate_top": "27134527"
+      },
+      {
+        "query_id": "759",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "1805641",
+        "candidate_top": "1805641"
+      },
+      {
+        "query_id": "768",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "19497526",
+        "candidate_top": "19497526"
+      },
+      {
+        "query_id": "770",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "15476777",
+        "candidate_top": "15476777"
+      },
+      {
+        "query_id": "775",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "11569583",
+        "candidate_top": "11569583"
+      },
+      {
+        "query_id": "781",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "24338780",
+        "candidate_top": "24338780"
+      },
+      {
+        "query_id": "783",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "39084565",
+        "candidate_top": "39084565"
+      },
+      {
+        "query_id": "784",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "35008773",
+        "candidate_top": "23535770"
+      },
+      {
+        "query_id": "785",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "54440",
+        "candidate_top": "54440"
+      },
+      {
+        "query_id": "793",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "8425533",
+        "candidate_top": "8425533"
+      },
+      {
+        "query_id": "800",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "10765888",
+        "candidate_top": "10765888"
+      },
+      {
+        "query_id": "805",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "22180793",
+        "candidate_top": "22180793"
+      },
+      {
+        "query_id": "808",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "36606083",
+        "candidate_top": "36606083"
+      },
+      {
+        "query_id": "811",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "19799455",
+        "candidate_top": "19799455"
+      },
+      {
+        "query_id": "814",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "33387953",
+        "candidate_top": "33387953"
+      },
+      {
+        "query_id": "820",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "8646760",
+        "candidate_top": "8646760"
+      },
+      {
+        "query_id": "821",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "8646760",
+        "candidate_top": "8646760"
+      },
+      {
+        "query_id": "823",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "15319019",
+        "candidate_top": "15319019"
+      },
+      {
+        "query_id": "830",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "12737132",
+        "candidate_top": "12737132"
+      },
+      {
+        "query_id": "831",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "12737132",
+        "candidate_top": "12737132"
+      },
+      {
+        "query_id": "832",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "30303335",
+        "candidate_top": "30303335"
+      },
+      {
+        "query_id": "834",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "12631182",
+        "candidate_top": "12631182"
+      },
+      {
+        "query_id": "837",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.0,
+        "delta": -0.333333,
+        "baseline_top": "1780819",
+        "candidate_top": "1780819"
+      },
+      {
+        "query_id": "839",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "169264",
+        "candidate_top": "169264"
+      },
+      {
+        "query_id": "845",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "9878167",
+        "candidate_top": "9878167"
+      },
+      {
+        "query_id": "847",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "33835579",
+        "candidate_top": "24241932"
+      },
+      {
+        "query_id": "852",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "13843341",
+        "candidate_top": "13843341"
+      },
+      {
+        "query_id": "859",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "12315072",
+        "candidate_top": "12315072"
+      },
+      {
+        "query_id": "870",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "37029185",
+        "candidate_top": "37029185"
+      },
+      {
+        "query_id": "873",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "4345757",
+        "candidate_top": "4345757"
+      },
+      {
+        "query_id": "879",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "8426046",
+        "candidate_top": "8426046"
+      },
+      {
+        "query_id": "880",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "8426046",
+        "candidate_top": "8426046"
+      },
+      {
+        "query_id": "882",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "14803797",
+        "candidate_top": "14803797"
+      },
+      {
+        "query_id": "887",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "2140513",
+        "candidate_top": "33872649"
+      },
+      {
+        "query_id": "903",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "10648422",
+        "candidate_top": "10648422"
+      },
+      {
+        "query_id": "904",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "7370282",
+        "candidate_top": "7370282"
+      },
+      {
+        "query_id": "907",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "6923961",
+        "candidate_top": "6923961"
+      },
+      {
+        "query_id": "911",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "11254556",
+        "candidate_top": "11254556"
+      },
+      {
+        "query_id": "94",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.333333,
+        "baseline_top": "46926352",
+        "candidate_top": "46926352"
+      },
+      {
+        "query_id": "99",
+        "baseline_avg_rel": 0.333333,
+        "candidate_avg_rel": 0.333333,
+        "delta": 0.0,
+        "baseline_top": "18810195",
+        "candidate_top": "18810195"
+      }
+    ],
+    "5": [
+      {
+        "query_id": "1",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17482507",
+        "candidate_top": "17482507"
+      },
+      {
+        "query_id": "100",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4381486",
+        "candidate_top": "4381486"
+      },
+      {
+        "query_id": "113",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "14584755",
+        "candidate_top": "14584755"
+      },
+      {
+        "query_id": "115",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "33872649",
+        "candidate_top": "33872649"
+      },
+      {
+        "query_id": "118",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "6372244",
+        "candidate_top": "6372244"
+      },
+      {
+        "query_id": "124",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4883040",
+        "candidate_top": "4883040"
+      },
+      {
+        "query_id": "127",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "293661",
+        "candidate_top": "293661"
+      },
+      {
+        "query_id": "128",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "1122279",
+        "candidate_top": "1122279"
+      },
+      {
+        "query_id": "129",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "27768226",
+        "candidate_top": "27768226"
+      },
+      {
+        "query_id": "13",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "7662395",
+        "candidate_top": "7662395"
+      },
+      {
+        "query_id": "130",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "27768226",
+        "candidate_top": "27768226"
+      },
+      {
+        "query_id": "132",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "7613033",
+        "candidate_top": "7613033"
+      },
+      {
+        "query_id": "133",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "17934082",
+        "candidate_top": "45764440"
+      },
+      {
+        "query_id": "137",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "26016929",
+        "candidate_top": "26016929"
+      },
+      {
+        "query_id": "141",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "14437255",
+        "candidate_top": "14437255"
+      },
+      {
+        "query_id": "142",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "10582939",
+        "candidate_top": "10582939"
+      },
+      {
+        "query_id": "143",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "10582939",
+        "candidate_top": "10582939"
+      },
+      {
+        "query_id": "146",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "10582939",
+        "candidate_top": "10582939"
+      },
+      {
+        "query_id": "148",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "15728433",
+        "candidate_top": "15728433"
+      },
+      {
+        "query_id": "163",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "18872233",
+        "candidate_top": "18872233"
+      },
+      {
+        "query_id": "171",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "12670680",
+        "candidate_top": "12670680"
+      },
+      {
+        "query_id": "179",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "16322674",
+        "candidate_top": "16322674"
+      },
+      {
+        "query_id": "180",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "16966326",
+        "candidate_top": "16966326"
+      },
+      {
+        "query_id": "183",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "46193388",
+        "candidate_top": "46193388"
+      },
+      {
+        "query_id": "185",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "5864770",
+        "candidate_top": "5864770"
+      },
+      {
+        "query_id": "198",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "13949015",
+        "candidate_top": "13949015"
+      },
+      {
+        "query_id": "208",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "13519661",
+        "candidate_top": "13519661"
+      },
+      {
+        "query_id": "212",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "7808055",
+        "candidate_top": "7808055"
+      },
+      {
+        "query_id": "213",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "27054878",
+        "candidate_top": "27054878"
+      },
+      {
+        "query_id": "216",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "217",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "218",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "219",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "230",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "26456326",
+        "candidate_top": "26456326"
+      },
+      {
+        "query_id": "232",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "10536636",
+        "candidate_top": "10536636"
+      },
+      {
+        "query_id": "233",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4388470",
+        "candidate_top": "4388470"
+      },
+      {
+        "query_id": "236",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4388470",
+        "candidate_top": "4388470"
+      },
+      {
+        "query_id": "237",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4942718",
+        "candidate_top": "4942718"
+      },
+      {
+        "query_id": "238",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "4463811",
+        "candidate_top": "4463811"
+      },
+      {
+        "query_id": "239",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "3230557",
+        "candidate_top": "3230557"
+      },
+      {
+        "query_id": "248",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "23369842",
+        "candidate_top": "23369842"
+      },
+      {
+        "query_id": "249",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "23369842",
+        "candidate_top": "23369842"
+      },
+      {
+        "query_id": "261",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "46743299",
+        "candidate_top": "46743299"
+      },
+      {
+        "query_id": "268",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1568684",
+        "candidate_top": "1568684"
+      },
+      {
+        "query_id": "269",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1568684",
+        "candidate_top": "1568684"
+      },
+      {
+        "query_id": "274",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "11614737",
+        "candidate_top": "11614737"
+      },
+      {
+        "query_id": "275",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4961038",
+        "candidate_top": "17462437"
+      },
+      {
+        "query_id": "279",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "14376683",
+        "candidate_top": "14376683"
+      },
+      {
+        "query_id": "294",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "13949015",
+        "candidate_top": "13949015"
+      },
+      {
+        "query_id": "295",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "24044977",
+        "candidate_top": "24044977"
+      },
+      {
+        "query_id": "298",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "23887844",
+        "candidate_top": "23887844"
+      },
+      {
+        "query_id": "3",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "23389795",
+        "candidate_top": "23389795"
+      },
+      {
+        "query_id": "300",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "16120395",
+        "candidate_top": "16120395"
+      },
+      {
+        "query_id": "303",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4085204",
+        "candidate_top": "4085204"
+      },
+      {
+        "query_id": "312",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "15966318",
+        "candidate_top": "15966318"
+      },
+      {
+        "query_id": "314",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "544971",
+        "candidate_top": "544971"
+      },
+      {
+        "query_id": "324",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.0,
+        "delta": -0.2,
+        "baseline_top": "23816832",
+        "candidate_top": "23816832"
+      },
+      {
+        "query_id": "327",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "17997584",
+        "candidate_top": "17997584"
+      },
+      {
+        "query_id": "338",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "23349986",
+        "candidate_top": "23349986"
+      },
+      {
+        "query_id": "343",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "308862",
+        "candidate_top": "308862"
+      },
+      {
+        "query_id": "350",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "16927286",
+        "candidate_top": "16242975"
+      },
+      {
+        "query_id": "354",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "8774475",
+        "candidate_top": "8774475"
+      },
+      {
+        "query_id": "36",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "42441846",
+        "candidate_top": "42441846"
+      },
+      {
+        "query_id": "362",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "38587347",
+        "candidate_top": "38587347"
+      },
+      {
+        "query_id": "380",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "2248870",
+        "candidate_top": "2248870"
+      },
+      {
+        "query_id": "384",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "51972698",
+        "candidate_top": "51972698"
+      },
+      {
+        "query_id": "385",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1032372",
+        "candidate_top": "1032372"
+      },
+      {
+        "query_id": "386",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "16495649",
+        "candidate_top": "16495649"
+      },
+      {
+        "query_id": "388",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1148122",
+        "candidate_top": "1148122"
+      },
+      {
+        "query_id": "399",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "791050",
+        "candidate_top": "791050"
+      },
+      {
+        "query_id": "410",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "14924526",
+        "candidate_top": "14924526"
+      },
+      {
+        "query_id": "411",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "14924526",
+        "candidate_top": "14924526"
+      },
+      {
+        "query_id": "415",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4709641",
+        "candidate_top": "4709641"
+      },
+      {
+        "query_id": "42",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "40913091",
+        "candidate_top": "40913091"
+      },
+      {
+        "query_id": "421",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17631671",
+        "candidate_top": "17631671"
+      },
+      {
+        "query_id": "431",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "19922508",
+        "candidate_top": "19922508"
+      },
+      {
+        "query_id": "436",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "14637235",
+        "candidate_top": "14637235"
+      },
+      {
+        "query_id": "437",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "24466904",
+        "candidate_top": "2359152"
+      },
+      {
+        "query_id": "439",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "18575183",
+        "candidate_top": "18575183"
+      },
+      {
+        "query_id": "440",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "18575183",
+        "candidate_top": "18575183"
+      },
+      {
+        "query_id": "443",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "10165258",
+        "candidate_top": "10165258"
+      },
+      {
+        "query_id": "452",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4632921",
+        "candidate_top": "4632921"
+      },
+      {
+        "query_id": "475",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23576165",
+        "candidate_top": "23576165"
+      },
+      {
+        "query_id": "478",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "34854444",
+        "candidate_top": "34854444"
+      },
+      {
+        "query_id": "48",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "18617259",
+        "candidate_top": "18617259"
+      },
+      {
+        "query_id": "49",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "5953485",
+        "candidate_top": "5953485"
+      },
+      {
+        "query_id": "491",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "56893404",
+        "candidate_top": "56893404"
+      },
+      {
+        "query_id": "5",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "42240424",
+        "candidate_top": "17333231"
+      },
+      {
+        "query_id": "50",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "39559521",
+        "candidate_top": "39559521"
+      },
+      {
+        "query_id": "501",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "21274919",
+        "candidate_top": "21274919"
+      },
+      {
+        "query_id": "502",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "43990286",
+        "candidate_top": "43990286"
+      },
+      {
+        "query_id": "507",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "30774694",
+        "candidate_top": "30774694"
+      },
+      {
+        "query_id": "508",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "25516011",
+        "candidate_top": "25516011"
+      },
+      {
+        "query_id": "51",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "45638119",
+        "candidate_top": "45638119"
+      },
+      {
+        "query_id": "513",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "13230773",
+        "candidate_top": "13230773"
+      },
+      {
+        "query_id": "514",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "22023404",
+        "candidate_top": "22023404"
+      },
+      {
+        "query_id": "516",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "29564505",
+        "candidate_top": "29564505"
+      },
+      {
+        "query_id": "517",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "19658917",
+        "candidate_top": "19658917"
+      },
+      {
+        "query_id": "521",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "34873974",
+        "candidate_top": "34873974"
+      },
+      {
+        "query_id": "525",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "13639330",
+        "candidate_top": "13639330"
+      },
+      {
+        "query_id": "527",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1617327",
+        "candidate_top": "1617327"
+      },
+      {
+        "query_id": "528",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "5476778",
+        "candidate_top": "5476778"
+      },
+      {
+        "query_id": "53",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "45638119",
+        "candidate_top": "45638119"
+      },
+      {
+        "query_id": "532",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1387104",
+        "candidate_top": "12991445"
+      },
+      {
+        "query_id": "533",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1387104",
+        "candidate_top": "12991445"
+      },
+      {
+        "query_id": "535",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "44660616",
+        "candidate_top": "44660616"
+      },
+      {
+        "query_id": "536",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17097974",
+        "candidate_top": "43566999"
+      },
+      {
+        "query_id": "539",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "13282296",
+        "candidate_top": "13282296"
+      },
+      {
+        "query_id": "54",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "49556906",
+        "candidate_top": "49556906"
+      },
+      {
+        "query_id": "540",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "17150648",
+        "candidate_top": "2039912"
+      },
+      {
+        "query_id": "544",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "32556431",
+        "candidate_top": "32556431"
+      },
+      {
+        "query_id": "549",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "9433958",
+        "candidate_top": "9433958"
+      },
+      {
+        "query_id": "551",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "8903143",
+        "candidate_top": "8903143"
+      },
+      {
+        "query_id": "552",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "10669582",
+        "candidate_top": "1471041"
+      },
+      {
+        "query_id": "554",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "52925737",
+        "candidate_top": "364522"
+      },
+      {
+        "query_id": "56",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4709641",
+        "candidate_top": "4709641"
+      },
+      {
+        "query_id": "560",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "29347970",
+        "candidate_top": "29347970"
+      },
+      {
+        "query_id": "569",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "21320417",
+        "candidate_top": "21320417"
+      },
+      {
+        "query_id": "57",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4709641",
+        "candidate_top": "4709641"
+      },
+      {
+        "query_id": "575",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "9548440",
+        "candidate_top": "9548440"
+      },
+      {
+        "query_id": "577",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "42065070",
+        "candidate_top": "42065070"
+      },
+      {
+        "query_id": "578",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "8764879",
+        "candidate_top": "8764879"
+      },
+      {
+        "query_id": "587",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "16999023",
+        "candidate_top": "16999023"
+      },
+      {
+        "query_id": "589",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "10984005",
+        "candidate_top": "10984005"
+      },
+      {
+        "query_id": "593",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "19675911",
+        "candidate_top": "19675911"
+      },
+      {
+        "query_id": "597",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "36355784",
+        "candidate_top": "36355784"
+      },
+      {
+        "query_id": "598",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "27446873",
+        "candidate_top": "27446873"
+      },
+      {
+        "query_id": "613",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "9638032",
+        "candidate_top": "9638032"
+      },
+      {
+        "query_id": "619",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "49556906",
+        "candidate_top": "49556906"
+      },
+      {
+        "query_id": "623",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "4462079",
+        "candidate_top": "22843838"
+      },
+      {
+        "query_id": "628",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "22705234",
+        "candidate_top": "22705234"
+      },
+      {
+        "query_id": "636",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "22025252",
+        "candidate_top": "22025252"
+      },
+      {
+        "query_id": "637",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "73473433",
+        "candidate_top": "73473433"
+      },
+      {
+        "query_id": "641",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "24865781",
+        "candidate_top": "24865781"
+      },
+      {
+        "query_id": "644",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "120626",
+        "candidate_top": "120626"
+      },
+      {
+        "query_id": "649",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "12789595",
+        "candidate_top": "12789595"
+      },
+      {
+        "query_id": "659",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "46926352",
+        "candidate_top": "46926352"
+      },
+      {
+        "query_id": "660",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "7662206",
+        "candidate_top": "7662206"
+      },
+      {
+        "query_id": "674",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "2095573",
+        "candidate_top": "2095573"
+      },
+      {
+        "query_id": "684",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4942718",
+        "candidate_top": "4942718"
+      },
+      {
+        "query_id": "690",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "36653415",
+        "candidate_top": "36653415"
+      },
+      {
+        "query_id": "691",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "28195565",
+        "candidate_top": "28195565"
+      },
+      {
+        "query_id": "692",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "23203102",
+        "candidate_top": "27049238"
+      },
+      {
+        "query_id": "693",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "23203102",
+        "candidate_top": "27049238"
+      },
+      {
+        "query_id": "70",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "5956380",
+        "candidate_top": "5956380"
+      },
+      {
+        "query_id": "700",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "25670099",
+        "candidate_top": "25670099"
+      },
+      {
+        "query_id": "702",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "16557565",
+        "candidate_top": "16557565"
+      },
+      {
+        "query_id": "715",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "28390999",
+        "candidate_top": "28390999"
+      },
+      {
+        "query_id": "716",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23581096",
+        "candidate_top": "23581096"
+      },
+      {
+        "query_id": "718",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "17587795",
+        "candidate_top": "17587795"
+      },
+      {
+        "query_id": "72",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "1744752",
+        "candidate_top": "1744752"
+      },
+      {
+        "query_id": "721",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1834762",
+        "candidate_top": "1834762"
+      },
+      {
+        "query_id": "723",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "5531479",
+        "candidate_top": "5531479"
+      },
+      {
+        "query_id": "727",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "7521113",
+        "candidate_top": "7521113"
+      },
+      {
+        "query_id": "728",
+        "baseline_avg_rel": 0.4,
+        "candidate_avg_rel": 0.4,
+        "delta": 0.0,
+        "baseline_top": "7521113",
+        "candidate_top": "7521113"
+      },
+      {
+        "query_id": "729",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.2,
+        "baseline_top": "18038250",
+        "candidate_top": "18038250"
+      },
+      {
+        "query_id": "742",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "32159283",
+        "candidate_top": "32159283"
+      },
+      {
+        "query_id": "743",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "32159283",
+        "candidate_top": "32159283"
+      },
+      {
+        "query_id": "744",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4138659",
+        "candidate_top": "4138659"
+      },
+      {
+        "query_id": "75",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "2837758",
+        "candidate_top": "13965483"
+      },
+      {
+        "query_id": "756",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "2831620",
+        "candidate_top": "27134527"
+      },
+      {
+        "query_id": "759",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1805641",
+        "candidate_top": "1805641"
+      },
+      {
+        "query_id": "768",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.0,
+        "delta": -0.2,
+        "baseline_top": "19497526",
+        "candidate_top": "19497526"
+      },
+      {
+        "query_id": "770",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "15476777",
+        "candidate_top": "15476777"
+      },
+      {
+        "query_id": "775",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "11569583",
+        "candidate_top": "11569583"
+      },
+      {
+        "query_id": "781",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "24338780",
+        "candidate_top": "24338780"
+      },
+      {
+        "query_id": "783",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "39084565",
+        "candidate_top": "39084565"
+      },
+      {
+        "query_id": "784",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "35008773",
+        "candidate_top": "23535770"
+      },
+      {
+        "query_id": "785",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.0,
+        "delta": -0.2,
+        "baseline_top": "54440",
+        "candidate_top": "54440"
+      },
+      {
+        "query_id": "793",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "8425533",
+        "candidate_top": "8425533"
+      },
+      {
+        "query_id": "800",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "10765888",
+        "candidate_top": "10765888"
+      },
+      {
+        "query_id": "805",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "22180793",
+        "candidate_top": "22180793"
+      },
+      {
+        "query_id": "808",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "36606083",
+        "candidate_top": "36606083"
+      },
+      {
+        "query_id": "811",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "19799455",
+        "candidate_top": "19799455"
+      },
+      {
+        "query_id": "814",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "33387953",
+        "candidate_top": "33387953"
+      },
+      {
+        "query_id": "820",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "8646760",
+        "candidate_top": "8646760"
+      },
+      {
+        "query_id": "821",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "8646760",
+        "candidate_top": "8646760"
+      },
+      {
+        "query_id": "823",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "15319019",
+        "candidate_top": "15319019"
+      },
+      {
+        "query_id": "830",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "12737132",
+        "candidate_top": "12737132"
+      },
+      {
+        "query_id": "831",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "12737132",
+        "candidate_top": "12737132"
+      },
+      {
+        "query_id": "832",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "30303335",
+        "candidate_top": "30303335"
+      },
+      {
+        "query_id": "834",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "12631182",
+        "candidate_top": "12631182"
+      },
+      {
+        "query_id": "837",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "1780819",
+        "candidate_top": "1780819"
+      },
+      {
+        "query_id": "839",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "169264",
+        "candidate_top": "169264"
+      },
+      {
+        "query_id": "845",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "9878167",
+        "candidate_top": "9878167"
+      },
+      {
+        "query_id": "847",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "33835579",
+        "candidate_top": "24241932"
+      },
+      {
+        "query_id": "852",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "13843341",
+        "candidate_top": "13843341"
+      },
+      {
+        "query_id": "859",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "12315072",
+        "candidate_top": "12315072"
+      },
+      {
+        "query_id": "870",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "37029185",
+        "candidate_top": "37029185"
+      },
+      {
+        "query_id": "873",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "4345757",
+        "candidate_top": "4345757"
+      },
+      {
+        "query_id": "879",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "8426046",
+        "candidate_top": "8426046"
+      },
+      {
+        "query_id": "880",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "8426046",
+        "candidate_top": "8426046"
+      },
+      {
+        "query_id": "882",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "14803797",
+        "candidate_top": "14803797"
+      },
+      {
+        "query_id": "887",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "2140513",
+        "candidate_top": "33872649"
+      },
+      {
+        "query_id": "903",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "10648422",
+        "candidate_top": "10648422"
+      },
+      {
+        "query_id": "904",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "7370282",
+        "candidate_top": "7370282"
+      },
+      {
+        "query_id": "907",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "6923961",
+        "candidate_top": "6923961"
+      },
+      {
+        "query_id": "911",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "11254556",
+        "candidate_top": "11254556"
+      },
+      {
+        "query_id": "94",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "46926352",
+        "candidate_top": "46926352"
+      },
+      {
+        "query_id": "99",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "18810195",
+        "candidate_top": "18810195"
+      }
+    ],
+    "10": [
+      {
+        "query_id": "1",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17482507",
+        "candidate_top": "17482507"
+      },
+      {
+        "query_id": "100",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4381486",
+        "candidate_top": "4381486"
+      },
+      {
+        "query_id": "113",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "14584755",
+        "candidate_top": "14584755"
+      },
+      {
+        "query_id": "115",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "33872649",
+        "candidate_top": "33872649"
+      },
+      {
+        "query_id": "118",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "6372244",
+        "candidate_top": "6372244"
+      },
+      {
+        "query_id": "124",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4883040",
+        "candidate_top": "4883040"
+      },
+      {
+        "query_id": "127",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "293661",
+        "candidate_top": "293661"
+      },
+      {
+        "query_id": "128",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1122279",
+        "candidate_top": "1122279"
+      },
+      {
+        "query_id": "129",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "27768226",
+        "candidate_top": "27768226"
+      },
+      {
+        "query_id": "13",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "7662395",
+        "candidate_top": "7662395"
+      },
+      {
+        "query_id": "130",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "27768226",
+        "candidate_top": "27768226"
+      },
+      {
+        "query_id": "132",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "7613033",
+        "candidate_top": "7613033"
+      },
+      {
+        "query_id": "133",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.1,
+        "baseline_top": "17934082",
+        "candidate_top": "45764440"
+      },
+      {
+        "query_id": "137",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "26016929",
+        "candidate_top": "26016929"
+      },
+      {
+        "query_id": "141",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "14437255",
+        "candidate_top": "14437255"
+      },
+      {
+        "query_id": "142",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "10582939",
+        "candidate_top": "10582939"
+      },
+      {
+        "query_id": "143",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "10582939",
+        "candidate_top": "10582939"
+      },
+      {
+        "query_id": "146",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "10582939",
+        "candidate_top": "10582939"
+      },
+      {
+        "query_id": "148",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.1,
+        "baseline_top": "15728433",
+        "candidate_top": "15728433"
+      },
+      {
+        "query_id": "163",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "18872233",
+        "candidate_top": "18872233"
+      },
+      {
+        "query_id": "171",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "12670680",
+        "candidate_top": "12670680"
+      },
+      {
+        "query_id": "179",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "16322674",
+        "candidate_top": "16322674"
+      },
+      {
+        "query_id": "180",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "16966326",
+        "candidate_top": "16966326"
+      },
+      {
+        "query_id": "183",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "46193388",
+        "candidate_top": "46193388"
+      },
+      {
+        "query_id": "185",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "5864770",
+        "candidate_top": "5864770"
+      },
+      {
+        "query_id": "198",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "13949015",
+        "candidate_top": "13949015"
+      },
+      {
+        "query_id": "208",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "13519661",
+        "candidate_top": "13519661"
+      },
+      {
+        "query_id": "212",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.1,
+        "baseline_top": "7808055",
+        "candidate_top": "7808055"
+      },
+      {
+        "query_id": "213",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "27054878",
+        "candidate_top": "27054878"
+      },
+      {
+        "query_id": "216",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "217",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "218",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "219",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "21366394",
+        "candidate_top": "21366394"
+      },
+      {
+        "query_id": "230",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "26456326",
+        "candidate_top": "26456326"
+      },
+      {
+        "query_id": "232",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "10536636",
+        "candidate_top": "10536636"
+      },
+      {
+        "query_id": "233",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4388470",
+        "candidate_top": "4388470"
+      },
+      {
+        "query_id": "236",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4388470",
+        "candidate_top": "4388470"
+      },
+      {
+        "query_id": "237",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4942718",
+        "candidate_top": "4942718"
+      },
+      {
+        "query_id": "238",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "4463811",
+        "candidate_top": "4463811"
+      },
+      {
+        "query_id": "239",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "3230557",
+        "candidate_top": "3230557"
+      },
+      {
+        "query_id": "248",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "23369842",
+        "candidate_top": "23369842"
+      },
+      {
+        "query_id": "249",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "23369842",
+        "candidate_top": "23369842"
+      },
+      {
+        "query_id": "261",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "46743299",
+        "candidate_top": "46743299"
+      },
+      {
+        "query_id": "268",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1568684",
+        "candidate_top": "1568684"
+      },
+      {
+        "query_id": "269",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1568684",
+        "candidate_top": "1568684"
+      },
+      {
+        "query_id": "274",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "11614737",
+        "candidate_top": "11614737"
+      },
+      {
+        "query_id": "275",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4961038",
+        "candidate_top": "17462437"
+      },
+      {
+        "query_id": "279",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "14376683",
+        "candidate_top": "14376683"
+      },
+      {
+        "query_id": "294",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "13949015",
+        "candidate_top": "13949015"
+      },
+      {
+        "query_id": "295",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "24044977",
+        "candidate_top": "24044977"
+      },
+      {
+        "query_id": "298",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "23887844",
+        "candidate_top": "23887844"
+      },
+      {
+        "query_id": "3",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "23389795",
+        "candidate_top": "23389795"
+      },
+      {
+        "query_id": "300",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "16120395",
+        "candidate_top": "16120395"
+      },
+      {
+        "query_id": "303",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4085204",
+        "candidate_top": "4085204"
+      },
+      {
+        "query_id": "312",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "15966318",
+        "candidate_top": "15966318"
+      },
+      {
+        "query_id": "314",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "544971",
+        "candidate_top": "544971"
+      },
+      {
+        "query_id": "324",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "23816832",
+        "candidate_top": "23816832"
+      },
+      {
+        "query_id": "327",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "17997584",
+        "candidate_top": "17997584"
+      },
+      {
+        "query_id": "338",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "23349986",
+        "candidate_top": "23349986"
+      },
+      {
+        "query_id": "343",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "308862",
+        "candidate_top": "308862"
+      },
+      {
+        "query_id": "350",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "16927286",
+        "candidate_top": "16242975"
+      },
+      {
+        "query_id": "354",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "8774475",
+        "candidate_top": "8774475"
+      },
+      {
+        "query_id": "36",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "42441846",
+        "candidate_top": "42441846"
+      },
+      {
+        "query_id": "362",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "38587347",
+        "candidate_top": "38587347"
+      },
+      {
+        "query_id": "380",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "2248870",
+        "candidate_top": "2248870"
+      },
+      {
+        "query_id": "384",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "51972698",
+        "candidate_top": "51972698"
+      },
+      {
+        "query_id": "385",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.1,
+        "baseline_top": "1032372",
+        "candidate_top": "1032372"
+      },
+      {
+        "query_id": "386",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "16495649",
+        "candidate_top": "16495649"
+      },
+      {
+        "query_id": "388",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1148122",
+        "candidate_top": "1148122"
+      },
+      {
+        "query_id": "399",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "791050",
+        "candidate_top": "791050"
+      },
+      {
+        "query_id": "410",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "14924526",
+        "candidate_top": "14924526"
+      },
+      {
+        "query_id": "411",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "14924526",
+        "candidate_top": "14924526"
+      },
+      {
+        "query_id": "415",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4709641",
+        "candidate_top": "4709641"
+      },
+      {
+        "query_id": "42",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "40913091",
+        "candidate_top": "40913091"
+      },
+      {
+        "query_id": "421",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17631671",
+        "candidate_top": "17631671"
+      },
+      {
+        "query_id": "431",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "19922508",
+        "candidate_top": "19922508"
+      },
+      {
+        "query_id": "436",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "14637235",
+        "candidate_top": "14637235"
+      },
+      {
+        "query_id": "437",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "24466904",
+        "candidate_top": "2359152"
+      },
+      {
+        "query_id": "439",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "18575183",
+        "candidate_top": "18575183"
+      },
+      {
+        "query_id": "440",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "18575183",
+        "candidate_top": "18575183"
+      },
+      {
+        "query_id": "443",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "10165258",
+        "candidate_top": "10165258"
+      },
+      {
+        "query_id": "452",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "4632921",
+        "candidate_top": "4632921"
+      },
+      {
+        "query_id": "475",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23576165",
+        "candidate_top": "23576165"
+      },
+      {
+        "query_id": "478",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "34854444",
+        "candidate_top": "34854444"
+      },
+      {
+        "query_id": "48",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "18617259",
+        "candidate_top": "18617259"
+      },
+      {
+        "query_id": "49",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "5953485",
+        "candidate_top": "5953485"
+      },
+      {
+        "query_id": "491",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "56893404",
+        "candidate_top": "56893404"
+      },
+      {
+        "query_id": "5",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "42240424",
+        "candidate_top": "17333231"
+      },
+      {
+        "query_id": "50",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "39559521",
+        "candidate_top": "39559521"
+      },
+      {
+        "query_id": "501",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "21274919",
+        "candidate_top": "21274919"
+      },
+      {
+        "query_id": "502",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "43990286",
+        "candidate_top": "43990286"
+      },
+      {
+        "query_id": "507",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "30774694",
+        "candidate_top": "30774694"
+      },
+      {
+        "query_id": "508",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "25516011",
+        "candidate_top": "25516011"
+      },
+      {
+        "query_id": "51",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "45638119",
+        "candidate_top": "45638119"
+      },
+      {
+        "query_id": "513",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "13230773",
+        "candidate_top": "13230773"
+      },
+      {
+        "query_id": "514",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "22023404",
+        "candidate_top": "22023404"
+      },
+      {
+        "query_id": "516",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "29564505",
+        "candidate_top": "29564505"
+      },
+      {
+        "query_id": "517",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "19658917",
+        "candidate_top": "19658917"
+      },
+      {
+        "query_id": "521",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "34873974",
+        "candidate_top": "34873974"
+      },
+      {
+        "query_id": "525",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "13639330",
+        "candidate_top": "13639330"
+      },
+      {
+        "query_id": "527",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1617327",
+        "candidate_top": "1617327"
+      },
+      {
+        "query_id": "528",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "5476778",
+        "candidate_top": "5476778"
+      },
+      {
+        "query_id": "53",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "45638119",
+        "candidate_top": "45638119"
+      },
+      {
+        "query_id": "532",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1387104",
+        "candidate_top": "12991445"
+      },
+      {
+        "query_id": "533",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1387104",
+        "candidate_top": "12991445"
+      },
+      {
+        "query_id": "535",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "44660616",
+        "candidate_top": "44660616"
+      },
+      {
+        "query_id": "536",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "17097974",
+        "candidate_top": "43566999"
+      },
+      {
+        "query_id": "539",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "13282296",
+        "candidate_top": "13282296"
+      },
+      {
+        "query_id": "54",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "49556906",
+        "candidate_top": "49556906"
+      },
+      {
+        "query_id": "540",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "17150648",
+        "candidate_top": "2039912"
+      },
+      {
+        "query_id": "544",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "32556431",
+        "candidate_top": "32556431"
+      },
+      {
+        "query_id": "549",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "9433958",
+        "candidate_top": "9433958"
+      },
+      {
+        "query_id": "551",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "8903143",
+        "candidate_top": "8903143"
+      },
+      {
+        "query_id": "552",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "10669582",
+        "candidate_top": "1471041"
+      },
+      {
+        "query_id": "554",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "52925737",
+        "candidate_top": "364522"
+      },
+      {
+        "query_id": "56",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4709641",
+        "candidate_top": "4709641"
+      },
+      {
+        "query_id": "560",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "29347970",
+        "candidate_top": "29347970"
+      },
+      {
+        "query_id": "569",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "21320417",
+        "candidate_top": "21320417"
+      },
+      {
+        "query_id": "57",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4709641",
+        "candidate_top": "4709641"
+      },
+      {
+        "query_id": "575",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.1,
+        "baseline_top": "9548440",
+        "candidate_top": "9548440"
+      },
+      {
+        "query_id": "577",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "42065070",
+        "candidate_top": "42065070"
+      },
+      {
+        "query_id": "578",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "8764879",
+        "candidate_top": "8764879"
+      },
+      {
+        "query_id": "587",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "16999023",
+        "candidate_top": "16999023"
+      },
+      {
+        "query_id": "589",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "10984005",
+        "candidate_top": "10984005"
+      },
+      {
+        "query_id": "593",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "19675911",
+        "candidate_top": "19675911"
+      },
+      {
+        "query_id": "597",
+        "baseline_avg_rel": 0.3,
+        "candidate_avg_rel": 0.3,
+        "delta": 0.0,
+        "baseline_top": "36355784",
+        "candidate_top": "36355784"
+      },
+      {
+        "query_id": "598",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "27446873",
+        "candidate_top": "27446873"
+      },
+      {
+        "query_id": "613",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "9638032",
+        "candidate_top": "9638032"
+      },
+      {
+        "query_id": "619",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "49556906",
+        "candidate_top": "49556906"
+      },
+      {
+        "query_id": "623",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4462079",
+        "candidate_top": "22843838"
+      },
+      {
+        "query_id": "628",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "22705234",
+        "candidate_top": "22705234"
+      },
+      {
+        "query_id": "636",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "22025252",
+        "candidate_top": "22025252"
+      },
+      {
+        "query_id": "637",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "73473433",
+        "candidate_top": "73473433"
+      },
+      {
+        "query_id": "641",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "24865781",
+        "candidate_top": "24865781"
+      },
+      {
+        "query_id": "644",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "120626",
+        "candidate_top": "120626"
+      },
+      {
+        "query_id": "649",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "12789595",
+        "candidate_top": "12789595"
+      },
+      {
+        "query_id": "659",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "46926352",
+        "candidate_top": "46926352"
+      },
+      {
+        "query_id": "660",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "7662206",
+        "candidate_top": "7662206"
+      },
+      {
+        "query_id": "674",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "2095573",
+        "candidate_top": "2095573"
+      },
+      {
+        "query_id": "684",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4942718",
+        "candidate_top": "4942718"
+      },
+      {
+        "query_id": "690",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "36653415",
+        "candidate_top": "36653415"
+      },
+      {
+        "query_id": "691",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "28195565",
+        "candidate_top": "28195565"
+      },
+      {
+        "query_id": "692",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "23203102",
+        "candidate_top": "27049238"
+      },
+      {
+        "query_id": "693",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "23203102",
+        "candidate_top": "27049238"
+      },
+      {
+        "query_id": "70",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "5956380",
+        "candidate_top": "5956380"
+      },
+      {
+        "query_id": "700",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "25670099",
+        "candidate_top": "25670099"
+      },
+      {
+        "query_id": "702",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "16557565",
+        "candidate_top": "16557565"
+      },
+      {
+        "query_id": "715",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "28390999",
+        "candidate_top": "28390999"
+      },
+      {
+        "query_id": "716",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "23581096",
+        "candidate_top": "23581096"
+      },
+      {
+        "query_id": "718",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "17587795",
+        "candidate_top": "17587795"
+      },
+      {
+        "query_id": "72",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "1744752",
+        "candidate_top": "1744752"
+      },
+      {
+        "query_id": "721",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1834762",
+        "candidate_top": "1834762"
+      },
+      {
+        "query_id": "723",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "5531479",
+        "candidate_top": "5531479"
+      },
+      {
+        "query_id": "727",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "7521113",
+        "candidate_top": "7521113"
+      },
+      {
+        "query_id": "728",
+        "baseline_avg_rel": 0.2,
+        "candidate_avg_rel": 0.2,
+        "delta": 0.0,
+        "baseline_top": "7521113",
+        "candidate_top": "7521113"
+      },
+      {
+        "query_id": "729",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "18038250",
+        "candidate_top": "18038250"
+      },
+      {
+        "query_id": "742",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "32159283",
+        "candidate_top": "32159283"
+      },
+      {
+        "query_id": "743",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "32159283",
+        "candidate_top": "32159283"
+      },
+      {
+        "query_id": "744",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "4138659",
+        "candidate_top": "4138659"
+      },
+      {
+        "query_id": "75",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "2837758",
+        "candidate_top": "13965483"
+      },
+      {
+        "query_id": "756",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "2831620",
+        "candidate_top": "27134527"
+      },
+      {
+        "query_id": "759",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1805641",
+        "candidate_top": "1805641"
+      },
+      {
+        "query_id": "768",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "19497526",
+        "candidate_top": "19497526"
+      },
+      {
+        "query_id": "770",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "15476777",
+        "candidate_top": "15476777"
+      },
+      {
+        "query_id": "775",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "11569583",
+        "candidate_top": "11569583"
+      },
+      {
+        "query_id": "781",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "24338780",
+        "candidate_top": "24338780"
+      },
+      {
+        "query_id": "783",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "39084565",
+        "candidate_top": "39084565"
+      },
+      {
+        "query_id": "784",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "35008773",
+        "candidate_top": "23535770"
+      },
+      {
+        "query_id": "785",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "54440",
+        "candidate_top": "54440"
+      },
+      {
+        "query_id": "793",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "8425533",
+        "candidate_top": "8425533"
+      },
+      {
+        "query_id": "800",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "10765888",
+        "candidate_top": "10765888"
+      },
+      {
+        "query_id": "805",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "22180793",
+        "candidate_top": "22180793"
+      },
+      {
+        "query_id": "808",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "36606083",
+        "candidate_top": "36606083"
+      },
+      {
+        "query_id": "811",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "19799455",
+        "candidate_top": "19799455"
+      },
+      {
+        "query_id": "814",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "33387953",
+        "candidate_top": "33387953"
+      },
+      {
+        "query_id": "820",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "8646760",
+        "candidate_top": "8646760"
+      },
+      {
+        "query_id": "821",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "8646760",
+        "candidate_top": "8646760"
+      },
+      {
+        "query_id": "823",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "15319019",
+        "candidate_top": "15319019"
+      },
+      {
+        "query_id": "830",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "12737132",
+        "candidate_top": "12737132"
+      },
+      {
+        "query_id": "831",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "12737132",
+        "candidate_top": "12737132"
+      },
+      {
+        "query_id": "832",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "30303335",
+        "candidate_top": "30303335"
+      },
+      {
+        "query_id": "834",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "12631182",
+        "candidate_top": "12631182"
+      },
+      {
+        "query_id": "837",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "1780819",
+        "candidate_top": "1780819"
+      },
+      {
+        "query_id": "839",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "169264",
+        "candidate_top": "169264"
+      },
+      {
+        "query_id": "845",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "9878167",
+        "candidate_top": "9878167"
+      },
+      {
+        "query_id": "847",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "33835579",
+        "candidate_top": "24241932"
+      },
+      {
+        "query_id": "852",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "13843341",
+        "candidate_top": "13843341"
+      },
+      {
+        "query_id": "859",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "12315072",
+        "candidate_top": "12315072"
+      },
+      {
+        "query_id": "870",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "37029185",
+        "candidate_top": "37029185"
+      },
+      {
+        "query_id": "873",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.0,
+        "delta": -0.1,
+        "baseline_top": "4345757",
+        "candidate_top": "4345757"
+      },
+      {
+        "query_id": "879",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "8426046",
+        "candidate_top": "8426046"
+      },
+      {
+        "query_id": "880",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "8426046",
+        "candidate_top": "8426046"
+      },
+      {
+        "query_id": "882",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "14803797",
+        "candidate_top": "14803797"
+      },
+      {
+        "query_id": "887",
+        "baseline_avg_rel": 0.0,
+        "candidate_avg_rel": 0.0,
+        "delta": 0.0,
+        "baseline_top": "2140513",
+        "candidate_top": "33872649"
+      },
+      {
+        "query_id": "903",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "10648422",
+        "candidate_top": "10648422"
+      },
+      {
+        "query_id": "904",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "7370282",
+        "candidate_top": "7370282"
+      },
+      {
+        "query_id": "907",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "6923961",
+        "candidate_top": "6923961"
+      },
+      {
+        "query_id": "911",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "11254556",
+        "candidate_top": "11254556"
+      },
+      {
+        "query_id": "94",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "46926352",
+        "candidate_top": "46926352"
+      },
+      {
+        "query_id": "99",
+        "baseline_avg_rel": 0.1,
+        "candidate_avg_rel": 0.1,
+        "delta": 0.0,
+        "baseline_top": "18810195",
+        "candidate_top": "18810195"
+      }
+    ]
+  },
+  "improved_queries": [
+    {
+      "query_id": "415",
+      "baseline_avg_rel": 0.0,
+      "candidate_avg_rel": 0.333333,
+      "delta": 0.333333,
+      "baseline_top": "4709641",
+      "candidate_top": "4709641"
+    },
+    {
+      "query_id": "452",
+      "baseline_avg_rel": 0.0,
+      "candidate_avg_rel": 0.333333,
+      "delta": 0.333333,
+      "baseline_top": "4632921",
+      "candidate_top": "4632921"
+    },
+    {
+      "query_id": "659",
+      "baseline_avg_rel": 0.0,
+      "candidate_avg_rel": 0.333333,
+      "delta": 0.333333,
+      "baseline_top": "46926352",
+      "candidate_top": "46926352"
+    },
+    {
+      "query_id": "75",
+      "baseline_avg_rel": 0.0,
+      "candidate_avg_rel": 0.333333,
+      "delta": 0.333333,
+      "baseline_top": "2837758",
+      "candidate_top": "13965483"
+    },
+    {
+      "query_id": "94",
+      "baseline_avg_rel": 0.0,
+      "candidate_avg_rel": 0.333333,
+      "delta": 0.333333,
+      "baseline_top": "46926352",
+      "candidate_top": "46926352"
+    }
+  ],
+  "worsened_queries": [
+    {
+      "query_id": "48",
+      "baseline_avg_rel": 0.333333,
+      "candidate_avg_rel": 0.0,
+      "delta": -0.333333,
+      "baseline_top": "18617259",
+      "candidate_top": "18617259"
+    },
+    {
+      "query_id": "837",
+      "baseline_avg_rel": 0.333333,
+      "candidate_avg_rel": 0.0,
+      "delta": -0.333333,
+      "baseline_top": "1780819",
+      "candidate_top": "1780819"
+    }
+  ],
+  "next_actions": [
+    "Increase query count and add harder cases.",
+    "Do not claim improvement from this mode yet.",
+    "Inspect rank movement explanations for near misses."
+  ]
+}
