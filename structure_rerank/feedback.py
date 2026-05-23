@@ -27,9 +27,7 @@ def _query_level_avg_rel(rows: List[Mapping[str, Any]], judgments: Dict[Tuple[st
 def _group_by_mode_query(rows: List[Mapping[str, Any]]) -> Dict[str, Dict[str, List[Mapping[str, Any]]]]:
     grouped: Dict[str, Dict[str, List[Mapping[str, Any]]]] = {}
     for row in rows:
-        mode = str(row["mode"])
-        query_id = str(row["query_id"])
-        grouped.setdefault(mode, {}).setdefault(query_id, []).append(row)
+        grouped.setdefault(str(row["mode"]), {}).setdefault(str(row["query_id"]), []).append(row)
     for mode_rows in grouped.values():
         for query_rows in mode_rows.values():
             query_rows.sort(key=lambda item: int(item["rank"]))
@@ -44,12 +42,36 @@ def judge(metrics_by_k: Dict[int, Dict[str, Dict[str, float]]], primary_k: int =
     avg_key = f"AvgRel@{primary_k}"
     ndcg_delta = float(rerank.get(ndcg_key, 0.0)) - float(baseline.get(ndcg_key, 0.0))
     avg_delta = float(rerank.get(avg_key, 0.0)) - float(baseline.get(avg_key, 0.0))
-
     if ndcg_delta >= 0.01 and avg_delta >= 0.0:
         return "PASS"
     if ndcg_delta <= -0.01 or avg_delta < 0.0:
         return "FAIL"
     return "UNCERTAIN"
+
+
+def build_ablation_summary(metrics_by_k: Dict[int, Dict[str, Dict[str, float]]], primary_k: int = PRIMARY_K) -> List[Dict[str, Any]]:
+    metrics = metrics_by_k[primary_k]
+    baseline = metrics.get("baseline", {})
+    base_ndcg = float(baseline.get(f"nDCG@{primary_k}", 0.0))
+    base_avg = float(baseline.get(f"AvgRel@{primary_k}", 0.0))
+    rows: List[Dict[str, Any]] = []
+    for mode, values in metrics.items():
+        if mode == "baseline":
+            continue
+        ndcg = float(values.get(f"nDCG@{primary_k}", 0.0))
+        avg = float(values.get(f"AvgRel@{primary_k}", 0.0))
+        rows.append(
+            {
+                "mode": mode,
+                f"nDCG@{primary_k}": round(ndcg, 6),
+                f"AvgRel@{primary_k}": round(avg, 6),
+                "MRR": round(float(values.get("MRR", 0.0)), 6),
+                "delta_nDCG": round(ndcg - base_ndcg, 6),
+                "delta_AvgRel": round(avg - base_avg, 6),
+            }
+        )
+    rows.sort(key=lambda row: (row["delta_nDCG"], row["delta_AvgRel"]), reverse=True)
+    return rows
 
 
 def build_feedback(results_path: Path, judgments_path: Path, ks: List[int]) -> Dict[str, Any]:
@@ -83,13 +105,15 @@ def build_feedback(results_path: Path, judgments_path: Path, ks: List[int]) -> D
     improved = [item for item in primary_deltas if item["delta"] > 0]
     worsened = [item for item in primary_deltas if item["delta"] < 0]
     unchanged = [item for item in primary_deltas if item["delta"] == 0]
+    ablation_summary = build_ablation_summary(metrics_by_k, primary_k=PRIMARY_K)
 
     verdict = judge(metrics_by_k, primary_k=PRIMARY_K)
+    best_mode = ablation_summary[0]["mode"] if ablation_summary else "none"
     if verdict == "PASS":
         next_actions = [
+            f"Use {best_mode} as the first candidate for the next real-like dataset comparison.",
             "Add a small real exported dataset without production secrets.",
-            "Keep top-3/top-5/top-10 metrics and compare again before changing the scoring formula.",
-            "Inspect improved queries to identify which structure types carried the gain.",
+            "Inspect improved queries to identify which structure type carried the gain.",
         ]
     elif verdict == "FAIL":
         next_actions = [
@@ -100,7 +124,7 @@ def build_feedback(results_path: Path, judgments_path: Path, ks: List[int]) -> D
     else:
         next_actions = [
             "Add harder negative examples where lexical overlap is high but structure is wrong.",
-            "Add per-structure ablation: conclusion-only, causal-only, contrast-only.",
+            "Add per-structure ablation with a real-like exported sample.",
             "Do not claim success until the real exported dataset improves.",
         ]
 
@@ -109,6 +133,7 @@ def build_feedback(results_path: Path, judgments_path: Path, ks: List[int]) -> D
         "primary_k": PRIMARY_K,
         "metrics_by_k": {str(k): metrics for k, metrics in metrics_by_k.items()},
         "query_deltas_by_k": {str(k): items for k, items in query_deltas_by_k.items()},
+        "ablation_summary": ablation_summary,
         "improved_queries": improved,
         "worsened_queries": worsened,
         "unchanged_queries": unchanged,
@@ -117,9 +142,7 @@ def build_feedback(results_path: Path, judgments_path: Path, ks: List[int]) -> D
 
 
 def write_feedback_md(feedback: Mapping[str, Any], output_path: Path) -> None:
-    lines: List[str] = []
-    lines.append("# Feedback report")
-    lines.append("")
+    lines: List[str] = ["# Feedback report", ""]
     lines.append(f"Judgment: **{feedback['verdict']}**")
     lines.append(f"Primary cutoff: **top-{feedback['primary_k']}**")
     lines.append("")
@@ -135,11 +158,20 @@ def write_feedback_md(feedback: Mapping[str, Any], output_path: Path) -> None:
                 f"| {k_text} | {mode} | {row.get(f'nDCG@{k_text}', 0.0):.6f} | {row.get('MRR', 0.0):.6f} | {row.get(f'AvgRel@{k_text}', 0.0):.6f} |"
             )
     lines.append("")
+    lines.append("## Ablation summary at primary cutoff")
+    lines.append("")
+    lines.append("| mode | nDCG | AvgRel | MRR | delta nDCG | delta AvgRel |")
+    lines.append("|---|---:|---:|---:|---:|---:|")
+    primary_key = str(feedback["primary_k"])
+    for item in feedback["ablation_summary"]:
+        lines.append(
+            f"| {item['mode']} | {item[f'nDCG@{primary_key}']:.6f} | {item[f'AvgRel@{primary_key}']:.6f} | {item['MRR']:.6f} | {item['delta_nDCG']:.6f} | {item['delta_AvgRel']:.6f} |"
+        )
+    lines.append("")
     lines.append("## Primary query deltas")
     lines.append("")
     lines.append("| query_id | baseline AvgRel | structure AvgRel | delta | baseline top | structure top |")
     lines.append("|---|---:|---:|---:|---|---|")
-    primary_key = str(feedback["primary_k"])
     for item in feedback["query_deltas_by_k"][primary_key]:
         lines.append(
             f"| {item['query_id']} | {item['baseline_avg_rel']:.6f} | {item['structure_rerank_avg_rel']:.6f} | {item['delta']:.6f} | {item['baseline_top']} | {item['structure_top']} |"
@@ -150,7 +182,6 @@ def write_feedback_md(feedback: Mapping[str, Any], output_path: Path) -> None:
     for action in feedback["next_actions"]:
         lines.append(f"- {action}")
     lines.append("")
-
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text("\n".join(lines), encoding="utf-8")
 
@@ -164,9 +195,8 @@ def run(
     skip_rerank: bool = False,
 ) -> Dict[str, Any]:
     ks = ks or DEFAULT_KS
-    max_k = max(ks)
     if not skip_rerank:
-        run_rerank(output_path=results_path, top_k=max_k)
+        run_rerank(output_path=results_path, top_k=max(ks))
     feedback = build_feedback(results_path, judgments_path, ks=ks)
     feedback_md_path.parent.mkdir(parents=True, exist_ok=True)
     feedback_json_path.parent.mkdir(parents=True, exist_ok=True)
