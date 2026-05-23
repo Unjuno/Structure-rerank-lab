@@ -6,3 +6,15 @@
 {"id":"p6","text":"Markdown lists often look similar even when the ideas are unrelated. Formatting should not dominate the search score when the query asks about reasoning."}
 {"id":"p7","text":"If a post claims that public experiments improve trust, and another post argues the opposite from the same premise, both should be discoverable for comparison."}
 {"id":"p8","text":"A causal explanation connects a reason to an outcome. For example, if extraction errors are frequent, reranking can become worse."}
+{"id":"p9","text":"This keyword trap repeats search, conclusions, posts, rank, and higher. It has similar words but does not state that conclusions should affect ranking."}
+{"id":"p10","text":"A contrast compares two ideas. Topical similarity is about shared subject matter, while argument similarity is about shared reasoning path."}
+{"id":"p11","text":"Reranking is not a replacement for dense retrieval. It should run after candidate generation and only adjust the order of candidates."}
+{"id":"p12","text":"If structure extraction invents a premise, reranking becomes worse because the score rewards a false explanation."}
+{"id":"p13","text":"A premise is a reason that supports a conclusion. A conclusion is the claim that the reasoning tries to justify."}
+{"id":"p14","text":"When two posts share the same premise but reach opposite conclusions, the search interface should show them side by side."}
+{"id":"p15","text":"Causal causal causal, reranking reranking, worse worse. This post is a keyword trap and does not explain any cause."}
+{"id":"p16","text":"Structure search means storing extracted conclusions, premises, causes, contrasts, and definitions as explicit searchable fields."}
+{"id":"p17","text":"Markdown lists are useful for scanning, but they should not count as reasoning evidence by themselves."}
+{"id":"p18","text":"Public experiments can improve trust because readers can inspect the hypothesis, method, failures, and results."}
+{"id":"p19","text":"Public experiments can reduce trust if the report hides failures or presents a tiny synthetic sample as proof."}
+{"id":"p20","text":"A definition answers what a term means. A causal explanation answers why an outcome happened."}
