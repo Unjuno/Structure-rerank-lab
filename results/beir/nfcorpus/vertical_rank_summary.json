@@ -1,0 +1,174 @@
+{
+  "baseline_mode": "vector_baseline",
+  "compare_mode": "vertical_vector_rerank",
+  "k": 10,
+  "improved_relevant_moves": 136,
+  "harmed_relevant_moves": 94,
+  "neutral_or_irrelevant_moves": 647,
+  "entered_relevant": 33,
+  "left_relevant": 20,
+  "queries_with_relevant_up": [
+    {
+      "query_id": "PLAIN-1018",
+      "count": 4
+    },
+    {
+      "query_id": "PLAIN-1109",
+      "count": 2
+    },
+    {
+      "query_id": "PLAIN-112",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1183",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1193",
+      "count": 2
+    },
+    {
+      "query_id": "PLAIN-1225",
+      "count": 2
+    },
+    {
+      "query_id": "PLAIN-1262",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1275",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1288",
+      "count": 3
+    },
+    {
+      "query_id": "PLAIN-1299",
+      "count": 2
+    },
+    {
+      "query_id": "PLAIN-1320",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1342",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1374",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1387",
+      "count": 2
+    },
+    {
+      "query_id": "PLAIN-1398",
+      "count": 3
+    },
+    {
+      "query_id": "PLAIN-1409",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1441",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1453",
+      "count": 3
+    },
+    {
+      "query_id": "PLAIN-1463",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1527",
+      "count": 5
+    }
+  ],
+  "queries_with_relevant_down": [
+    {
+      "query_id": "PLAIN-1018",
+      "count": 2
+    },
+    {
+      "query_id": "PLAIN-1151",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1225",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1275",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1288",
+      "count": 3
+    },
+    {
+      "query_id": "PLAIN-1387",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1398",
+      "count": 3
+    },
+    {
+      "query_id": "PLAIN-1441",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1453",
+      "count": 2
+    },
+    {
+      "query_id": "PLAIN-1463",
+      "count": 3
+    },
+    {
+      "query_id": "PLAIN-1527",
+      "count": 3
+    },
+    {
+      "query_id": "PLAIN-1557",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1601",
+      "count": 2
+    },
+    {
+      "query_id": "PLAIN-1635",
+      "count": 2
+    },
+    {
+      "query_id": "PLAIN-1667",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1721",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1741",
+      "count": 3
+    },
+    {
+      "query_id": "PLAIN-1805",
+      "count": 3
+    },
+    {
+      "query_id": "PLAIN-1817",
+      "count": 1
+    },
+    {
+      "query_id": "PLAIN-1837",
+      "count": 3
+    }
+  ]
+}
