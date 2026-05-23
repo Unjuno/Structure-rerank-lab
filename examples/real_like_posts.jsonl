@@ -13,3 +13,18 @@
 {"id":"r13","text":"Question: Are markdown bullets evidence of reasoning? No. Formatting can make unrelated posts look similar, so formatting should not dominate retrieval when the query asks for reasoning structure."}
 {"id":"r14","text":"Question: Can the same premise support opposite conclusions? Yes. For comparison, a search system should surface posts that share a premise but reach different conclusions."}
 {"id":"r15","text":"Question: What does definition search need? Definition search needs posts that explain what a term means, not merely posts that repeat the term many times."}
+{"id":"r16","text":"Question: When should a reranker be trusted? It should be trusted only when it improves held-out queries and the failure cases are understandable. A gain on cherry-picked examples is not enough."}
+{"id":"r17","text":"Question: What is a hard negative in retrieval evaluation? A hard negative is a candidate that looks similar to the query but is not actually relevant. It tests whether the ranking method can avoid shallow matches."}
+{"id":"r18","text":"Question: How can query intent guide structure scoring? Query intent tells the reranker which structure type matters. A definition query should reward definitions, while a contrast query should reward comparisons."}
+{"id":"r19","text":"Question: Does adding more structure always improve ranking? No. More structure can add noise if the structure is broad, duplicated, or weakly related to the query."}
+{"id":"r20","text":"Question: Why separate candidate generation from reranking? Candidate generation should maximize recall. Reranking should improve precision among candidates using richer signals."}
+{"id":"r21","text":"Question: Can vector similarity hide reasoning differences? Yes. Two posts can use similar words but make different claims. A structure signal can help separate those cases."}
+{"id":"r22","text":"Question: What is a stable evaluation loop? A stable loop fixes the data, metrics, and decision thresholds before tuning. Otherwise the experiment can drift until it appears to pass."}
+{"id":"r23","text":"Question: What does a rank movement report explain? It shows which posts moved up, moved down, entered the top-k, or left the top-k after reranking."}
+{"id":"r24","text":"Question: Why use nDCG instead of only top-1 accuracy? nDCG uses graded relevance and rank position, so it can detect whether highly relevant items move closer to the top."}
+{"id":"r25","text":"Question: What is a false structural match? It happens when a post has the requested structure type but the structure text does not answer the query."}
+{"id":"r26","text":"Question: How should public experiment reports handle negative results? Negative results should be kept visible because they show the boundary of the method and prevent exaggerated claims."}
+{"id":"r27","text":"Question: Can a structure label be correct but still unhelpful? Yes. A correct label can be too generic. For example, many posts have conclusions, but only some conclusions answer the query."}
+{"id":"r28","text":"Question: What makes a dataset too easy? A dataset is too easy when keyword overlap already identifies the correct answer and the reranker has no meaningful work to do."}
+{"id":"r29","text":"Question: What is the role of ablation? Ablation removes or isolates components so the experiment can see which signal caused improvement or damage."}
+{"id":"r30","text":"Question: Should neural embeddings be added immediately? No. First the simple vector baseline should be stable. Then neural embeddings can be added as an optional stronger baseline."}
