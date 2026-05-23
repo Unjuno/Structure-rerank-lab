@@ -80,6 +80,88 @@ jobs:
       - name: Generate combined experiment summary
         run: python -m structure_rerank.experiment_summary
 
+      - name: Run real-like lexical rerank
+        run: >-
+          python -m structure_rerank.rerank
+          --posts examples/real_like_posts.jsonl
+          --queries examples/real_like_queries.jsonl
+          --structures examples/real_like_structures.jsonl
+          --output results/real_like_results.jsonl
+
+      - name: Evaluate real-like lexical experiment
+        run: >-
+          python -m structure_rerank.evaluate
+          --results results/real_like_results.jsonl
+          --judgments examples/real_like_judgments.jsonl
+          --skip-rerank
+
+      - name: Generate real-like lexical feedback report
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/real_like_results.jsonl
+          --judgments examples/real_like_judgments.jsonl
+          --output-md results/real_like_feedback.md
+          --output-json results/real_like_feedback.json
+          --baseline-mode baseline
+          --candidate-mode structure_rerank
+
+      - name: Generate real-like lexical diagnostics report
+        run: >-
+          python -m structure_rerank.diagnose
+          --results results/real_like_results.jsonl
+          --judgments examples/real_like_judgments.jsonl
+          --queries examples/real_like_queries.jsonl
+          --diagnostics-md results/real_like_diagnostics.md
+          --diagnostics-json results/real_like_diagnostics.json
+          --skip-rerank
+
+      - name: Generate real-like lexical rank movement explanations
+        run: >-
+          python -m structure_rerank.explain_moves
+          --results results/real_like_results.jsonl
+          --judgments examples/real_like_judgments.jsonl
+          --explanations-md results/real_like_rank_movements.md
+          --explanations-json results/real_like_rank_movements.json
+          --baseline-mode baseline
+          --compare-mode structure_rerank
+          --skip-rerank
+
+      - name: Run real-like vector experiment
+        run: >-
+          python -m structure_rerank.vector_experiment
+          --posts examples/real_like_posts.jsonl
+          --queries examples/real_like_queries.jsonl
+          --structures examples/real_like_structures.jsonl
+          --output results/real_like_vector_results.jsonl
+
+      - name: Evaluate real-like vector experiment
+        run: >-
+          python -m structure_rerank.evaluate
+          --results results/real_like_vector_results.jsonl
+          --judgments examples/real_like_judgments.jsonl
+          --skip-rerank
+
+      - name: Generate real-like vector feedback report
+        run: >-
+          python -m structure_rerank.mode_feedback
+          --results results/real_like_vector_results.jsonl
+          --judgments examples/real_like_judgments.jsonl
+          --output-md results/real_like_vector_feedback.md
+          --output-json results/real_like_vector_feedback.json
+          --baseline-mode vector_baseline
+          --candidate-mode vector_structure_rerank
+
+      - name: Generate real-like vector rank movement explanations
+        run: >-
+          python -m structure_rerank.explain_moves
+          --results results/real_like_vector_results.jsonl
+          --judgments examples/real_like_judgments.jsonl
+          --explanations-md results/real_like_vector_rank_movements.md
+          --explanations-json results/real_like_vector_rank_movements.json
+          --baseline-mode vector_baseline
+          --compare-mode vector_structure_rerank
+          --skip-rerank
+
       - name: Upload experiment artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -99,6 +181,18 @@ jobs:
             results/vector_rank_movements.json
             results/experiment_summary.md
             results/experiment_summary.json
+            results/real_like_results.jsonl
+            results/real_like_feedback.md
+            results/real_like_feedback.json
+            results/real_like_diagnostics.md
+            results/real_like_diagnostics.json
+            results/real_like_rank_movements.md
+            results/real_like_rank_movements.json
+            results/real_like_vector_results.jsonl
+            results/real_like_vector_feedback.md
+            results/real_like_vector_feedback.json
+            results/real_like_vector_rank_movements.md
+            results/real_like_vector_rank_movements.json
 
       - name: Commit generated experiment snapshots
         if: github.event_name == 'push'
