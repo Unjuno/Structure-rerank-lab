@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  sample-experiment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate JSONL files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for path in Path('examples').glob('*.jsonl'):
+              for line_no, line in enumerate(path.read_text(encoding='utf-8').splitlines(), start=1):
+                  if not line.strip():
+                      continue
+                  json.loads(line)
+              print(f'valid jsonl: {path}')
+          PY
+
+      - name: Run sample rerank
+        run: python -m structure_rerank.rerank
+
+      - name: Run evaluation
+        run: python -m structure_rerank.evaluate --skip-rerank
