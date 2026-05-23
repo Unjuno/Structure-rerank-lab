@@ -37,6 +37,8 @@ This is still not neural embedding search. It is the CI-safe sparse-vector versi
 
 BEIR vertical-vector workflows run the same mode on ArguAna, SciFact, and NFCorpus.
 
+ArguAna also has a compact corpus-vertical workflow for quick validation.
+
 ## Next upgrade path
 
 1. Keep the TF-IDF vector baseline as the CI-safe baseline.
