@@ -37,3 +37,15 @@ jobs:
 
       - name: Run evaluation
         run: python -m structure_rerank.evaluate --skip-rerank
+
+      - name: Generate feedback report
+        run: python -m structure_rerank.feedback --skip-rerank
+
+      - name: Upload experiment artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: structure-rerank-feedback
+          path: |
+            results/sample_results.jsonl
+            results/feedback.md
+            results/feedback.json
