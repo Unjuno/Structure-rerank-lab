@@ -12,6 +12,11 @@ The vector experiment emits:
 - `vector_structure_rerank`
 - `vertical_vector_rerank`
 - `corpus_vertical_rerank`
+- `diagonal_vertical_05`
+- `diagonal_vertical_20`
+- `diagonal_vertical_35`
+- `diagonal_vertical_50`
+- `diagonal_corpus_20`
 
 ## Pipeline
 
@@ -22,7 +27,7 @@ queries
   -> vectorize query
   -> cosine similarity against post vectors
   -> vector_baseline ranking
-  -> add horizontal or vertical structure score
+  -> add horizontal, vertical, or diagonal auxiliary score
 ```
 
 ## Current meaning
@@ -30,6 +35,8 @@ queries
 `vertical_vector_rerank` estimates structure axes as vectors, then compares query vectors against those axes and post structure vectors.
 
 `corpus_vertical_rerank` estimates latent corpus axes from post vectors, then scores query/post alignment through those axes.
+
+`diagonal_*` modes sweep different mixtures of horizontal and vertical-style scores.
 
 This is still not neural embedding search. It is the CI-safe sparse-vector version of the vertical-vector idea.
 
@@ -42,5 +49,5 @@ ArguAna also has a compact corpus-vertical workflow with a persisted status file
 ## Next upgrade path
 
 1. Keep the TF-IDF vector baseline as the CI-safe baseline.
-2. Compare `vector_structure_rerank`, `vertical_vector_rerank`, and `corpus_vertical_rerank`.
+2. Compare `vector_structure_rerank`, `vertical_vector_rerank`, `corpus_vertical_rerank`, and diagonal variants.
 3. Add optional neural embedding output later.
