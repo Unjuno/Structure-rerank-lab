@@ -13,6 +13,15 @@ from .vertical_vector import build_post_structure_vectors, build_structure_axes,
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "results" / "vector_results.jsonl"
+VERTICAL_DIAGONALS = [
+    ("diagonal_vertical_05", 0.95, 0.05),
+    ("diagonal_vertical_20", 0.80, 0.20),
+    ("diagonal_vertical_35", 0.65, 0.35),
+    ("diagonal_vertical_50", 0.50, 0.50),
+]
+CORPUS_DIAGONALS = [
+    ("diagonal_corpus_20", 0.80, 0.20),
+]
 
 
 def rows_for_query(
@@ -69,6 +78,11 @@ def rows_from_raw(
     return rows[:top_k]
 
 
+def write_rows(handle: Any, rows: List[Dict[str, Any]]) -> None:
+    for row in rows:
+        handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
 def run(
     posts_path: Path = DEFAULT_POSTS,
     queries_path: Path = DEFAULT_QUERIES,
@@ -95,14 +109,15 @@ def run(
             raw_base = [(str(post["id"]), base_scores.get(str(post["id"]), 0.0)) for post in posts]
             raw_vertical = [(str(post["id"]), vertical_scores.get(str(post["id"]), 0.0)) for post in posts]
             raw_corpus = [(str(post["id"]), corpus_scores.get(str(post["id"]), 0.0)) for post in posts]
-            for row in rows_for_query("vector_baseline", query, posts, base_scores, structure_index, top_k, False):
-                handle.write(json.dumps(row, ensure_ascii=False) + "\n")
-            for row in rows_for_query("vector_structure_rerank", query, posts, base_scores, structure_index, top_k, True):
-                handle.write(json.dumps(row, ensure_ascii=False) + "\n")
-            for row in rows_from_raw("vertical_vector_rerank", query, posts, raw_base, raw_vertical, top_k, 0.8, 0.2):
-                handle.write(json.dumps(row, ensure_ascii=False) + "\n")
-            for row in rows_from_raw("corpus_vertical_rerank", query, posts, raw_base, raw_corpus, top_k, 0.8, 0.2):
-                handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+            write_rows(handle, rows_for_query("vector_baseline", query, posts, base_scores, structure_index, top_k, False))
+            write_rows(handle, rows_for_query("vector_structure_rerank", query, posts, base_scores, structure_index, top_k, True))
+            write_rows(handle, rows_from_raw("vertical_vector_rerank", query, posts, raw_base, raw_vertical, top_k, 0.8, 0.2))
+            write_rows(handle, rows_from_raw("corpus_vertical_rerank", query, posts, raw_base, raw_corpus, top_k, 0.8, 0.2))
+            for mode, alpha, beta in VERTICAL_DIAGONALS:
+                write_rows(handle, rows_from_raw(mode, query, posts, raw_base, raw_vertical, top_k, alpha, beta))
+            for mode, alpha, beta in CORPUS_DIAGONALS:
+                write_rows(handle, rows_from_raw(mode, query, posts, raw_base, raw_corpus, top_k, alpha, beta))
     print(f"wrote {output_path}")
 
 
