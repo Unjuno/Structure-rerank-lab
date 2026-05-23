@@ -44,6 +44,9 @@ jobs:
       - name: Generate diagnostics report
         run: python -m structure_rerank.diagnose --skip-rerank
 
+      - name: Generate rank movement explanations
+        run: python -m structure_rerank.explain_moves --skip-rerank
+
       - name: Upload experiment artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -54,3 +57,5 @@ jobs:
             results/feedback.json
             results/diagnostics.md
             results/diagnostics.json
+            results/rank_movements.md
+            results/rank_movements.json
