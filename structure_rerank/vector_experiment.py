@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List
 
+from .corpus_vertical import corpus_vertical_scores
 from .rerank import DEFAULT_POSTS, DEFAULT_QUERIES, DEFAULT_STRUCTURES
 from .structure_score import build_structure_index, combine_scores, load_jsonl, normalize_scores, structure_score
 from .vector_score import build_post_vectors, vector_scores
@@ -25,7 +26,7 @@ def rows_for_query(
     alpha: float = 0.8,
     beta: float = 0.2,
 ) -> List[Dict[str, Any]]:
-    raw_base = [(str(post["id"]), base_scores.get(str(post["id"]), 0.0)) for post in posts]
+    raw_base = [(str(post["id"]), base_scores.get(str(post["id"], 0.0))) for post in posts]
     raw_struct = []
     for post in posts:
         post_id = str(post["id"])
@@ -89,13 +90,17 @@ def run(
             qtext = str(query["query"])
             base_scores = vector_scores(qtext, post_vectors, idf)
             vertical_scores = vertical_vector_scores(qtext, post_structure_vectors, axes, idf)
+            corpus_scores = corpus_vertical_scores(qtext, post_vectors, idf)
+            raw_base = [(str(post["id"]), base_scores.get(str(post["id"]), 0.0)) for post in posts]
+            raw_vertical = [(str(post["id"]), vertical_scores.get(str(post["id"]), 0.0)) for post in posts]
+            raw_corpus = [(str(post["id"]), corpus_scores.get(str(post["id"]), 0.0)) for post in posts]
             for row in rows_for_query("vector_baseline", query, posts, base_scores, structure_index, top_k, False):
                 handle.write(json.dumps(row, ensure_ascii=False) + "\n")
             for row in rows_for_query("vector_structure_rerank", query, posts, base_scores, structure_index, top_k, True):
                 handle.write(json.dumps(row, ensure_ascii=False) + "\n")
-            raw_base = [(str(post["id"]), base_scores.get(str(post["id"]), 0.0)) for post in posts]
-            raw_vertical = [(str(post["id"]), vertical_scores.get(str(post["id"]), 0.0)) for post in posts]
             for row in rows_from_raw("vertical_vector_rerank", query, posts, raw_base, raw_vertical, top_k, 0.8, 0.2):
+                handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+            for row in rows_from_raw("corpus_vertical_rerank", query, posts, raw_base, raw_corpus, top_k, 0.8, 0.2):
                 handle.write(json.dumps(row, ensure_ascii=False) + "\n")
     print(f"wrote {output_path}")
 
