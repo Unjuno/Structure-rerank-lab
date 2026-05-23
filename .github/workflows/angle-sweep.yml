@@ -2,32 +2,15 @@ name: Angle Sweep
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  run:
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: |
-          mkdir -p results
-          cat examples/real_like_queries.jsonl examples/real_like_queries_extra.jsonl > results/real_like_queries_20.jsonl
-          cat examples/real_like_judgments.jsonl examples/real_like_judgments_extra.jsonl > results/real_like_judgments_20.jsonl
-      - run: python -m structure_rerank.vector_experiment --posts examples/real_like_posts.jsonl --queries results/real_like_queries_20.jsonl --structures examples/real_like_structures.jsonl --output results/real_like_expanded_vector_results.jsonl
-      - run: python -m structure_rerank.angle_sweep --results results/real_like_expanded_vector_results.jsonl --judgments results/real_like_judgments_20.jsonl --output-md results/angle_sweep.md --output-json results/angle_sweep.json
-      - run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
-          git pull --rebase || true
-          git add results/angle_sweep.md results/angle_sweep.json results/real_like_expanded_vector_results.jsonl
-          git commit -m "results: angle sweep" || exit 0
-          git push || true
+      - name: Archived workflow
+        run: |
+          echo "Archived: angle sweep code remains in structure_rerank/angle_sweep.py."
+          echo "Refresh deliberately from an experiment branch only."
