@@ -5,34 +5,34 @@
   "queries": [
     {
       "query_id": "rq1",
+      "moves": []
+    },
+    {
+      "query_id": "rq10",
       "moves": [
         {
-          "post_id": "r9",
-          "relevance": 1,
+          "post_id": "r12",
+          "relevance": 0,
           "direction": "up",
-          "baseline_rank": 4,
-          "compare_rank": 3,
+          "baseline_rank": 3,
+          "compare_rank": 2,
           "rank_delta": 1,
-          "baseline_score": 0.262761,
-          "structure_score": 0.023457,
-          "rerank_score": 0.2149
+          "baseline_score": 0.216273,
+          "structure_score": 0.011806,
+          "rerank_score": 0.17538
         },
         {
           "post_id": "r6",
           "relevance": 0,
           "direction": "down",
-          "baseline_rank": 3,
-          "compare_rank": 4,
+          "baseline_rank": 2,
+          "compare_rank": 3,
           "rank_delta": -1,
-          "baseline_score": 0.26467,
+          "baseline_score": 0.219156,
           "structure_score": 0.0,
-          "rerank_score": 0.211736
+          "rerank_score": 0.175324
         }
       ]
-    },
-    {
-      "query_id": "rq10",
-      "moves": []
     },
     {
       "query_id": "rq2",
@@ -58,11 +58,22 @@
           "relevance": 1,
           "direction": "up",
           "baseline_rank": 5,
-          "compare_rank": 3,
-          "rank_delta": 2,
-          "baseline_score": 0.395328,
+          "compare_rank": 2,
+          "rank_delta": 3,
+          "baseline_score": 0.395394,
           "structure_score": 0.894737,
-          "rerank_score": 0.49521
+          "rerank_score": 0.495263
+        },
+        {
+          "post_id": "r15",
+          "relevance": 1,
+          "direction": "down",
+          "baseline_rank": 2,
+          "compare_rank": 3,
+          "rank_delta": -1,
+          "baseline_score": 0.535843,
+          "structure_score": 0.0,
+          "rerank_score": 0.428675
         },
         {
           "post_id": "r14",
@@ -71,9 +82,9 @@
           "baseline_rank": 3,
           "compare_rank": 4,
           "rank_delta": -1,
-          "baseline_score": 0.538886,
+          "baseline_score": 0.532525,
           "structure_score": 0.0,
-          "rerank_score": 0.431108
+          "rerank_score": 0.42602
         },
         {
           "post_id": "r2",
@@ -82,9 +93,9 @@
           "baseline_rank": 4,
           "compare_rank": 5,
           "rank_delta": -1,
-          "baseline_score": 0.525754,
+          "baseline_score": 0.499207,
           "structure_score": 0.0,
-          "rerank_score": 0.420603
+          "rerank_score": 0.399366
         }
       ]
     },

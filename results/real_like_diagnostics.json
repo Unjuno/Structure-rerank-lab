@@ -408,12 +408,12 @@
     {
       "query_id": "rq5",
       "intent_structure": "contrast",
-      "baseline_avg_rel": 1.666667,
+      "baseline_avg_rel": 1.0,
       "best_mode": {
         "mode": "baseline",
         "structure_type": null,
         "intent_matched": false,
-        "avg_rel": 1.666667,
+        "avg_rel": 1.0,
         "delta_vs_baseline": 0.0,
         "top_post": "r5"
       },
@@ -421,7 +421,7 @@
         "mode": "structure_rerank",
         "structure_type": null,
         "intent_matched": false,
-        "avg_rel": 1.666667,
+        "avg_rel": 1.0,
         "delta_vs_baseline": 0.0,
         "top_post": "r5"
       },
@@ -430,7 +430,7 @@
           "mode": "baseline",
           "structure_type": null,
           "intent_matched": false,
-          "avg_rel": 1.666667,
+          "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
           "top_post": "r5"
         },
@@ -438,7 +438,7 @@
           "mode": "structure_causal_only",
           "structure_type": "causal",
           "intent_matched": false,
-          "avg_rel": 1.666667,
+          "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
           "top_post": "r5"
         },
@@ -446,7 +446,7 @@
           "mode": "structure_conclusion_only",
           "structure_type": "conclusion",
           "intent_matched": false,
-          "avg_rel": 1.666667,
+          "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
           "top_post": "r5"
         },
@@ -454,7 +454,7 @@
           "mode": "structure_contrast_only",
           "structure_type": "contrast",
           "intent_matched": true,
-          "avg_rel": 1.666667,
+          "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
           "top_post": "r5"
         },
@@ -462,7 +462,7 @@
           "mode": "structure_definition_only",
           "structure_type": "definition",
           "intent_matched": false,
-          "avg_rel": 1.666667,
+          "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
           "top_post": "r5"
         },
@@ -470,7 +470,7 @@
           "mode": "structure_premise_only",
           "structure_type": "premise",
           "intent_matched": false,
-          "avg_rel": 1.666667,
+          "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
           "top_post": "r5"
         },
@@ -478,7 +478,7 @@
           "mode": "structure_rerank",
           "structure_type": null,
           "intent_matched": false,
-          "avg_rel": 1.666667,
+          "avg_rel": 1.0,
           "delta_vs_baseline": 0.0,
           "top_post": "r5"
         }

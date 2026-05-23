@@ -43,7 +43,7 @@ Query count: **10**
 | rq2 | causal | 1.000000 | baseline | 1.000000 | structure_rerank | 1.000000 |
 | rq3 | contrast | 1.333333 | baseline | 1.333333 | structure_rerank | 1.333333 |
 | rq4 | causal | 1.000000 | baseline | 1.000000 | structure_rerank | 1.000000 |
-| rq5 | contrast | 1.666667 | baseline | 1.666667 | structure_rerank | 1.666667 |
+| rq5 | contrast | 1.000000 | baseline | 1.000000 | structure_rerank | 1.000000 |
 | rq6 | definition | 1.333333 | baseline | 1.333333 | structure_rerank | 1.333333 |
 | rq7 | causal | 1.000000 | baseline | 1.000000 | structure_rerank | 1.000000 |
 | rq8 | contrast | 1.000000 | baseline | 1.000000 | structure_rerank | 1.000000 |
