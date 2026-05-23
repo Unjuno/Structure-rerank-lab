@@ -66,11 +66,9 @@ def structure_score(
 ) -> float:
     """Score structure match with query-intent gating.
 
-    Earlier scoring allowed any structure text to contribute via lexical overlap.
-    That made cross-type signals such as causal snippets affect contrast queries.
-    This version gives full text-overlap credit only when the structure type
-    matches the query intent. Cross-type structures receive only a small leakage
-    credit, enough for weak fallback but not enough to dominate reranking.
+    A structure type match is not enough by itself. The extracted structure text
+    must also overlap with the query. This prevents every `conclusion` snippet
+    from being boosted for every conclusion query.
     """
 
     intent = str(query.get("intent_structure", "")).strip().lower()
@@ -83,12 +81,11 @@ def structure_score(
             continue
         text = str(item.get("text", ""))
         confidence = float(item.get("confidence", 0.0) or 0.0)
-        type_matches_intent = bool(intent and stype == intent)
-        type_score = confidence if type_matches_intent else 0.0
         overlap = lexical_score(query_text, text)
-        text_weight = 1.0 if (type_matches_intent or not intent) else 0.15
-        text_score = overlap * text_weight
-        score = 0.7 * type_score + 0.3 * text_score
+        if not intent or stype == intent:
+            score = confidence * overlap
+        else:
+            score = 0.15 * confidence * overlap
         if score > best:
             best = score
     return best
