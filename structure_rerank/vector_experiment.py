@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List
 
-from .corpus_vertical import corpus_vertical_scores
+from .corpus_vertical import build_corpus_axes, corpus_vertical_scores_with_axes
 from .rerank import DEFAULT_POSTS, DEFAULT_QUERIES, DEFAULT_STRUCTURES
 from .structure_score import build_structure_index, combine_scores, load_jsonl, normalize_scores, structure_score
 from .vector_score import build_post_vectors, vector_scores
@@ -83,6 +83,7 @@ def run(
     post_vectors, idf = build_post_vectors(posts)
     axes = build_structure_axes(structures, idf)
     post_structure_vectors = build_post_structure_vectors(structures, idf)
+    corpus_axes = build_corpus_axes(post_vectors)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as handle:
@@ -90,7 +91,7 @@ def run(
             qtext = str(query["query"])
             base_scores = vector_scores(qtext, post_vectors, idf)
             vertical_scores = vertical_vector_scores(qtext, post_structure_vectors, axes, idf)
-            corpus_scores = corpus_vertical_scores(qtext, post_vectors, idf)
+            corpus_scores = corpus_vertical_scores_with_axes(qtext, post_vectors, idf, corpus_axes)
             raw_base = [(str(post["id"]), base_scores.get(str(post["id"]), 0.0)) for post in posts]
             raw_vertical = [(str(post["id"]), vertical_scores.get(str(post["id"]), 0.0)) for post in posts]
             raw_corpus = [(str(post["id"]), corpus_scores.get(str(post["id"]), 0.0)) for post in posts]
