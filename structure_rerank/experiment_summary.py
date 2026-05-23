@@ -20,8 +20,7 @@ def load_json(path: Path) -> Dict[str, Any]:
 
 
 def _metric_row(feedback: Mapping[str, Any], k: int, baseline_mode: str, candidate_mode: str) -> Dict[str, Any]:
-    metrics_by_k = feedback.get("metrics_by_k", {})
-    metrics = metrics_by_k.get(str(k), {})
+    metrics = feedback.get("metrics_by_k", {}).get(str(k), {})
     baseline = metrics.get(baseline_mode, {})
     candidate = metrics.get(candidate_mode, {})
     ndcg_key = f"nDCG@{k}"
@@ -39,11 +38,7 @@ def _metric_row(feedback: Mapping[str, Any], k: int, baseline_mode: str, candida
     }
 
 
-def summarize(
-    lexical_feedback_path: Path,
-    vector_feedback_path: Path,
-    diagnostics_path: Path,
-) -> Dict[str, Any]:
+def summarize(lexical_feedback_path: Path, vector_feedback_path: Path, diagnostics_path: Path) -> Dict[str, Any]:
     lexical = load_json(lexical_feedback_path)
     vector = load_json(vector_feedback_path)
     diagnostics = load_json(diagnostics_path)
@@ -52,43 +47,56 @@ def summarize(
     vector_row = _metric_row(vector, 3, "vector_baseline", "vector_structure_rerank") if not vector.get("missing") else None
 
     blockers: List[str] = []
-    next_actions: List[str] = []
-
     if lexical.get("missing"):
         blockers.append("lexical feedback is missing")
     if vector.get("missing"):
         blockers.append("vector feedback is missing")
-
     if lexical_row and lexical_row["delta_nDCG"] <= 0:
         blockers.append("lexical structure rerank does not improve nDCG@3")
     if vector_row and vector_row["delta_nDCG"] <= 0:
         blockers.append("vector structure rerank does not improve nDCG@3")
 
-    harmful_modes = diagnostics.get("harmful_modes", {}) if isinstance(diagnostics, dict) else {}
-    if harmful_modes:
-        next_actions.append(f"inspect harmful modes: {', '.join(harmful_modes.keys())}")
-    if not blockers:
+    degrading = diagnostics.get("harmful_modes", {}) if isinstance(diagnostics, dict) else {}
+    degrading_matched = diagnostics.get("harmful_intent_matched_modes", {}) if isinstance(diagnostics, dict) else {}
+    degrading_off_intent = diagnostics.get("harmful_off_intent_modes", {}) if isinstance(diagnostics, dict) else {}
+
+    next_actions: List[str] = []
+    if degrading_matched:
+        next_actions.append(f"inspect intent-matched degrading modes: {', '.join(degrading_matched.keys())}")
+    if degrading_off_intent:
+        next_actions.append(f"track off-intent ablation degradation separately: {', '.join(degrading_off_intent.keys())}")
+    if blockers:
+        next_actions.append("fix blockers before adding more features")
+    else:
         next_actions.append("add a real-like exported sample without secrets")
         next_actions.append("keep TF-IDF vector baseline as CI-safe baseline")
         next_actions.append("add optional neural embedding backend only after real-like sample check")
-    else:
-        next_actions.append("fix blockers before adding more features")
 
     return {
         "status": "PASS" if not blockers else "NEEDS_WORK",
         "blockers": blockers,
         "lexical_top3": lexical_row,
         "vector_top3": vector_row,
-        "harmful_modes": harmful_modes,
+        "degrading_modes": degrading,
+        "degrading_intent_matched_modes": degrading_matched,
+        "degrading_off_intent_modes": degrading_off_intent,
         "next_actions": next_actions,
     }
 
 
-def write_md(summary: Mapping[str, Any], output_path: Path) -> None:
-    lines: List[str] = ["# Experiment summary", ""]
-    lines.append(f"Overall status: **{summary['status']}**")
+def _write_mapping(lines: List[str], title: str, data: Mapping[str, int]) -> None:
+    lines.append(f"## {title}")
+    lines.append("")
+    if data:
+        for mode, count in data.items():
+            lines.append(f"- {mode}: {count}")
+    else:
+        lines.append("- none")
     lines.append("")
 
+
+def write_md(summary: Mapping[str, Any], output_path: Path) -> None:
+    lines: List[str] = ["# Experiment summary", "", f"Overall status: **{summary['status']}**", ""]
     lines.append("## Top-3 comparison")
     lines.append("")
     lines.append("| family | baseline | candidate | baseline nDCG@3 | candidate nDCG@3 | delta nDCG@3 | baseline AvgRel@3 | candidate AvgRel@3 | delta AvgRel@3 |")
@@ -98,48 +106,23 @@ def write_md(summary: Mapping[str, Any], output_path: Path) -> None:
             lines.append(f"| {family} | missing | missing | 0 | 0 | 0 | 0 | 0 | 0 |")
             continue
         lines.append(
-            f"| {family} | {row['baseline_mode']} | {row['candidate_mode']} | "
-            f"{row['baseline_nDCG']:.6f} | {row['candidate_nDCG']:.6f} | {row['delta_nDCG']:.6f} | "
-            f"{row['baseline_AvgRel']:.6f} | {row['candidate_AvgRel']:.6f} | {row['delta_AvgRel']:.6f} |"
+            f"| {family} | {row['baseline_mode']} | {row['candidate_mode']} | {row['baseline_nDCG']:.6f} | {row['candidate_nDCG']:.6f} | {row['delta_nDCG']:.6f} | {row['baseline_AvgRel']:.6f} | {row['candidate_AvgRel']:.6f} | {row['delta_AvgRel']:.6f} |"
         )
-
     lines.append("")
-    lines.append("## Blockers")
-    lines.append("")
-    if summary["blockers"]:
-        for item in summary["blockers"]:
-            lines.append(f"- {item}")
-    else:
-        lines.append("- none")
-
-    lines.append("")
-    lines.append("## Harmful modes")
-    lines.append("")
-    harmful_modes = summary.get("harmful_modes", {})
-    if harmful_modes:
-        for mode, count in harmful_modes.items():
-            lines.append(f"- {mode}: {count}")
-    else:
-        lines.append("- none")
-
-    lines.append("")
+    _write_mapping(lines, "Blockers", {item: 1 for item in summary["blockers"]})
+    _write_mapping(lines, "Degrading modes", summary.get("degrading_modes", {}))
+    _write_mapping(lines, "Degrading intent-matched modes", summary.get("degrading_intent_matched_modes", {}))
+    _write_mapping(lines, "Degrading off-intent modes", summary.get("degrading_off_intent_modes", {}))
     lines.append("## Next actions")
     lines.append("")
     for item in summary["next_actions"]:
         lines.append(f"- {item}")
     lines.append("")
-
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def run(
-    lexical_feedback_path: Path = DEFAULT_LEXICAL_FEEDBACK,
-    vector_feedback_path: Path = DEFAULT_VECTOR_FEEDBACK,
-    diagnostics_path: Path = DEFAULT_DIAGNOSTICS,
-    output_md_path: Path = DEFAULT_OUTPUT_MD,
-    output_json_path: Path = DEFAULT_OUTPUT_JSON,
-) -> Dict[str, Any]:
+def run(lexical_feedback_path: Path = DEFAULT_LEXICAL_FEEDBACK, vector_feedback_path: Path = DEFAULT_VECTOR_FEEDBACK, diagnostics_path: Path = DEFAULT_DIAGNOSTICS, output_md_path: Path = DEFAULT_OUTPUT_MD, output_json_path: Path = DEFAULT_OUTPUT_JSON) -> Dict[str, Any]:
     summary = summarize(lexical_feedback_path, vector_feedback_path, diagnostics_path)
     output_md_path.parent.mkdir(parents=True, exist_ok=True)
     output_json_path.parent.mkdir(parents=True, exist_ok=True)
