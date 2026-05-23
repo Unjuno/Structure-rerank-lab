@@ -69,7 +69,7 @@
 {"mode": "vector_baseline", "query_id": "rq4", "post_id": "r22", "baseline_score": 0.071727, "structure_score": 0.0, "rerank_score": 0.071727, "rank": 9}
 {"mode": "vector_baseline", "query_id": "rq4", "post_id": "r28", "baseline_score": 0.069798, "structure_score": 0.0, "rerank_score": 0.069798, "rank": 10}
 {"mode": "vector_structure_rerank", "query_id": "rq4", "post_id": "r4", "baseline_score": 1.0, "structure_score": 1.0, "rerank_score": 1.0, "rank": 1}
-{"mode": "vector_structure_rerank", "query_id": "rq4", "post_id": "r17", "baseline_score": 0.395136, "structure_score": 0.0, "rerank_score": 0.316109, "rank": 2}
+{"mode": "vector_structure_rerank", "query_id": "rq4", "post_id": "r17", "baseline_score": 0.395136, "structure_score": 0.005864, "rerank_score": 0.317282, "rank": 2}
 {"mode": "vector_structure_rerank", "query_id": "rq4", "post_id": "r24", "baseline_score": 0.169518, "structure_score": 0.0, "rerank_score": 0.135614, "rank": 3}
 {"mode": "vector_structure_rerank", "query_id": "rq4", "post_id": "r9", "baseline_score": 0.14365, "structure_score": 0.0, "rerank_score": 0.11492, "rank": 4}
 {"mode": "vector_structure_rerank", "query_id": "rq4", "post_id": "r6", "baseline_score": 0.143216, "structure_score": 0.0, "rerank_score": 0.114573, "rank": 5}

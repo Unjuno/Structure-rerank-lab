@@ -101,7 +101,30 @@
     },
     {
       "query_id": "rq4",
-      "moves": []
+      "moves": [
+        {
+          "post_id": "r17",
+          "relevance": 0,
+          "direction": "up",
+          "baseline_rank": 3,
+          "compare_rank": 2,
+          "rank_delta": 1,
+          "baseline_score": 0.333333,
+          "structure_score": 0.005864,
+          "rerank_score": 0.26784
+        },
+        {
+          "post_id": "r9",
+          "relevance": 0,
+          "direction": "down",
+          "baseline_rank": 2,
+          "compare_rank": 3,
+          "rank_delta": -1,
+          "baseline_score": 0.333333,
+          "structure_score": 0.0,
+          "rerank_score": 0.266667
+        }
+      ]
     },
     {
       "query_id": "rq5",

@@ -219,8 +219,8 @@
 {"mode": "baseline", "query_id": "rq4", "post_id": "r21", "baseline_score": 0.166667, "structure_score": 0.0, "rerank_score": 0.166667, "rank": 9}
 {"mode": "baseline", "query_id": "rq4", "post_id": "r22", "baseline_score": 0.166667, "structure_score": 0.0, "rerank_score": 0.166667, "rank": 10}
 {"mode": "structure_rerank", "query_id": "rq4", "post_id": "r4", "baseline_score": 1.0, "structure_score": 1.0, "rerank_score": 1.0, "rank": 1}
-{"mode": "structure_rerank", "query_id": "rq4", "post_id": "r9", "baseline_score": 0.333333, "structure_score": 0.0, "rerank_score": 0.266667, "rank": 2}
-{"mode": "structure_rerank", "query_id": "rq4", "post_id": "r17", "baseline_score": 0.333333, "structure_score": 0.0, "rerank_score": 0.266667, "rank": 3}
+{"mode": "structure_rerank", "query_id": "rq4", "post_id": "r17", "baseline_score": 0.333333, "structure_score": 0.005864, "rerank_score": 0.26784, "rank": 2}
+{"mode": "structure_rerank", "query_id": "rq4", "post_id": "r9", "baseline_score": 0.333333, "structure_score": 0.0, "rerank_score": 0.266667, "rank": 3}
 {"mode": "structure_rerank", "query_id": "rq4", "post_id": "r24", "baseline_score": 0.333333, "structure_score": 0.0, "rerank_score": 0.266667, "rank": 4}
 {"mode": "structure_rerank", "query_id": "rq4", "post_id": "r6", "baseline_score": 0.166667, "structure_score": 0.0, "rerank_score": 0.133333, "rank": 5}
 {"mode": "structure_rerank", "query_id": "rq4", "post_id": "r8", "baseline_score": 0.166667, "structure_score": 0.0, "rerank_score": 0.133333, "rank": 6}
@@ -269,8 +269,8 @@
 {"mode": "structure_contrast_only", "query_id": "rq4", "post_id": "r21", "baseline_score": 0.166667, "structure_score": 0.0, "rerank_score": 0.133333, "rank": 9}
 {"mode": "structure_contrast_only", "query_id": "rq4", "post_id": "r22", "baseline_score": 0.166667, "structure_score": 0.0, "rerank_score": 0.133333, "rank": 10}
 {"mode": "structure_definition_only", "query_id": "rq4", "post_id": "r4", "baseline_score": 1.0, "structure_score": 0.0, "rerank_score": 0.8, "rank": 1}
-{"mode": "structure_definition_only", "query_id": "rq4", "post_id": "r9", "baseline_score": 0.333333, "structure_score": 0.0, "rerank_score": 0.266667, "rank": 2}
-{"mode": "structure_definition_only", "query_id": "rq4", "post_id": "r17", "baseline_score": 0.333333, "structure_score": 0.0, "rerank_score": 0.266667, "rank": 3}
+{"mode": "structure_definition_only", "query_id": "rq4", "post_id": "r17", "baseline_score": 0.333333, "structure_score": 1.0, "rerank_score": 0.466667, "rank": 2}
+{"mode": "structure_definition_only", "query_id": "rq4", "post_id": "r9", "baseline_score": 0.333333, "structure_score": 0.0, "rerank_score": 0.266667, "rank": 3}
 {"mode": "structure_definition_only", "query_id": "rq4", "post_id": "r24", "baseline_score": 0.333333, "structure_score": 0.0, "rerank_score": 0.266667, "rank": 4}
 {"mode": "structure_definition_only", "query_id": "rq4", "post_id": "r6", "baseline_score": 0.166667, "structure_score": 0.0, "rerank_score": 0.133333, "rank": 5}
 {"mode": "structure_definition_only", "query_id": "rq4", "post_id": "r8", "baseline_score": 0.166667, "structure_score": 0.0, "rerank_score": 0.133333, "rank": 6}

@@ -32,7 +32,10 @@ No rank movements inside the cutoff.
 
 ## rq4
 
-No rank movements inside the cutoff.
+| post_id | relevance | direction | baseline rank | compare rank | rank delta | structure score | rerank score |
+|---|---:|---|---:|---:|---:|---:|---:|
+| r17 | 0 | up | 3 | 2 | 1 | 0.005864 | 0.26784 |
+| r9 | 0 | down | 2 | 3 | -1 | 0.0 | 0.266667 |
 
 ## rq5
 
