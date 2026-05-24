@@ -2,12 +2,11 @@
 
 ## Hypothesis
 
-Retrieval should use two vector directions:
+Retrieval should use two vector directions and angle mixtures:
 
 1. horizontal vector search over documents/posts
 2. vertical vector estimation over structure axes/features
-
-The current main candidate is `vertical_vector_rerank`.
+3. diagonal mixtures of horizontal and vertical signals
 
 ## Implemented modes
 
@@ -27,12 +26,17 @@ The current main candidate is `vertical_vector_rerank`.
 
 Dataset: 30 posts / 20 queries
 
-| mode | nDCG@3 | AvgRel@3 | verdict |
-|---|---:|---:|---|
-| vector_baseline | 0.859447 | 1.100000 | - |
-| vector_structure_rerank | 0.870507 | 1.150000 | PASS |
-| vertical_vector_rerank | 0.875672 | 1.166667 | PASS |
-| corpus_vertical_rerank | 0.861717 | 1.116667 | UNCERTAIN |
+| mode | nDCG@3 | delta nDCG@3 | AvgRel@3 | delta AvgRel@3 | verdict |
+|---|---:|---:|---:|---:|---|
+| vector_baseline | 0.859447 | - | 1.100000 | - | - |
+| diagonal_vertical_50 | 0.878747 | 0.019300 | 1.183333 | 0.083333 | PASS |
+| diagonal_vertical_35 | 0.876477 | 0.017030 | 1.166667 | 0.066667 | PASS |
+| vertical_vector_rerank | 0.875672 | 0.016225 | 1.166667 | 0.066667 | PASS |
+| diagonal_vertical_20 | 0.875672 | 0.016225 | 1.166667 | 0.066667 | PASS |
+| vector_structure_rerank | 0.870507 | 0.011060 | 1.150000 | 0.050000 | PASS |
+| corpus_vertical_rerank | 0.861717 | 0.002270 | 1.116667 | 0.016667 | UNCERTAIN |
+| diagonal_corpus_20 | 0.861717 | 0.002270 | 1.116667 | 0.016667 | UNCERTAIN |
+| diagonal_vertical_05 | 0.859447 | 0.000000 | 1.100000 | 0.000000 | UNCERTAIN |
 
 ### BEIR ArguAna
 
@@ -63,23 +67,23 @@ Dataset: 30 posts / 20 queries
 
 ## Current conclusion
 
-`vertical_vector_rerank` remains the current main candidate.
+`diagonal_vertical_50` is the best mode on expanded real-like data.
 
-`corpus_vertical_rerank` is implemented, but it is weaker than `vertical_vector_rerank` on expanded real-like and fails on BEIR ArguAna.
+`vertical_vector_rerank` remains the safer cross-dataset candidate because it has BEIR support on ArguAna and non-negative evidence on SciFact/NFCorpus.
 
-`diagonal_*` modes are implemented but still need an angle sweep result.
+`corpus_vertical_rerank` is weak: it is only uncertain on expanded real-like and fails on BEIR ArguAna.
 
 This does not prove superiority over dense neural embeddings.
 
 ## Active work
 
-- Run angle sweep on `experiment/angle-sweep`.
-- Compare diagonal variants against `vector_baseline` and `vertical_vector_rerank`.
-- Keep `vertical_vector_rerank` as the main candidate unless angle sweep produces a stronger result.
+- Test diagonal vertical modes on BEIR.
+- Keep corpus-derived axes experimental, not primary.
+- Prepare a final experiment report after BEIR diagonal checks.
 
 ## Next work
 
-1. Collect `results/angle_sweep.md/json`.
-2. If a diagonal mode wins, record it in `docs/current-state.md`.
+1. Run diagonal modes on BEIR ArguAna, SciFact, and NFCorpus.
+2. Compare diagonal modes against `vertical_vector_rerank`.
 3. Write an experiment report.
 4. Clean up temporary workflows and branches.
