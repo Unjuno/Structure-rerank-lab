@@ -15,6 +15,11 @@ The current main candidate is `vertical_vector_rerank`.
 - `vector_structure_rerank`
 - `vertical_vector_rerank`
 - `corpus_vertical_rerank`
+- `diagonal_vertical_05`
+- `diagonal_vertical_20`
+- `diagonal_vertical_35`
+- `diagonal_vertical_50`
+- `diagonal_corpus_20`
 
 ## Current results
 
@@ -36,7 +41,7 @@ Dataset: 30 posts / 20 queries
 | vector_baseline | 0.174341 | 0.098333 | - |
 | vector_structure_rerank | 0.174341 | 0.098333 | UNCERTAIN |
 | vertical_vector_rerank | 0.198268 | 0.111667 | PASS |
-| corpus_vertical_rerank | not collected | not collected | MISSING |
+| corpus_vertical_rerank | 0.159877 | 0.090000 | FAIL |
 
 ### BEIR SciFact
 
@@ -58,19 +63,23 @@ Dataset: 30 posts / 20 queries
 
 ## Current conclusion
 
-`vertical_vector_rerank` is consistently better than `vector_structure_rerank` in the current small tests.
+`vertical_vector_rerank` remains the current main candidate.
 
-`corpus_vertical_rerank` is implemented, but current expanded real-like evidence is only uncertain and BEIR values are not yet collected.
+`corpus_vertical_rerank` is implemented, but it is weaker than `vertical_vector_rerank` on expanded real-like and fails on BEIR ArguAna.
+
+`diagonal_*` modes are implemented but still need an angle sweep result.
 
 This does not prove superiority over dense neural embeddings.
 
 ## Active work
 
-- Keep `vertical_vector_rerank` as the main candidate.
-- Treat `corpus_vertical_rerank` as experimental until BEIR values are collected.
-- Diagnose why the compact BEIR corpus workflow does not persist result files.
+- Run angle sweep on `experiment/angle-sweep`.
+- Compare diagonal variants against `vector_baseline` and `vertical_vector_rerank`.
+- Keep `vertical_vector_rerank` as the main candidate unless angle sweep produces a stronger result.
 
 ## Next work
 
-1. Improve vertical axis estimation beyond fixed structure types.
-2. Add optional dense embedding backend later.
+1. Collect `results/angle_sweep.md/json`.
+2. If a diagonal mode wins, record it in `docs/current-state.md`.
+3. Write an experiment report.
+4. Clean up temporary workflows and branches.
