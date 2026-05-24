@@ -1,0 +1,60 @@
+name: BEIR Diagonal Sweep
+
+on:
+  push:
+    branches: [experiment/beir-diagonal]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diagonal:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        dataset: [arguana, scifact, nfcorpus]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Convert BEIR dataset
+        run: >-
+          python -m structure_rerank.beir_adapter
+          --dataset ${{ matrix.dataset }}
+          --out results/beir/${{ matrix.dataset }}
+          --max-queries 200
+          --max-corpus 8000
+
+      - name: Run vector experiment with diagonal modes
+        run: >-
+          python -m structure_rerank.vector_experiment
+          --posts results/beir/${{ matrix.dataset }}/posts.jsonl
+          --queries results/beir/${{ matrix.dataset }}/queries.jsonl
+          --structures results/beir/${{ matrix.dataset }}/structures.jsonl
+          --output results/beir/${{ matrix.dataset }}/vector_results.jsonl
+
+      - name: Generate diagonal angle sweep
+        run: >-
+          python -m structure_rerank.angle_sweep
+          --results results/beir/${{ matrix.dataset }}/vector_results.jsonl
+          --judgments results/beir/${{ matrix.dataset }}/judgments.jsonl
+          --output-md results/beir/${{ matrix.dataset }}/diagonal_angle_sweep.md
+          --output-json results/beir/${{ matrix.dataset }}/diagonal_angle_sweep.json
+
+      - name: Commit diagonal result
+        if: github.event_name == 'push'
+        run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git pull --rebase || true
+          git add results/beir/${{ matrix.dataset }}/diagonal_angle_sweep.md results/beir/${{ matrix.dataset }}/diagonal_angle_sweep.json
+          git commit -m "results: BEIR ${{ matrix.dataset }} diagonal sweep" || exit 0
+          git push || true
