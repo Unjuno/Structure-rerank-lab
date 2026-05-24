@@ -2,49 +2,15 @@ name: ArguAna Corpus Vertical
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  run:
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Run corpus vertical with persisted status
+      - name: Archived workflow
         run: |
-          mkdir -p results/beir/arguana
-          status=0
-          {
-            echo "step=convert"
-            python -m structure_rerank.beir_adapter --dataset arguana --out results/beir/arguana --max-queries 200 --max-corpus 8000 || status=$?
-            echo "convert_status=$status"
-            if [ "$status" -eq 0 ]; then
-              echo "step=vector_experiment"
-              python -m structure_rerank.vector_experiment --posts results/beir/arguana/posts.jsonl --queries results/beir/arguana/queries.jsonl --structures results/beir/arguana/structures.jsonl --output results/beir/arguana/vector_results.jsonl || status=$?
-              echo "vector_status=$status"
-            fi
-            if [ "$status" -eq 0 ]; then
-              echo "step=feedback"
-              python -m structure_rerank.mode_feedback --results results/beir/arguana/vector_results.jsonl --judgments results/beir/arguana/judgments.jsonl --output-md results/beir/arguana/corpus_vertical_feedback.md --output-json results/beir/arguana/corpus_vertical_feedback.json --baseline-mode vector_baseline --candidate-mode corpus_vertical_rerank || status=$?
-              echo "feedback_status=$status"
-            fi
-            echo "final_status=$status"
-          } > results/beir/arguana/corpus_vertical_status.txt 2>&1
-          cat results/beir/arguana/corpus_vertical_status.txt
-      - name: Commit result or diagnostic
-        if: github.event_name == 'push'
-        run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
-          git pull --rebase || true
-          git add results/beir/arguana/corpus_vertical_status.txt results/beir/arguana/corpus_vertical_feedback.md results/beir/arguana/corpus_vertical_feedback.json || true
-          git commit -m "results: arguana corpus vertical status" || exit 0
-          git push || true
+          echo "Archived: ArguAna corpus-vertical diagnostic workflow is no longer run on push."
+          echo "Corpus-derived vertical values are recorded under results/beir/arguana/."
