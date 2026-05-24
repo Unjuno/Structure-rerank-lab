@@ -7,207 +7,31 @@ on:
     branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  sample-experiment:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Validate JSONL files
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-
           for path in Path('examples').glob('*.jsonl'):
               for line_no, line in enumerate(path.read_text(encoding='utf-8').splitlines(), start=1):
-                  if not line.strip():
-                      continue
-                  json.loads(line)
+                  if line.strip():
+                      json.loads(line)
               print(f'valid jsonl: {path}')
           PY
-
-      - name: Run lexical sample rerank
-        run: python -m structure_rerank.rerank
-
-      - name: Run lexical evaluation
-        run: python -m structure_rerank.evaluate --skip-rerank
-
-      - name: Generate lexical feedback report
-        run: python -m structure_rerank.feedback --skip-rerank
-
-      - name: Generate lexical diagnostics report
-        run: python -m structure_rerank.diagnose --skip-rerank
-
-      - name: Generate lexical rank movement explanations
-        run: python -m structure_rerank.explain_moves --skip-rerank
-
-      - name: Run vector experiment
-        run: python -m structure_rerank.vector_experiment
-
-      - name: Evaluate vector experiment
-        run: python -m structure_rerank.evaluate --results results/vector_results.jsonl --skip-rerank
-
-      - name: Generate vector mode feedback report
-        run: >-
-          python -m structure_rerank.mode_feedback
-          --results results/vector_results.jsonl
-          --output-md results/vector_feedback.md
-          --output-json results/vector_feedback.json
-          --baseline-mode vector_baseline
-          --candidate-mode vector_structure_rerank
-
-      - name: Generate vector rank movement explanations
-        run: >-
-          python -m structure_rerank.explain_moves
-          --results results/vector_results.jsonl
-          --explanations-md results/vector_rank_movements.md
-          --explanations-json results/vector_rank_movements.json
-          --baseline-mode vector_baseline
-          --compare-mode vector_structure_rerank
-          --skip-rerank
-
-      - name: Generate combined experiment summary
-        run: python -m structure_rerank.experiment_summary
-
-      - name: Run real-like lexical rerank
-        run: >-
-          python -m structure_rerank.rerank
-          --posts examples/real_like_posts.jsonl
-          --queries examples/real_like_queries.jsonl
-          --structures examples/real_like_structures.jsonl
-          --output results/real_like_results.jsonl
-
-      - name: Evaluate real-like lexical experiment
-        run: >-
-          python -m structure_rerank.evaluate
-          --results results/real_like_results.jsonl
-          --judgments examples/real_like_judgments.jsonl
-          --skip-rerank
-
-      - name: Generate real-like lexical feedback report
-        run: >-
-          python -m structure_rerank.mode_feedback
-          --results results/real_like_results.jsonl
-          --judgments examples/real_like_judgments.jsonl
-          --output-md results/real_like_feedback.md
-          --output-json results/real_like_feedback.json
-          --baseline-mode baseline
-          --candidate-mode structure_rerank
-
-      - name: Generate real-like lexical diagnostics report
-        run: >-
-          python -m structure_rerank.diagnose
-          --results results/real_like_results.jsonl
-          --judgments examples/real_like_judgments.jsonl
-          --queries examples/real_like_queries.jsonl
-          --diagnostics-md results/real_like_diagnostics.md
-          --diagnostics-json results/real_like_diagnostics.json
-          --skip-rerank
-
-      - name: Generate real-like lexical rank movement explanations
-        run: >-
-          python -m structure_rerank.explain_moves
-          --results results/real_like_results.jsonl
-          --judgments examples/real_like_judgments.jsonl
-          --explanations-md results/real_like_rank_movements.md
-          --explanations-json results/real_like_rank_movements.json
-          --baseline-mode baseline
-          --compare-mode structure_rerank
-          --skip-rerank
-
-      - name: Run real-like vector experiment
-        run: >-
-          python -m structure_rerank.vector_experiment
-          --posts examples/real_like_posts.jsonl
-          --queries examples/real_like_queries.jsonl
-          --structures examples/real_like_structures.jsonl
-          --output results/real_like_vector_results.jsonl
-
-      - name: Evaluate real-like vector experiment
-        run: >-
-          python -m structure_rerank.evaluate
-          --results results/real_like_vector_results.jsonl
-          --judgments examples/real_like_judgments.jsonl
-          --skip-rerank
-
-      - name: Generate real-like vector feedback report
-        run: >-
-          python -m structure_rerank.mode_feedback
-          --results results/real_like_vector_results.jsonl
-          --judgments examples/real_like_judgments.jsonl
-          --output-md results/real_like_vector_feedback.md
-          --output-json results/real_like_vector_feedback.json
-          --baseline-mode vector_baseline
-          --candidate-mode vector_structure_rerank
-
-      - name: Generate real-like vector rank movement explanations
-        run: >-
-          python -m structure_rerank.explain_moves
-          --results results/real_like_vector_results.jsonl
-          --judgments examples/real_like_judgments.jsonl
-          --explanations-md results/real_like_vector_rank_movements.md
-          --explanations-json results/real_like_vector_rank_movements.json
-          --baseline-mode vector_baseline
-          --compare-mode vector_structure_rerank
-          --skip-rerank
-
-      - name: Generate real-like summary
-        run: python -m structure_rerank.real_like_summary
-
-      - name: Upload experiment artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: structure-rerank-feedback
-          path: |
-            results/sample_results.jsonl
-            results/feedback.md
-            results/feedback.json
-            results/diagnostics.md
-            results/diagnostics.json
-            results/rank_movements.md
-            results/rank_movements.json
-            results/vector_results.jsonl
-            results/vector_feedback.md
-            results/vector_feedback.json
-            results/vector_rank_movements.md
-            results/vector_rank_movements.json
-            results/experiment_summary.md
-            results/experiment_summary.json
-            results/real_like_results.jsonl
-            results/real_like_feedback.md
-            results/real_like_feedback.json
-            results/real_like_diagnostics.md
-            results/real_like_diagnostics.json
-            results/real_like_rank_movements.md
-            results/real_like_rank_movements.json
-            results/real_like_vector_results.jsonl
-            results/real_like_vector_feedback.md
-            results/real_like_vector_feedback.json
-            results/real_like_vector_rank_movements.md
-            results/real_like_vector_rank_movements.json
-            results/real_like_summary.md
-            results/real_like_summary.json
-
-      - name: Commit generated experiment snapshots
-        if: github.event_name == 'push'
+      - name: Import modules
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add results/
-          if git diff --cached --quiet; then
-            echo "no generated result changes"
-          else
-            git commit -m "results: refresh generated experiment snapshots [skip ci]"
-            git push
-          fi
+          python - <<'PY'
+          import structure_rerank.angle_sweep
+          import structure_rerank.beir_adapter
+          import structure_rerank.vector_experiment
+          PY
