@@ -1,0 +1,73 @@
+{
+  "k": 3,
+  "baseline": {
+    "nDCG": 0.391228,
+    "AvgRel": 0.393333
+  },
+  "items": [
+    {
+      "mode": "diagonal_vertical_35",
+      "nDCG": 0.402485,
+      "delta_nDCG": 0.011256999999999961,
+      "AvgRel": 0.41,
+      "delta_AvgRel": 0.016666999999999987,
+      "MRR": 0.54077
+    },
+    {
+      "mode": "vertical_vector_rerank",
+      "nDCG": 0.39958,
+      "delta_nDCG": 0.00835199999999997,
+      "AvgRel": 0.401667,
+      "delta_AvgRel": 0.008334000000000008,
+      "MRR": 0.537728
+    },
+    {
+      "mode": "diagonal_vertical_20",
+      "nDCG": 0.39958,
+      "delta_nDCG": 0.00835199999999997,
+      "AvgRel": 0.401667,
+      "delta_AvgRel": 0.008334000000000008,
+      "MRR": 0.537728
+    },
+    {
+      "mode": "vector_structure_rerank",
+      "nDCG": 0.398333,
+      "delta_nDCG": 0.0071049999999999724,
+      "AvgRel": 0.396667,
+      "delta_AvgRel": 0.0033340000000000036,
+      "MRR": 0.545456
+    },
+    {
+      "mode": "diagonal_vertical_05",
+      "nDCG": 0.395614,
+      "delta_nDCG": 0.004386000000000001,
+      "AvgRel": 0.398333,
+      "delta_AvgRel": 0.0050000000000000044,
+      "MRR": 0.534359
+    },
+    {
+      "mode": "corpus_vertical_rerank",
+      "nDCG": 0.392094,
+      "delta_nDCG": 0.0008659999999999779,
+      "AvgRel": 0.393333,
+      "delta_AvgRel": 0.0,
+      "MRR": 0.53247
+    },
+    {
+      "mode": "diagonal_corpus_20",
+      "nDCG": 0.392094,
+      "delta_nDCG": 0.0008659999999999779,
+      "AvgRel": 0.393333,
+      "delta_AvgRel": 0.0,
+      "MRR": 0.53247
+    },
+    {
+      "mode": "diagonal_vertical_50",
+      "nDCG": 0.392086,
+      "delta_nDCG": 0.0008579999999999699,
+      "AvgRel": 0.403333,
+      "delta_AvgRel": 0.010000000000000009,
+      "MRR": 0.524589
+    }
+  ]
+}
