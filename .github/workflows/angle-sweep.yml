@@ -2,50 +2,15 @@ name: Angle Sweep
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  run:
+  archived:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Run angle sweep with status
+      - name: Archived workflow
         run: |
-          mkdir -p results
-          status=0
-          {
-            echo "step=build_inputs"
-            cat examples/real_like_queries.jsonl examples/real_like_queries_extra.jsonl > results/real_like_queries_20.jsonl || status=$?
-            cat examples/real_like_judgments.jsonl examples/real_like_judgments_extra.jsonl > results/real_like_judgments_20.jsonl || status=$?
-            echo "build_status=$status"
-            if [ "$status" -eq 0 ]; then
-              echo "step=vector_experiment"
-              python -m structure_rerank.vector_experiment --posts examples/real_like_posts.jsonl --queries results/real_like_queries_20.jsonl --structures examples/real_like_structures.jsonl --output results/real_like_expanded_vector_results.jsonl || status=$?
-              echo "vector_status=$status"
-            fi
-            if [ "$status" -eq 0 ]; then
-              echo "step=angle_sweep"
-              python -m structure_rerank.angle_sweep --results results/real_like_expanded_vector_results.jsonl --judgments results/real_like_judgments_20.jsonl --output-md results/angle_sweep.md --output-json results/angle_sweep.json || status=$?
-              echo "angle_status=$status"
-            fi
-            echo "final_status=$status"
-          } > results/angle_sweep_status.txt 2>&1
-          cat results/angle_sweep_status.txt
-      - name: Commit output or status
-        if: github.event_name == 'push'
-        run: |
-          git config user.name github-actions
-          git config user.email actions@github.com
-          git pull --rebase || true
-          git add results/angle_sweep_status.txt results/angle_sweep.md results/angle_sweep.json results/real_like_expanded_vector_results.jsonl || true
-          git commit -m "results: angle sweep status" || exit 0
-          git push || true
+          echo "Archived: angle sweep results are recorded under results/ when refreshed intentionally."
+          echo "Do not run this on every push."
