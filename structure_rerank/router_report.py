@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, Mapping
 
-from .angle_router import ROUTED_MODE, choose_mode
+from .angle_router import DATASET_ROUTED_MODE, QUERY_ROUTED_MODE, choose_dataset_mode
 from .evaluate import evaluate
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,10 +16,10 @@ DEFAULT_JSON = ROOT / "results" / "angle_router_report.json"
 BASELINE_MODE = "vertical_vector_rerank"
 
 
-def build(results: Path, judgments: Path, dataset: str, k: int = 3) -> Dict[str, Any]:
+def build(results: Path, judgments: Path, dataset: str, routed_mode: str, k: int = 3) -> Dict[str, Any]:
     metrics = evaluate(results, judgments, k=k)
     baseline = metrics.get(BASELINE_MODE, {})
-    routed = metrics.get(ROUTED_MODE, {})
+    routed = metrics.get(routed_mode, {})
     b_ndcg = float(baseline.get(f"nDCG@{k}", 0.0))
     r_ndcg = float(routed.get(f"nDCG@{k}", 0.0))
     b_avg = float(baseline.get(f"AvgRel@{k}", 0.0))
@@ -27,9 +27,9 @@ def build(results: Path, judgments: Path, dataset: str, k: int = 3) -> Dict[str,
     return {
         "dataset": dataset,
         "k": k,
-        "selected_mode": choose_mode(dataset),
+        "selected_mode": choose_dataset_mode(dataset) if routed_mode == DATASET_ROUTED_MODE else "query_conditioned",
         "baseline_mode": BASELINE_MODE,
-        "routed_mode": ROUTED_MODE,
+        "routed_mode": routed_mode,
         "baseline": baseline,
         "routed": routed,
         "delta_nDCG": r_ndcg - b_ndcg,
@@ -43,6 +43,7 @@ def write_md(report: Mapping[str, Any], output: Path) -> None:
     routed = report["routed"]
     lines = ["# Angle router report", ""]
     lines.append(f"Dataset: `{report['dataset']}`")
+    lines.append(f"Router: `{report['routed_mode']}`")
     lines.append(f"Selected mode: `{report['selected_mode']}`")
     lines.append("")
     lines.append(f"| mode | nDCG@{k} | AvgRel@{k} | MRR |")
@@ -61,8 +62,16 @@ def write_md(report: Mapping[str, Any], output: Path) -> None:
     output.write_text("\n".join(lines), encoding="utf-8")
 
 
-def run(results: Path = DEFAULT_RESULTS, judgments: Path = DEFAULT_JUDGMENTS, output_md: Path = DEFAULT_MD, output_json: Path = DEFAULT_JSON, dataset: str = "unknown", k: int = 3) -> Dict[str, Any]:
-    report = build(results, judgments, dataset, k)
+def run(
+    results: Path = DEFAULT_RESULTS,
+    judgments: Path = DEFAULT_JUDGMENTS,
+    output_md: Path = DEFAULT_MD,
+    output_json: Path = DEFAULT_JSON,
+    dataset: str = "unknown",
+    routed_mode: str = DATASET_ROUTED_MODE,
+    k: int = 3,
+) -> Dict[str, Any]:
+    report = build(results, judgments, dataset, routed_mode, k)
     output_md.parent.mkdir(parents=True, exist_ok=True)
     output_json.parent.mkdir(parents=True, exist_ok=True)
     write_md(report, output_md)
@@ -79,9 +88,10 @@ def main() -> None:
     parser.add_argument("--output-md", type=Path, default=DEFAULT_MD)
     parser.add_argument("--output-json", type=Path, default=DEFAULT_JSON)
     parser.add_argument("--dataset", required=True)
+    parser.add_argument("--routed-mode", choices=[DATASET_ROUTED_MODE, QUERY_ROUTED_MODE], default=DATASET_ROUTED_MODE)
     parser.add_argument("--k", type=int, default=3)
     args = parser.parse_args()
-    run(args.results, args.judgments, args.output_md, args.output_json, args.dataset, args.k)
+    run(args.results, args.judgments, args.output_md, args.output_json, args.dataset, args.routed_mode, args.k)
 
 
 if __name__ == "__main__":
