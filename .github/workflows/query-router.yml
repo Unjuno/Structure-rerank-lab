@@ -1,0 +1,58 @@
+name: Query Router Experiment
+
+on:
+  push:
+    branches: [experiment/query-router]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  real-like:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build expanded inputs
+        run: |
+          mkdir -p results/query-router/real_like
+          cat examples/real_like_queries.jsonl examples/real_like_queries_extra.jsonl > results/query-router/real_like/queries.jsonl
+          cat examples/real_like_judgments.jsonl examples/real_like_judgments_extra.jsonl > results/query-router/real_like/judgments.jsonl
+      - name: Run vector experiment
+        run: >-
+          python -m structure_rerank.vector_experiment
+          --posts examples/real_like_posts.jsonl
+          --queries results/query-router/real_like/queries.jsonl
+          --structures examples/real_like_structures.jsonl
+          --output results/query-router/real_like/vector_results.jsonl
+      - name: Run query router
+        run: >-
+          python -m structure_rerank.angle_router
+          --results results/query-router/real_like/vector_results.jsonl
+          --queries results/query-router/real_like/queries.jsonl
+          --output results/query-router/real_like/router_results.jsonl
+          --dataset expanded_real_like
+          --router query
+      - name: Report query router
+        run: >-
+          python -m structure_rerank.router_report
+          --results results/query-router/real_like/router_results.jsonl
+          --judgments results/query-router/real_like/judgments.jsonl
+          --output-md results/query-router/real_like/query_router_report.md
+          --output-json results/query-router/real_like/query_router_report.json
+          --dataset expanded_real_like
+          --routed-mode query_angle_router
+      - name: Commit query router results
+        if: github.event_name == 'push'
+        run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git pull --rebase || true
+          git add results/query-router/real_like/query_router_report.md results/query-router/real_like/query_router_report.json
+          git commit -m "results: query router real-like" || exit 0
+          git push || true
