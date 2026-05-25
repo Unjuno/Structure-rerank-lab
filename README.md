@@ -21,6 +21,21 @@ Primary docs:
 2. `docs/experiment-report.md`
 3. `docs/discovery-phase-summary.md`
 
+## Ideas and review comments
+
+If you have an idea, criticism, reproducibility concern, or a better experiment design, please open a GitHub Issue.
+
+Useful issues include:
+
+- a concrete failure case or counterexample
+- a better way to build vertical or diagonal axes
+- a proposal for query/task-conditioned angle selection
+- a reproducibility problem in the current reports
+- a small public dataset that can be safely added
+- a reason the current interpretation is too strong or too weak
+
+Please keep issues specific. A useful issue should state the claim, the evidence or intuition behind it, and the smallest check that would confirm or reject it.
+
 ## Core hypothesis
 
 Search over question/discussion logs can improve when baseline retrieval is combined with explicit structure or vertical-vector signals.
