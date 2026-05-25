@@ -2,48 +2,89 @@
 
 Experimental lab for testing whether extracted reasoning structures improve search reranking.
 
+## Current status
+
+Discovery phase is closed.
+
+Active experimentation should pause here. Resume only for comments, reviews, reproducibility fixes, or a deliberate next-session plan for failure-case analysis.
+
+Current practical result:
+
+- safe fixed default: `vertical_vector_rerank` / `diagonal_vertical_20`
+- useful but task-dependent: `diagonal_vertical_35`, `diagonal_vertical_50`
+- not promoted in the current implementation: `corpus_vertical_rerank`, `diagonal_corpus_20`
+- first query-only router: tiny improvement only, not yet a strong result
+
+Primary docs:
+
+1. `docs/current-state.md`
+2. `docs/experiment-report.md`
+3. `docs/discovery-phase-summary.md`
+
 ## Core hypothesis
 
-Search over question/discussion logs can improve when baseline retrieval is reranked with explicit structure signals:
+Search over question/discussion logs can improve when baseline retrieval is combined with explicit structure or vertical-vector signals.
 
-- `conclusion`
-- `premise`
-- `causal`
-- `contrast`
-- `definition`
+The current tested signal families are:
 
-## Current baselines
+- horizontal sparse-vector search
+- structure-aware reranking
+- vertical vector reranking
+- diagonal mixtures of horizontal and vertical scores
+- simple router experiments for angle selection
 
-This repository currently tests two lightweight baselines:
+## Current baselines and candidates
 
 | family | baseline | candidate |
 |---|---|---|
 | lexical | token-overlap lexical ranking | lexical + structure rerank |
-| vector | dependency-free TF-IDF sparse vector cosine ranking | TF-IDF vector + structure rerank |
+| vector | dependency-free TF-IDF sparse vector cosine ranking | TF-IDF vector + structure/vertical/diagonal rerank |
+| router | fixed `vertical_vector_rerank` / `diagonal_vertical_20` | oracle dataset router and first query-only router |
 
 The vector baseline is **not** a neural embedding model. It is a CI-safe sparse TF-IDF vector baseline. Neural embeddings are intentionally left for a later optional backend.
+
+## Key discovery-phase findings
+
+The vertical-vector signal is useful.
+
+A single fixed strong diagonal is not supported. The best angle depends on the dataset/task:
+
+| dataset | best observed mode |
+|---|---|
+| expanded real-like | `diagonal_vertical_50` |
+| ArguAna | `diagonal_vertical_35` |
+| SciFact | `vertical_vector_rerank` / `diagonal_vertical_20` |
+| NFCorpus | `diagonal_vertical_35` |
+
+The first query-only router produced only a tiny expanded real-like improvement:
+
+| mode | nDCG@3 | AvgRel@3 | MRR |
+|---|---:|---:|---:|
+| `vertical_vector_rerank` | 0.875672 | 1.166667 | 1.000000 |
+| `query_angle_router` | 0.876477 | 1.166667 | 1.000000 |
+
+This keeps the router hypothesis alive, but it is not enough to claim a strong query-only router.
 
 ## Experiment loop
 
 ```text
-sample data
-  -> baseline ranking
-  -> structure-aware reranking
+sample / real-like / BEIR-derived data
+  -> baseline sparse-vector ranking
+  -> structure / vertical / diagonal reranking
   -> metric evaluation
   -> feedback report
   -> diagnostics
-  -> rank movement explanations
-  -> combined experiment summary
-  -> generated result snapshots
+  -> result snapshots
+  -> report update
 ```
 
-The goal is not to claim production validity from a tiny synthetic dataset. The goal is to create a closed loop that can say:
+The goal is not to claim production validity from the small real-like dataset. The goal is to create a closed loop that can say:
 
-- whether structure reranking helped
-- which structure types helped
+- whether structure or vertical reranking helped
+- which angle mixtures helped
 - which modes hurt
-- which posts moved up or down
-- what to fix next
+- which datasets disagree
+- what to inspect next
 
 ## Main commands
 
@@ -58,65 +99,47 @@ python -m structure_rerank.explain_moves --skip-rerank
 # TF-IDF vector experiment
 python -m structure_rerank.vector_experiment
 python -m structure_rerank.evaluate --results results/vector_results.jsonl --skip-rerank
-python -m structure_rerank.mode_feedback \
-  --results results/vector_results.jsonl \
-  --output-md results/vector_feedback.md \
-  --output-json results/vector_feedback.json \
-  --baseline-mode vector_baseline \
-  --candidate-mode vector_structure_rerank
-python -m structure_rerank.explain_moves \
-  --results results/vector_results.jsonl \
-  --explanations-md results/vector_rank_movements.md \
-  --explanations-json results/vector_rank_movements.json \
-  --baseline-mode vector_baseline \
-  --compare-mode vector_structure_rerank \
-  --skip-rerank
 
-# combined summary
-python -m structure_rerank.experiment_summary
+# angle sweep
+python -m structure_rerank.angle_sweep \
+  --results results/vector_results.jsonl \
+  --judgments examples/sample_judgments.jsonl
+
+# query router, requires vector results and query rows
+python -m structure_rerank.angle_router \
+  --results results/vector_results.jsonl \
+  --queries examples/sample_queries.jsonl \
+  --output results/query_router_results.jsonl \
+  --router query
 ```
-
-## Generated results
-
-GitHub Actions generates these files:
-
-- `results/sample_results.jsonl`
-- `results/feedback.md`
-- `results/feedback.json`
-- `results/diagnostics.md`
-- `results/diagnostics.json`
-- `results/rank_movements.md`
-- `results/rank_movements.json`
-- `results/vector_results.jsonl`
-- `results/vector_feedback.md`
-- `results/vector_feedback.json`
-- `results/vector_rank_movements.md`
-- `results/vector_rank_movements.json`
-- `results/experiment_summary.md`
-- `results/experiment_summary.json`
-
-On push to `main`, CI also commits changed `results/` snapshots back to the repository with `[skip ci]`. Therefore the intended reading order is:
-
-1. open `results/experiment_summary.md`
-2. inspect `results/vector_feedback.md` if vector results block progress
-3. inspect `results/diagnostics.md` and rank movement reports for failure causes
-4. use workflow artifacts only when debugging CI itself
 
 ## Current limitations
 
 This lab does **not** yet prove:
 
-- improvement over neural embeddings
-- improvement on real production data
+- improvement over neural dense embeddings
+- improvement on production data
 - robust automatic structure extraction
-- usefulness of dimension gating
+- robust learned angle routing
+- usefulness beyond the tested sparse TF-IDF setting
 
-It currently tests a narrower claim:
+It currently supports a narrower claim:
 
 ```text
-Given extracted structure labels, does structure-aware reranking improve retrieval over lexical and TF-IDF sparse-vector baselines on a small controlled dataset?
+Given extracted structure labels and sparse TF-IDF vectors, vertical reranking is useful, diagonal mixtures can help, but angle choice is task-dependent.
 ```
 
-## Next step
+## Next phase
 
-After lexical and TF-IDF vector experiments both pass on the sample dataset, add a small real-like exported dataset with no secrets and rerun the same closed loop.
+Failure-case analysis only.
+
+Do not add more ad hoc angle rules before doing this:
+
+1. list selected angle per query
+2. compare changed ranks against `vertical_vector_rerank`
+3. classify helped / unchanged / hurt cases
+4. then revise query router rules if evidence supports it
+
+## Repository operation note
+
+Heavy result-generation workflows should not run on every push. Use temporary experiment branches for future runs, record results, update docs, then archive workflows again before merging.
