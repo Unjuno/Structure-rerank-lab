@@ -8,6 +8,8 @@ Test whether retrieval improves when horizontal sparse-vector search is combined
 
 This report covers the CI-safe sparse TF-IDF version of the idea. It does not claim results for neural dense embeddings.
 
+This report closes the current discovery phase. Further work should focus on failure-case analysis rather than adding more ad hoc angle rules.
+
 ## Tested modes
 
 - `vector_baseline`
@@ -20,6 +22,7 @@ This report covers the CI-safe sparse TF-IDF version of the idea. It does not cl
 - `diagonal_vertical_50`
 - `diagonal_corpus_20`
 - `angle_router` as an oracle-style dataset-conditioned summary
+- `query_angle_router` as a first non-oracle query-only heuristic
 
 ## Summary
 
@@ -33,13 +36,14 @@ Current practical conclusion:
 - best SciFact mode: `vertical_vector_rerank` / `diagonal_vertical_20`
 - best NFCorpus mode: `diagonal_vertical_35`
 - weak family: `corpus_vertical_rerank` and `diagonal_corpus_20`
-- next candidate: a non-oracle task/query angle router
+- oracle router shows angle-selection headroom
+- first query-only router only gives a tiny real-like improvement
 
 ## Expanded real-like dataset
 
 Dataset size: 30 posts / 20 queries.
 
-Best mode: `diagonal_vertical_50`.
+Best fixed mode: `diagonal_vertical_50`.
 
 | mode | nDCG@3 | delta nDCG@3 | AvgRel@3 | delta AvgRel@3 |
 |---|---:|---:|---:|---:|
@@ -110,6 +114,23 @@ The minimal dataset router selects the empirically best angle per dataset. This 
 | SciFact | 0.558624 | 0.558624 | 0.000000 | 0.225000 | 0.225000 | 0.000000 | `diagonal_vertical_20` |
 | NFCorpus | 0.399580 | 0.402485 | 0.002905 | 0.401667 | 0.410000 | 0.008333 | `diagonal_vertical_35` |
 
+## First query-only router
+
+The first non-oracle router uses cheap query text features only. It is intentionally small and heuristic.
+
+Expanded real-like result:
+
+| mode | nDCG@3 | AvgRel@3 | MRR |
+|---|---:|---:|---:|
+| vertical_vector_rerank | 0.875672 | 1.166667 | 1.000000 |
+| query_angle_router | 0.876477 | 1.166667 | 1.000000 |
+
+Delta nDCG@3: 0.000805.
+
+Delta AvgRel@3: 0.000000.
+
+This is a very small improvement. It is enough to keep the router hypothesis alive, but not enough to claim that the query-only heuristic is strong.
+
 ## Interpretation
 
 The results reject a single fixed strong-diagonal rule.
@@ -119,10 +140,13 @@ The results reject a single fixed strong-diagonal rule.
 - `vertical_vector_rerank` / `diagonal_vertical_20` is not always the best, but it is the most stable fixed choice across tested datasets.
 - `corpus_vertical_rerank` is not a main candidate in the current implementation.
 - the oracle-style dataset router shows positive headroom, but it is not yet a deployable router.
+- the first query-only router gives only a tiny real-like gain.
 
-The next useful hypothesis is not “use one fixed diagonal angle.” It is “select the angle by task or query without using dataset labels.”
+The next useful work is not to keep adding angle rules immediately. The next useful work is failure-case analysis: inspect which queries changed angle, which rankings changed, and where the heuristic failed.
 
 ## Decision
+
+Discovery phase is closed.
 
 Keep `vertical_vector_rerank` / `diagonal_vertical_20` as the safe default.
 
@@ -130,14 +154,16 @@ Promote `diagonal_vertical_35` and `diagonal_vertical_50` to task-conditioned ca
 
 Do not promote `corpus_vertical_rerank` without a different axis construction method.
 
-## Next experiment
+Do not promote `query_angle_router` yet. Treat it as a first weak non-oracle baseline.
 
-Implement a non-oracle angle router:
+## Next phase
 
-- input: query text and/or cheap corpus statistics
-- output: one of `diagonal_vertical_20`, `diagonal_vertical_35`, `diagonal_vertical_50`
-- baseline: fixed `vertical_vector_rerank` / `diagonal_vertical_20`
-- failure condition: routed mode lowers nDCG@3 or AvgRel@3 on any tested BEIR dataset
+Failure-case analysis phase:
+
+- list selected angle per query
+- compare changed ranks against `vertical_vector_rerank`
+- identify queries where the router helped, did nothing, or hurt
+- only then change the query router rules
 
 ## Repository operation note
 
