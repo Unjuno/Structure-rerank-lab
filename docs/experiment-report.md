@@ -19,6 +19,7 @@ This report covers the CI-safe sparse TF-IDF version of the idea. It does not cl
 - `diagonal_vertical_35`
 - `diagonal_vertical_50`
 - `diagonal_corpus_20`
+- `angle_router` as an oracle-style dataset-conditioned summary
 
 ## Summary
 
@@ -32,6 +33,7 @@ Current practical conclusion:
 - best SciFact mode: `vertical_vector_rerank` / `diagonal_vertical_20`
 - best NFCorpus mode: `diagonal_vertical_35`
 - weak family: `corpus_vertical_rerank` and `diagonal_corpus_20`
+- next candidate: a non-oracle task/query angle router
 
 ## Expanded real-like dataset
 
@@ -97,6 +99,17 @@ Best mode: `diagonal_vertical_35`.
 | diagonal_corpus_20 | 0.392094 | 0.000866 | 0.393333 | 0.000000 |
 | diagonal_vertical_50 | 0.392086 | 0.000858 | 0.403333 | 0.010000 |
 
+## Oracle-style dataset router
+
+The minimal dataset router selects the empirically best angle per dataset. This is not deployable by itself because it uses dataset identity. It is a headroom check.
+
+| dataset | safe nDCG@3 | routed nDCG@3 | delta nDCG@3 | safe AvgRel@3 | routed AvgRel@3 | delta AvgRel@3 | selected mode |
+|---|---:|---:|---:|---:|---:|---:|---|
+| expanded real-like | 0.875672 | 0.878747 | 0.003075 | 1.166667 | 1.183333 | 0.016666 | `diagonal_vertical_50` |
+| ArguAna | 0.198268 | 0.208268 | 0.010000 | 0.111667 | 0.118333 | 0.006666 | `diagonal_vertical_35` |
+| SciFact | 0.558624 | 0.558624 | 0.000000 | 0.225000 | 0.225000 | 0.000000 | `diagonal_vertical_20` |
+| NFCorpus | 0.399580 | 0.402485 | 0.002905 | 0.401667 | 0.410000 | 0.008333 | `diagonal_vertical_35` |
+
 ## Interpretation
 
 The results reject a single fixed strong-diagonal rule.
@@ -105,8 +118,9 @@ The results reject a single fixed strong-diagonal rule.
 - `diagonal_vertical_35` is strong on ArguAna and NFCorpus, but it hurts SciFact.
 - `vertical_vector_rerank` / `diagonal_vertical_20` is not always the best, but it is the most stable fixed choice across tested datasets.
 - `corpus_vertical_rerank` is not a main candidate in the current implementation.
+- the oracle-style dataset router shows positive headroom, but it is not yet a deployable router.
 
-The next useful hypothesis is not “use one fixed diagonal angle.” It is “select the angle by task or query.”
+The next useful hypothesis is not “use one fixed diagonal angle.” It is “select the angle by task or query without using dataset labels.”
 
 ## Decision
 
@@ -118,13 +132,12 @@ Do not promote `corpus_vertical_rerank` without a different axis construction me
 
 ## Next experiment
 
-Implement a minimal angle router:
+Implement a non-oracle angle router:
 
-- ArguAna-like and NFCorpus-like cases: prefer `diagonal_vertical_35`
-- SciFact-like cases: prefer `diagonal_vertical_20`
-- fallback: `vertical_vector_rerank`
-
-Then compare the routed result against the fixed `vertical_vector_rerank` baseline.
+- input: query text and/or cheap corpus statistics
+- output: one of `diagonal_vertical_20`, `diagonal_vertical_35`, `diagonal_vertical_50`
+- baseline: fixed `vertical_vector_rerank` / `diagonal_vertical_20`
+- failure condition: routed mode lowers nDCG@3 or AvgRel@3 on any tested BEIR dataset
 
 ## Repository operation note
 
