@@ -8,6 +8,12 @@ Retrieval should use two vector directions and angle mixtures:
 2. vertical vector estimation over structure axes/features
 3. diagonal mixtures of horizontal and vertical signals
 
+## Phase status
+
+Discovery phase is closed.
+
+The next phase is failure-case analysis. Do not keep adding angle rules until changed-query diagnostics are inspected.
+
 ## Implemented modes
 
 - `vector_baseline`
@@ -19,6 +25,8 @@ Retrieval should use two vector directions and angle mixtures:
 - `diagonal_vertical_35`
 - `diagonal_vertical_50`
 - `diagonal_corpus_20`
+- `angle_router` as an oracle-style dataset-conditioned summary
+- `query_angle_router` as a first non-oracle query-only heuristic
 
 ## Current results
 
@@ -68,6 +76,28 @@ Dataset: 30 posts / 20 queries
 | vector_structure_rerank | 0.398333 | 0.007105 | 0.396667 | 0.003334 | PASS |
 | diagonal_vertical_50 | 0.392086 | 0.000858 | 0.403333 | 0.010000 | WEAK |
 
+### Oracle-style dataset router
+
+| dataset | safe nDCG@3 | routed nDCG@3 | delta nDCG@3 | safe AvgRel@3 | routed AvgRel@3 | delta AvgRel@3 | selected mode |
+|---|---:|---:|---:|---:|---:|---:|---|
+| expanded real-like | 0.875672 | 0.878747 | 0.003075 | 1.166667 | 1.183333 | 0.016666 | `diagonal_vertical_50` |
+| ArguAna | 0.198268 | 0.208268 | 0.010000 | 0.111667 | 0.118333 | 0.006666 | `diagonal_vertical_35` |
+| SciFact | 0.558624 | 0.558624 | 0.000000 | 0.225000 | 0.225000 | 0.000000 | `diagonal_vertical_20` |
+| NFCorpus | 0.399580 | 0.402485 | 0.002905 | 0.401667 | 0.410000 | 0.008333 | `diagonal_vertical_35` |
+
+### First query-only router
+
+Expanded real-like:
+
+| mode | nDCG@3 | AvgRel@3 | MRR |
+|---|---:|---:|---:|
+| vertical_vector_rerank | 0.875672 | 1.166667 | 1.000000 |
+| query_angle_router | 0.876477 | 1.166667 | 1.000000 |
+
+Delta nDCG@3: 0.000805
+
+Delta AvgRel@3: 0.000000
+
 ## Current conclusion
 
 The vertical-vector idea is supported.
@@ -80,21 +110,21 @@ A single fixed strong diagonal is not supported:
 
 Therefore, the current safe default is `vertical_vector_rerank` / `diagonal_vertical_20`.
 
-The next candidate is not a stronger fixed angle. The next candidate is task- or query-conditioned angle selection.
+The first query-only router keeps the router hypothesis alive, but the improvement is tiny.
 
 `corpus_vertical_rerank` is weak in the current implementation and should not be promoted without a different axis construction method.
 
 This does not prove superiority over dense neural embeddings.
 
-## Active work
+## Next phase
 
-- Implement a minimal angle router.
-- Compare routed angle selection against fixed `vertical_vector_rerank` / `diagonal_vertical_20`.
-- Keep heavy workflows archived and run future experiments from temporary experiment branches.
+Failure-case analysis:
 
-## Next work
+1. list selected angle per query
+2. compare changed ranks against `vertical_vector_rerank`
+3. identify queries where the router helped, did nothing, or hurt
+4. only then change query router rules
 
-1. Implement a minimal task/query angle router.
-2. Evaluate the router on expanded real-like and BEIR.
-3. Update the experiment report.
-4. Clean up temporary workflows and branches.
+## Hold policy
+
+Stop active experimentation here. Resume only when comments, reviews, or a deliberate next-session plan require changes.
