@@ -79,6 +79,25 @@ Next phase checklist:
 3. Classify each query as helped, unchanged, or hurt.
 4. Only then change query router rules.
 
+## Feedback and ideas
+
+Ideas, criticism, reproducibility concerns, and alternative experiment designs should be opened as GitHub Issues.
+
+Useful issues are specific and testable. Good examples:
+
+- a concrete failure case or counterexample
+- a better way to construct vertical or diagonal axes
+- a proposal for non-oracle query/task angle routing
+- a reproducibility issue in the current reports
+- a small public dataset that can be safely added
+- a claim that the current interpretation is too strong or too weak
+
+A good issue should include:
+
+1. the claim
+2. the evidence or intuition
+3. the smallest check that would confirm or reject it
+
 ## Stop rule
 
 Stop active experimentation here.
