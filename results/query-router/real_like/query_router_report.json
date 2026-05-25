@@ -1,0 +1,19 @@
+{
+  "dataset": "expanded_real_like",
+  "k": 3,
+  "selected_mode": "query_conditioned",
+  "baseline_mode": "vertical_vector_rerank",
+  "routed_mode": "query_angle_router",
+  "baseline": {
+    "nDCG@3": 0.875672,
+    "MRR": 1.0,
+    "AvgRel@3": 1.166667
+  },
+  "routed": {
+    "nDCG@3": 0.876477,
+    "MRR": 1.0,
+    "AvgRel@3": 1.166667
+  },
+  "delta_nDCG": 0.0008049999999999446,
+  "delta_AvgRel": 0.0
+}
